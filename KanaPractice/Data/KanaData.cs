@@ -42,24 +42,175 @@ namespace KanaPractice.Data {
 
         static List<BasicKana> modifiedKanaList;
 
+        static List<BasicKana> allKana;
 
         static KanaData() {
             //create list for each group
             // of kana
             vowels = new List<BasicKana> {
-                KanaData.A,
-                KanaData.E,
-                KanaData.I,
-                KanaData.O,
-                KanaData.U
+                A,
+                E,
+                I,
+                O,
+                U
             };
 
             kList = new List<BasicKana> {
-                KanaData.Ka,
-                KanaData.Ke,
-                KanaData.Ki,
-                KanaData.Ko,
-                KanaData.Ku
+                Ka,
+                Ke,
+                Ki,
+                Ko,
+                Ku
+            };
+
+            gList = new List<BasicKana> {
+                Ga,
+                Ge,
+                Gi,
+                Go,
+                Gu
+            };
+
+            sList = new List<BasicKana> {
+                Sa,
+                Se,
+                Shi,
+                So,
+                Su
+            };
+
+            zList = new List<BasicKana> {
+                Za,
+                Ze,
+                Ji,
+                Zo,
+                Zu
+            };
+
+            tList = new List<BasicKana> {
+                Ta,
+                Te,
+                Chi,
+                To,
+                Tsu
+            };
+
+            dList = new List<BasicKana> {
+                Da,
+                De,
+                Di,
+                Do,
+                Du
+            };
+
+            nList = new List<BasicKana> {
+                Na,
+                Ne,
+                Ni,
+                No,
+                Nu
+            };
+
+            hList = new List<BasicKana> {
+                Ha,
+                He,
+                Hi,
+                Ho,
+                Fu
+            };
+
+            bList = new List<BasicKana> {
+                Ba,
+                Be,
+                Bi,
+                Bo,
+                Bu
+            };
+
+            pList = new List<BasicKana> {
+                Pa,
+                Pe,
+                Pi,
+                Po,
+                Pu
+            };
+
+            mList = new List<BasicKana> {
+                Ma,
+                Me,
+                Mi,
+                Mo,
+                Mu
+            };
+
+            yList = new List<BasicKana> {
+                Ya,
+                Yu,
+                Yo
+            };
+
+            rList = new List<BasicKana> {
+                Ra,
+                Re,
+                Ri,
+                Ro,
+                Ru
+            };
+
+            wList = new List<BasicKana> {
+                Wa,
+                Wo,
+                N
+            };
+
+            modifiedKanaList = new List<BasicKana> {
+                Kya, //0
+                Kyu, //1
+                Kyo, //2
+
+                Gya, //3
+                Gyu, //4
+                Gyo, //5
+
+                Sha, //6
+                Shu, //7
+                Sho, //8
+
+                Ja, //9
+                Ju, //10
+                Jo, //12
+
+                Cha, //13
+                Chu, //14
+                Cho, //15
+
+                Dya, //16,
+                Dyu, //17
+                Dyo, //18
+
+                Hya, //19
+                Hyu, //20
+                Hyo, //21
+
+                Bya, //22
+                Byu, //23
+                Byo, //24
+
+                Pya, //25
+                Pyu, //26
+                Pyo, //27
+
+                Nya, //28
+                Nyu, //29
+                Nyo, //30
+
+                Mya, //31
+                Myu, //32
+                Myo, //33
+
+                Rya, //34
+                Ryu, //35
+                Ryo, //36
             };
         }
 
@@ -197,18 +348,18 @@ namespace KanaPractice.Data {
         public static BasicKana Gyu = new BasicKana("gyu", "ぎゅ", "ギュ");
         public static BasicKana Gyo = new BasicKana("gyo", "ぎょ", "ギョ");
         //s,z
-        public static BasicKana Sya = new BasicKana("sya", "しゃ", "シャ");
-        public static BasicKana Syu = new BasicKana("syu", "しゅ", "シュ");
-        public static BasicKana Syo = new BasicKana("syo", "しょ", "ショ");
+        public static BasicKana Sha = new BasicKana("sya", "しゃ", "シャ");
+        public static BasicKana Shu = new BasicKana("syu", "しゅ", "シュ");
+        public static BasicKana Sho = new BasicKana("syo", "しょ", "ショ");
 
         public static BasicKana Ja = new BasicKana("ja", "じゃ", "ジャ");
         public static BasicKana Ju = new BasicKana("ju", "じゅ", "ジュ");
         public static BasicKana Jo = new BasicKana("jo", "じょ", "ジョ");
 
         //t,d
-        public static BasicKana Tya = new BasicKana("cha", "ちゃ", "チャ");
-        public static BasicKana Tyu = new BasicKana("chu", "ちゅ", "チュ");
-        public static BasicKana Tyo = new BasicKana("cho", "ちょ", "チョ");
+        public static BasicKana Cha = new BasicKana("cha", "ちゃ", "チャ");
+        public static BasicKana Chu = new BasicKana("chu", "ちゅ", "チュ");
+        public static BasicKana Cho = new BasicKana("cho", "ちょ", "チョ");
 
         public static BasicKana Dya = new BasicKana("dya", "ぢゃ", "ヂャ");
         public static BasicKana Dyu = new BasicKana("dyu", "ぢゅ", "ヂュ");

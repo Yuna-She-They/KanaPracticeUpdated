@@ -21,6 +21,7 @@ namespace KanaPractice.Data {
         private string hirg;
         private string katakana;
 
+        //Todo Possibly Re-factor making a modified Kana struct, with ya,yu,yo props
         //? Do I need to make properties even though this is just designed to hold data in a static class?
 
         /// <summary>
