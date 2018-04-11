@@ -14,8 +14,53 @@ namespace KanaPractice.Data {
     /// A Class to hold All the Data for japanese Sylliables
     /// </summary>
     public static class KanaData {
-       static KanaData() {
 
+        static List<BasicKana> vowels;
+
+        static List<BasicKana> kList;
+        static List<BasicKana> gList;
+
+        static List<BasicKana> sList;
+        static List<BasicKana> zList;
+
+        static List<BasicKana> tList;
+        static List<BasicKana> dList;
+
+        static List<BasicKana> nList;
+
+        static List<BasicKana> hList;
+        static List<BasicKana> bList;
+        static List<BasicKana> pList;
+
+        static List<BasicKana> mList;
+
+        static List<BasicKana> yList;
+
+        static List<BasicKana> rList;
+
+        static List<BasicKana> wList;
+
+        static List<BasicKana> modifiedKanaList;
+
+
+        static KanaData() {
+            //create list for each group
+            // of kana
+            vowels = new List<BasicKana> {
+                KanaData.A,
+                KanaData.E,
+                KanaData.I,
+                KanaData.O,
+                KanaData.U
+            };
+
+            kList = new List<BasicKana> {
+                KanaData.Ka,
+                KanaData.Ke,
+                KanaData.Ki,
+                KanaData.Ko,
+                KanaData.Ku
+            };
         }
 
         //! TIL you can have constructors in a static class
