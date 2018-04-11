@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Serialization;
-using System.IO;
+
 
 namespace KanaPractice.Data {
 
@@ -163,55 +161,7 @@ namespace KanaPractice.Data {
                 N
             };
 
-            modifiedKanaList = new List<BasicKana> {
-                Kya, //0
-                Kyu, //1
-                Kyo, //2
 
-                Gya, //3
-                Gyu, //4
-                Gyo, //5
-
-                Sha, //6
-                Shu, //7
-                Sho, //8
-
-                Ja, //9
-                Ju, //10
-                Jo, //12
-
-                Cha, //13
-                Chu, //14
-                Cho, //15
-
-                Dya, //16,
-                Dyu, //17
-                Dyo, //18
-
-                Hya, //19
-                Hyu, //20
-                Hyo, //21
-
-                Bya, //22
-                Byu, //23
-                Byo, //24
-
-                Pya, //25
-                Pyu, //26
-                Pyo, //27
-
-                Nya, //28
-                Nyu, //29
-                Nyo, //30
-
-                Mya, //31
-                Myu, //32
-                Myo, //33
-
-                Rya, //34
-                Ryu, //35
-                Ryo, //36
-            };
         }
 
         //! TIL you can have constructors in a static class

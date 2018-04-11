@@ -17,9 +17,10 @@ namespace KanaPractice.Data {
     /// A Class that holds the symbols for each sylliable
     /// </summary>
     public class BasicKana {
-        private string romanji;
-        private string hirg;
-        private string katakana;
+        protected string romanji;
+        protected string hirg;
+        protected string katakana;
+        //public List<ModifiedKana> modifiedKanas;
 
         //Todo Possibly Re-factor making a modified Kana struct, with ya,yu,yo props
         //? Do I need to make properties even though this is just designed to hold data in a static class?
