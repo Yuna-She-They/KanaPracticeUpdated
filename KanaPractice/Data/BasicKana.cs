@@ -17,8 +17,21 @@ namespace KanaPractice.Data {
     /// A Class that holds the symbols for each sylliable
     /// </summary>
     public class BasicKana {
+        /// <summary>
+        /// The romanized version of how to read japanese
+        /// </summary>
         protected string romanji;
+
+        /// <summary>
+        /// Native Japanse Words are written in this
+        /// "Alphabet"
+        /// </summary>
         protected string hirg;
+
+        /// <summary>
+        /// Words barrowed from other languages
+        /// are written in this "alphabet"
+        /// </summary>
         protected string katakana;
         //public List<ModifiedKana> modifiedKanas;
 
