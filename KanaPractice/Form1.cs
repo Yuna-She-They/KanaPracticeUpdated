@@ -9,7 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KanaPractice {
+
+    /// <summary>
+    /// Holds Events for Event Driven Form
+    /// </summary>
     public partial class frmMain : Form {
+
+        /// <summary>
+        /// Constructor for class,
+        /// this calls initComponents
+        /// </summary>
         public frmMain() {
             InitializeComponent();
         }
