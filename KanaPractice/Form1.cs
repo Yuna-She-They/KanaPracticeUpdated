@@ -22,5 +22,14 @@ namespace KanaPractice {
         public frmMain() {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Exits The Application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void mnuExit_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
     }
 }
