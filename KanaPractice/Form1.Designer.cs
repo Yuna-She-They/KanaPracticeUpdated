@@ -79,7 +79,14 @@
             this.mnuModified = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuModifedLearn = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuModifedStudy = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblKana = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
+            this.grpSystem = new System.Windows.Forms.GroupBox();
+            this.radKatakana = new System.Windows.Forms.RadioButton();
+            this.radHirigana = new System.Windows.Forms.RadioButton();
+            this.lblSelectedSounds = new System.Windows.Forms.Label();
             this.mnuMain.SuspendLayout();
+            this.grpSystem.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuMain
@@ -90,7 +97,7 @@
             this.mnuKana});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
-            this.mnuMain.Size = new System.Drawing.Size(800, 33);
+            this.mnuMain.Size = new System.Drawing.Size(1052, 33);
             this.mnuMain.TabIndex = 0;
             this.mnuMain.Text = "menuStrip1";
             // 
@@ -468,17 +475,87 @@
             this.mnuModifedStudy.Size = new System.Drawing.Size(252, 30);
             this.mnuModifedStudy.Text = "Study";
             // 
+            // lblKana
+            // 
+            this.lblKana.AutoSize = true;
+            this.lblKana.Font = new System.Drawing.Font("mikachan_o-PB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKana.Location = new System.Drawing.Point(21, 296);
+            this.lblKana.Name = "lblKana";
+            this.lblKana.Size = new System.Drawing.Size(140, 48);
+            this.lblKana.TabIndex = 1;
+            this.lblKana.Text = "label1";
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(245, 289);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(152, 55);
+            this.lblError.TabIndex = 2;
+            this.lblError.Text = "label1";
+            // 
+            // grpSystem
+            // 
+            this.grpSystem.Controls.Add(this.radHirigana);
+            this.grpSystem.Controls.Add(this.radKatakana);
+            this.grpSystem.Location = new System.Drawing.Point(713, 36);
+            this.grpSystem.Name = "grpSystem";
+            this.grpSystem.Size = new System.Drawing.Size(293, 175);
+            this.grpSystem.TabIndex = 3;
+            this.grpSystem.TabStop = false;
+            this.grpSystem.Text = "Choose Writeing System";
+            // 
+            // radKatakana
+            // 
+            this.radKatakana.AutoSize = true;
+            this.radKatakana.Location = new System.Drawing.Point(29, 61);
+            this.radKatakana.Name = "radKatakana";
+            this.radKatakana.Size = new System.Drawing.Size(102, 24);
+            this.radKatakana.TabIndex = 0;
+            this.radKatakana.TabStop = true;
+            this.radKatakana.Text = "Katakana";
+            this.radKatakana.UseVisualStyleBackColor = true;
+            // 
+            // radHirigana
+            // 
+            this.radHirigana.AutoSize = true;
+            this.radHirigana.Location = new System.Drawing.Point(29, 120);
+            this.radHirigana.Name = "radHirigana";
+            this.radHirigana.Size = new System.Drawing.Size(93, 24);
+            this.radHirigana.TabIndex = 1;
+            this.radHirigana.TabStop = true;
+            this.radHirigana.Text = "Hirigana";
+            this.radHirigana.UseVisualStyleBackColor = true;
+            // 
+            // lblSelectedSounds
+            // 
+            this.lblSelectedSounds.AutoSize = true;
+            this.lblSelectedSounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedSounds.Location = new System.Drawing.Point(543, 97);
+            this.lblSelectedSounds.Name = "lblSelectedSounds";
+            this.lblSelectedSounds.Size = new System.Drawing.Size(152, 55);
+            this.lblSelectedSounds.TabIndex = 4;
+            this.lblSelectedSounds.Text = "label1";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1052, 577);
+            this.Controls.Add(this.lblSelectedSounds);
+            this.Controls.Add(this.grpSystem);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.lblKana);
             this.Controls.Add(this.mnuMain);
             this.MainMenuStrip = this.mnuMain;
             this.Name = "frmMain";
-            this.Text = "Form1";
+            this.Text = "Learn To Read Japanese";
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
+            this.grpSystem.ResumeLayout(false);
+            this.grpSystem.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,6 +615,12 @@
         private System.Windows.Forms.ToolStripMenuItem mnuModified;
         private System.Windows.Forms.ToolStripMenuItem mnuModifedLearn;
         private System.Windows.Forms.ToolStripMenuItem mnuModifedStudy;
+        private System.Windows.Forms.Label lblKana;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.GroupBox grpSystem;
+        private System.Windows.Forms.RadioButton radHirigana;
+        private System.Windows.Forms.RadioButton radKatakana;
+        private System.Windows.Forms.Label lblSelectedSounds;
     }
 }
 
