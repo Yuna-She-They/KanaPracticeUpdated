@@ -13,34 +13,99 @@ namespace KanaPractice.Data {
     /// </summary>
     public static class KanaData {
 
-        static List<BasicKana> vowels;
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> vowels;
 
-        static List<BasicKana> kList;
-        static List<BasicKana> gList;
 
-        static List<BasicKana> sList;
-        static List<BasicKana> zList;
 
-        static List<BasicKana> tList;
-        static List<BasicKana> dList;
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> kList;
 
-        static List<BasicKana> nList;
 
-        static List<BasicKana> hList;
-        static List<BasicKana> bList;
-        static List<BasicKana> pList;
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> gList;
 
-        static List<BasicKana> mList;
 
-        static List<BasicKana> yList;
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> sList;
 
-        static List<BasicKana> rList;
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> zList;
 
-        static List<BasicKana> wList;
 
-        static List<BasicKana> modifiedKanaList;
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> tList;
 
-        static List<BasicKana> allKana;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> dList;
+
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> nList;
+
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> hList;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> bList;
+
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> pList;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> mList;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> yList;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> rList;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> wList;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> modifiedKanaList;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static List<BasicKana> allKana;
 
         static KanaData() {
             //create list for each group
@@ -164,7 +229,7 @@ namespace KanaPractice.Data {
 
         }
 
-        //! TIL you can have constructors in a static class
+        //!important TIL you can have constructors in a static class
         /*x  todo
          * Figure out how to serilize class into an xml document
          * so I can use Xpath to Randomize What Kana Shows up
@@ -172,11 +237,15 @@ namespace KanaPractice.Data {
          */
 
 
+        //?question Would it be better to have the seprate sounds
+        //?question as private variables
         #region vowels
         /// <summary>
         /// The "A" Sound
         /// </summary>
         public static BasicKana A = new BasicKana("a", "あ", "ア");
+
+
 
         /// <summary>
         /// The "I" sound

@@ -20,21 +20,46 @@ namespace KanaPractice.Data {
         /// <summary>
         /// The romanized version of how to read japanese
         /// </summary>
-        protected string romanji;
+        private string romanji;
 
+        /// <summary>
+        /// Gets the romanji for the selected syllable.
+        /// </summary>
+        public string Romanji {
+            get {
+                return this.romanji;
+            }
+        }
         /// <summary>
         /// Native Japanse Words are written in this
         /// "Alphabet"
         /// </summary>
-        protected string hirg;
+        private string hirg;
+
+        /// <summary>
+        /// Gets Hiragana for Selected Syllable
+        /// </summary>
+        public string Hirg {
+            get {
+                return this.hirg;
+            }
+        }
 
         /// <summary>
         /// Words barrowed from other languages
         /// are written in this "alphabet"
         /// </summary>
-        protected string katakana;
-        //public List<ModifiedKana> modifiedKanas;
+        private string katakana;
 
+
+        /// <summary>
+        /// Gets Katakana for selected syllable
+        /// </summary>
+        public string Katakana {
+            get {
+                return Katakana;
+            }
+        }
         //Todo Possibly Re-factor making a modified Kana struct, with ya,yu,yo props
         //? Do I need to make properties even though this is just designed to hold data in a static class?
 
