@@ -111,122 +111,119 @@ namespace KanaPractice.Data {
             //create list for each group
             // of kana
             vowels = new List<BasicKana> {
-                A,
-                E,
-                I,
-                O,
-                U
+                new BasicKana("a","あ","ア"),
+                new BasicKana("i","い","イ"),
+                new BasicKana("u","う","ウ"),
+                new BasicKana("e","え","エ"),
+                new BasicKana("o","お","オ")
             };
 
             kList = new List<BasicKana> {
-                Ka,
-                Ke,
-                Ki,
-                Ko,
-                Ku
+                new BasicKana("ka","か","カ"),
+                new BasicKana("ki","き","キ"),
+                new BasicKana("ku","く","ク"),
+                new BasicKana("ke","け","ケ"),
+                new BasicKana("ko","こ","コ")
             };
 
             gList = new List<BasicKana> {
-                Ga,
-                Ge,
-                Gi,
-                Go,
-                Gu
+                new BasicKana("ga","が","ガ"),
+                new BasicKana("gi","ぎ","ギ"),
+                new BasicKana("gu","ぐ","グ"),
+                new BasicKana("ge","げ","ゲ"),
+                new BasicKana("go","ご","ゴ")
             };
 
             sList = new List<BasicKana> {
-                Sa,
-                Se,
-                Shi,
-                So,
-                Su
+                new BasicKana("sa","さ","サ"),
+                new BasicKana("shi","し","シ"),
+                new BasicKana("su","す","ス"),
+                new BasicKana("se","せ","セ"),
+                new BasicKana("so","そ","ソ")
             };
 
             zList = new List<BasicKana> {
-                Za,
-                Ze,
-                Ji,
-                Zo,
-                Zu
+                new BasicKana("za","ざ","ザ"),
+                new BasicKana("ji","じ","ジ"),
+                new BasicKana("zu","ず","ズ"),
+                new BasicKana("ze","ぜ","ゼ"),
+                new BasicKana("zo","ぞ","ゾ")
             };
 
             tList = new List<BasicKana> {
-                Ta,
-                Te,
-                Chi,
-                To,
-                Tsu
+                new BasicKana("ta","た","タ"),
+                new BasicKana("chi","ち","千"),
+                new BasicKana("tsu","つ","ツ"),
+                new BasicKana("te","て","テ"),
+                new BasicKana("to","と","ト")
             };
 
             dList = new List<BasicKana> {
-                Da,
-                De,
-                Di,
-                Do,
-                Du
+                new BasicKana("da","だ","ダ"),
+                new BasicKana("di","ぢ","ヂ"),
+                new BasicKana("du","づ","ヅ"),
+                new BasicKana("de","で","デ"),
+                new BasicKana("do","ど","ド")
             };
 
             nList = new List<BasicKana> {
-                Na,
-                Ne,
-                Ni,
-                No,
-                Nu
+                new BasicKana("na","な","ナ"),
+                new BasicKana("ni","に","ニ"),
+                new BasicKana("nu","ぬ","ヌ"),
+                new BasicKana("ne","ね","ネ"),
+                new BasicKana("no","の","ノ")
             };
 
             hList = new List<BasicKana> {
-                Ha,
-                He,
-                Hi,
-                Ho,
-                Fu
+                new BasicKana("ha","は","ハ"),
+                new BasicKana("hi","ひ","ヒ"),
+                new BasicKana("fu","ふ","フ"),
+                new BasicKana("he","へ","ヘ"),
+                new BasicKana("ho","ほ","ホ")
             };
 
             bList = new List<BasicKana> {
-                Ba,
-                Be,
-                Bi,
-                Bo,
-                Bu
+                new BasicKana("ba","ば","バ"),
+                new BasicKana("bi","び","ビ"),
+                new BasicKana("bu","ぶ","ブ"),
+                new BasicKana("be","べ","ベ"),
+                new BasicKana("bo","ぼ","ボ")
             };
 
             pList = new List<BasicKana> {
-                Pa,
-                Pe,
-                Pi,
-                Po,
-                Pu
+                new BasicKana("pa","ぱ","パ"),
+                new BasicKana("pi","ぴ","ピ"),
+                new BasicKana("pu","ぷ","ぷ"),
+                new BasicKana("pe","ぺ","ペ"),
+                new BasicKana("po","ぽ","ポ")
             };
 
             mList = new List<BasicKana> {
-                Ma,
-                Me,
-                Mi,
-                Mo,
-                Mu
+                new BasicKana("ma","ま","マ"),
+                new BasicKana("mi","み","ミ"),
+                new BasicKana("mu","む","ム"),
+                new BasicKana("me","め","メ"),
+                new BasicKana("mo","も","モ")
             };
-
             yList = new List<BasicKana> {
-                Ya,
-                Yu,
-                Yo
+                new BasicKana("ya","や","ヤ"),
+                new BasicKana("yu","ゆ","ユ"),
+                new BasicKana("yo","よ","ヨ")
             };
 
             rList = new List<BasicKana> {
-                Ra,
-                Re,
-                Ri,
-                Ro,
-                Ru
+                new BasicKana("ra","ら","ラ"),
+                new BasicKana("ri","り","リ"),
+                new BasicKana("ru","る","ル"),
+                new BasicKana("re","れ","レ"),
+                new BasicKana("ro","ろ","ロ")
             };
 
             wList = new List<BasicKana> {
-                Wa,
-                Wo,
-                N
+                new BasicKana("wa","わ","ワ"),
+                new BasicKana("wo","を","ヲ"),
+                new BasicKana("n","ん","ン")
             };
-
-
         }
 
         //!important TIL you can have constructors in a static class
@@ -239,416 +236,347 @@ namespace KanaPractice.Data {
 
         //?question Would it be better to have the seprate sounds
         //?question as private variables
-        #region vowels
-        /// <summary>
-        /// The "A" Sound
-        /// </summary>
-        private static BasicKana A = new BasicKana("a", "あ", "ア");
-
-
-
-        /// <summary>
-        /// The "I" sound
-        /// </summary>
-        private static BasicKana I = new BasicKana("i", "い", "イ");
-
-        /// <summary>
-        /// The "U"
-        /// </summary>
-        private static BasicKana U = new BasicKana("u", "う", "ウ");
-
-        /// <summary>
-        /// The "E" sound
-        /// </summary>
-        private static BasicKana E = new BasicKana("e", "え", "エ");
-
-        /// <summary>
-        /// The "O" Sound
-        /// </summary>
-        private static BasicKana O = new BasicKana("o", "お", "オ");
-        #endregion
-
-        #region K
-
-        /// <summary>
-        /// The "Ka" sound
-        /// </summary>
-        private static BasicKana Ka = new BasicKana("ka", "か", "カ");
-
-        /// <summary>
-        /// The "Ki" sound
-        /// </summary>
-        private static BasicKana Ki = new BasicKana("ki", "き", "キ");
-
-        /// <summary>
-        /// The "Ku" sound
-        /// </summary>
-        private static BasicKana Ku = new BasicKana("ku", "く", "ク");
-
-        /// <summary>
-        /// The "Ke" Sound
-        /// </summary>
-        private static BasicKana Ke = new BasicKana("ke", "け", "ケ");
-
-        /// <summary>
-        /// The "Ko" sound
-        /// </summary>
-        private static BasicKana Ko = new BasicKana("ko", "こ", "コ");
-        #endregion
-
-        #region G
-
-        /// <summary>
-        /// The "Ga" Sound
-        /// </summary>
-        public static BasicKana Ga = new BasicKana("ga", "が", "ガ");
-
-        /// <summary>
-        /// The "Gi" sound
-        /// </summary>
-        public static BasicKana Gi = new BasicKana("gi", "ぎ", "ギ");
-
-        /// <summary>
-        /// The "Gu" Sound
-        /// </summary>
-        public static BasicKana Gu = new BasicKana("gu", "ぐ", "グ");
-
-        /// <summary>
-        /// The "Ge" Sound
-        /// </summary>
-        public static BasicKana Ge = new BasicKana("ge", "げ", "ゲ");
-
-        /// <summary>
-        /// The "Go" Sound
-        /// </summary>
-        public static BasicKana Go = new BasicKana("go", "ご", "ゴ");
-        #endregion
-
-        #region S
-
-        /// <summary>
-        /// The "Sa" Sound
-        /// </summary>
-        private static BasicKana Sa = new BasicKana("sa", "さ", "サ");
-
-        /// <summary>
-        /// The "Shi" Sound
-        /// </summary>
-        private static BasicKana Shi = new BasicKana("shi", "し", "シ");
-
-        /// <summary>
-        /// The "Su" Sound
-        /// </summary>
-        private static BasicKana Su = new BasicKana("su", "す", "ス");
-
-        /// <summary>
-        /// The "Se" Sound
-        /// </summary>
-        private static BasicKana Se = new BasicKana("se", "せ", "セ");
-
-        /// <summary>
-        /// The "So" sound
-        /// </summary>
-        private static BasicKana So = new BasicKana("so", "そ", "ゾ");
-        #endregion
-
-        #region Z
-
-        /// <summary>
-        /// The "Za" Sound
-        /// </summary>
-        private static BasicKana Za = new BasicKana("za", "ざ", "ザ");
-
-        /// <summary>
-        /// The "Ji" Sound
-        /// </summary>
-        private static BasicKana Ji = new BasicKana("ji", "じ", "ジ");
-
-        /// <summary>
-        /// The "Zu" sound
-        /// </summary>
-        private static BasicKana Zu = new BasicKana("zu", "ず", "ズ");
-
-        /// <summary>
-        /// The "Ze" Sound
-        /// </summary>
-        private static BasicKana Ze = new BasicKana("ze", "ぜ", "ゼ");
-
-        /// <summary>
-        /// The "Zo" Sound
-        /// </summary>
-        private static BasicKana Zo = new BasicKana("zo", "ぞ", "ゾ");
-        #endregion
-
-        #region T
-
-        /// <summary>
-        /// Ta Sound
-        /// </summary>
-        private static BasicKana Ta = new BasicKana("ta", "た", "タ");
-
-        /// <summary>
-        /// Chi Sound
-        /// </summary>
-        private static BasicKana Chi = new BasicKana("chi", "ち", "チ");
-
-        /// <summary>
-        /// Tsu Sound
-        /// </summary>
-        private static BasicKana Tsu = new BasicKana("tsu", "つ", "ツ");
-
-        /// <summary>
-        /// Te sound
-        /// </summary>
-        private static BasicKana Te = new BasicKana("te", "て", "テ");
-
-        /// <summary>
-        /// To sound
-        /// </summary>
-        private static BasicKana To = new BasicKana("to", "と", "ト");
-        #endregion
-
-        #region D
-
-        /// <summary>
-        /// Da Sound
-        /// </summary>
-        private static BasicKana Da = new BasicKana("da", "だ", "ダ");
-
-        /// <summary>
-        /// The "Di" sound <br />
-        /// This isn't used in modern Japanese, but is still there for historic refrence
-        /// </summary>
-        private static BasicKana Di = new BasicKana("di", "ぢ", "ヂ");
-
-        /// <summary>
-        /// Du sound
-        /// </summary>
-        private static BasicKana Du = new BasicKana("du", "づ", "ヅ");
-
-        /// <summary>
-        /// De sound
-        /// </summary>
-        private static BasicKana De = new BasicKana("de", "で", "デ");
-
-        /// <summary>
-        /// Do sound
-        /// </summary>
-        private static BasicKana Do = new BasicKana("do", "ど", "ド");
-        #endregion
-
-        #region N
-
-        /// <summary>
-        /// Na sound
-        /// </summary>
-        private static BasicKana Na = new BasicKana("na", "な", "ナ");
-
-        /// <summary>
-        /// the Ni sound (We are the Knights who say "Ni")
-        /// </summary>
-        private static BasicKana Ni = new BasicKana("ni", "に", "ニ");
-
-        /// <summary>
-        /// The nu sound (sounds like new)
-        /// </summary>
-        private static BasicKana Nu = new BasicKana("nu", "ぬ", "ヌ");
-
-        /// <summary>
-        /// the Ne sound (knee)
-        /// </summary>
-        private static BasicKana Ne = new BasicKana("ne", "ね", "ネ");
-
-        /// <summary>
-        /// The no sound
-        /// </summary>
-        private static BasicKana No = new BasicKana("no", "の", "ノ");
-        #endregion
-
-        #region H
-
-        /// <summary>
-        /// ha sound
-        /// </summary>
-        private static BasicKana Ha = new BasicKana("ha", "は", "ハ");
-
-        /// <summary>
-        /// hi sound
-        /// </summary>
-        private static BasicKana Hi = new BasicKana("hi", "ひ", "ヒ");
-
-        /// <summary>
-        /// Watch out for this one, the Hu sound becomes fu
-        /// </summary>
-        private static BasicKana Fu = new BasicKana("fu", "ふ", "フ");
-
-        /// <summary>
-        /// He sound
-        /// </summary>
-        private static BasicKana He = new BasicKana("he", "へ", "ヘ");
-
-        /// <summary>
-        /// Ho sound
-        /// </summary>
-        private static BasicKana Ho = new BasicKana("ho", "ほ", "ホ");
-        #endregion
-
-        #region B
-
-        /// <summary>
-        /// Ba sound
-        /// </summary>
-        private static BasicKana Ba = new BasicKana("ba", "ば", "バ");
-
-        /// <summary>
-        /// Bi sound (be)
-        /// </summary>
-        private static BasicKana Bi = new BasicKana("bi", "び", "ビ");
-
-        /// <summary>
-        /// Bu sound
-        /// </summary>
-        private static BasicKana Bu = new BasicKana("bu", "ぶ", "ブ");
-
-        /// <summary>
-        /// Be sound
-        /// </summary>
-        private static BasicKana Be = new BasicKana("be", "べ", "ベ");
-
-        /// <summary>
-        /// Bo (bow) sound
-        /// </summary>
-        private static BasicKana Bo = new BasicKana("bo", "ぼ", "ボ");
-        #endregion
-
-        #region P
-
-        /// <summary>
-        /// Pa sound
-        /// </summary>
-        private static BasicKana Pa = new BasicKana("pa", "ぱ", "パ");
-
-        /// <summary>
-        /// Pi sound
-        /// </summary>
-        private static BasicKana Pi = new BasicKana("pi", "ぴ", "ピ");
-
-        /// <summary>
-        /// Pu sound
-        /// </summary>
-        private static BasicKana Pu = new BasicKana("pu", "ぷ", "プ");
-
-        /// <summary>
-        /// pe sound
-        /// </summary>
-        private static BasicKana Pe = new BasicKana("pe", "ぺ", "ペ");
-
-        /// <summary>
-        /// Po sound
-        /// </summary>
-        private static BasicKana Po = new BasicKana("po", "ぽ", "ポ");
-        #endregion
-
-        #region M
-
-        /// <summary>
-        /// Ma sound
-        /// </summary>
-        private static BasicKana Ma = new BasicKana("ma", "ま", "マ");
-
-        /// <summary>
-        /// me sound
-        /// </summary>
-        private static BasicKana Mi = new BasicKana("mi", "み", "ミ");
-
-        /// <summary>
-        /// mu sound
-        /// </summary>
-        private static BasicKana Mu = new BasicKana("mu", "む", "ム");
-
-        /// <summary>
-        ///  me sound
-        /// </summary>
-        private static BasicKana Me = new BasicKana("me", "め", "メ");
-
-        /// <summary>
-        /// Mo sound
-        /// </summary>
-        private static BasicKana Mo = new BasicKana("mo", "も", "モ");
-
-        #endregion
-
-        #region YaYuYo
-
-        /// <summary>
-        /// Ya sound
-        /// </summary>
-        private static BasicKana Ya = new BasicKana("ya", "や", "ヤ");
-
-        /// <summary>
-        /// Yu sound
-        /// </summary>
-        private static BasicKana Yu = new BasicKana("yu", "ゆ", "ユ");
-
-        /// <summary>
-        /// Yo sound
-        /// </summary>
-        private static BasicKana Yo = new BasicKana("yo", "よ", "ヨ");
-        #endregion
-
-        #region R
-
-        /// <summary>
-        /// Ra sound
-        /// </summary>
-        private static BasicKana Ra = new BasicKana("ra", "ら", "ラ");
-
-        /// <summary>
-        /// ri sound
-        /// </summary>
-        private static BasicKana Ri = new BasicKana("ri", "り", "リ");
-
-        /// <summary>
-        /// Ru sound
-        /// </summary>
-        private static BasicKana Ru = new BasicKana("ru", "る", "ル");
-
-        /// <summary>
-        /// Re sound
-        /// </summary>
-        private static BasicKana Re = new BasicKana("re", "れ", "レ");
-
-        /// <summary>
-        /// Ro sound
-        /// </summary>
-        private static BasicKana Ro = new BasicKana("ro", "ろ", "ロ");
-        #endregion
-
-        #region W
-
-        /// <summary>
-        /// Wa sound
-        /// </summary>
-        private static BasicKana Wa = new BasicKana("wa", "わ", "ワ");
-
-        /// <summary>
-        /// Wo (particle only not really a sound)
-        /// </summary>
-        private static BasicKana Wo = new BasicKana("wo", "を", "ヲ");
-
-        /// <summary>
-        /// "n" sound
-        /// </summary>
-        private static BasicKana N = new BasicKana("n", "ん", "ン");
-        #endregion
-
-
-/*
- * K = 0 .. 2
- * G = 3 .. 5
- * S = 6 .. 8
- * Z = 9..11
- */
+
+        //x private static BasicKana A = new BasicKana("a", "あ", "ア");
+
+        //x private static BasicKana I = new BasicKana("i", "い", "イ");
+
+        //x private static BasicKana U = new BasicKana("u", "う", "ウ");
+
+        //x private static BasicKana E = new BasicKana("e", "え", "エ");
+
+        //x private static BasicKana O = new BasicKana("o", "お", "オ");
+
+        //x <summary>
+        //x The "Ka" sound
+        //x </summary>
+        //x private static BasicKana Ka = new BasicKana("ka", "か", "カ");
+
+        //x <summary>
+        //x The "Ki" sound
+        //x </summary>
+        //x private static BasicKana Ki = new BasicKana("ki", "き", "キ");
+
+        //x <summary>
+        //x The "Ku" sound
+        //x </summary>
+        //x private static BasicKana Ku = new BasicKana("ku", "く", "ク");
+
+        //x <summary>
+        //x The "Ke" Sound
+        //x </summary>
+        //x private static BasicKana Ke = new BasicKana("ke", "け", "ケ");
+
+        //x <summary>
+        //x The "Ko" sound
+        //x </summary>
+        //x Remove private static BasicKana Ko = new BasicKana("ko", "こ", "コ");
+
+        //x <summary>
+        //x The "Ga" Sound
+        //x </summary>
+        //x public static BasicKana Ga = new BasicKana("ga", "が", "ガ");
+
+        //x <summary>
+        //x The "Gi" sound
+        //x </summary>
+        //x public static BasicKana Gi = new BasicKana("gi", "ぎ", "ギ");
+
+        //x <summary>
+        //x The "Gu" Sound
+        //x </summary>
+        //x public static BasicKana Gu = new BasicKana("gu", "ぐ", "グ");
+
+        //x <summary>
+        //x The "Ge" Sound
+        //x </summary>
+        //x public static BasicKana Ge = new BasicKana("ge", "げ", "ゲ");
+
+        //x <summary>
+        //x The "Go" Sound
+        //x </summary>
+        //x public static BasicKana Go = new BasicKana("go", "ご", "ゴ");
+
+        //x <summary>
+        //x The "Sa" Sound
+        //x </summary>
+        //x private static BasicKana Sa = new BasicKana("sa", "さ", "サ");
+
+        //x <summary>
+        //x The "Shi" Sound
+        //x </summary>
+        //x private static BasicKana Shi = new BasicKana("shi", "し", "シ");
+
+        //x <summary>
+        //x The "Su" Sound
+        //x </summary>
+        //x private static BasicKana Su = new BasicKana("su", "す", "ス");
+
+        //x <summary>
+        //x The "Se" Sound
+        //x </summary>
+        //x private static BasicKana Se = new BasicKana("se", "せ", "セ");
+
+        //x <summary>
+        //x The "So" sound
+        //x </summary>
+        //x private static BasicKana So = new BasicKana("so", "そ", "ゾ");
+
+        //x <summary>
+        //x The "Za" Sound
+        //x </summary>
+        //x private static BasicKana Za = new BasicKana("za", "ざ", "ザ");
+
+        //x <summary>
+        //x The "Ji" Sound
+        //x </summary>
+        //x private static BasicKana Ji = new BasicKana("ji", "じ", "ジ");
+
+        //x <summary>
+        //x The "Zu" sound
+        //x </summary>
+        //x private static BasicKana Zu = new BasicKana("zu", "ず", "ズ");
+
+        //x <summary>
+        //x The "Ze" Sound
+        //x </summary>
+        //x private static BasicKana Ze = new BasicKana("ze", "ぜ", "ゼ");
+
+        //x <summary>
+        //x The "Zo" Sound
+        //x </summary>
+        //x private static BasicKana Zo = new BasicKana("zo", "ぞ", "ゾ");
+
+        //x <summary>
+        //x Ta Sound
+        //x </summary>
+        //x private static BasicKana Ta = new BasicKana("ta", "た", "タ");
+
+        //x <summary>
+        //x Chi Sound
+        //x </summary>
+        //x private static BasicKana Chi = new BasicKana("chi", "ち", "チ");
+
+        //x <summary>
+        //x Tsu Sound
+        //x </summary>
+        //x private static BasicKana Tsu = new BasicKana("tsu", "つ", "ツ");
+
+        //x <summary>
+        //x Te sound
+        //x </summary>
+        //x private static BasicKana Te = new BasicKana("te", "て", "テ");
+
+        //x <summary>
+        //x To sound
+        //x </summary>
+        //x private static BasicKana To = new BasicKana("to", "と", "ト");
+
+        //x <summary>
+        //x Da Sound
+        //x </summary>
+        //x private static BasicKana Da = new BasicKana("da", "だ", "ダ");
+
+        //x <summary>
+        //x The "Di" sound <br />
+        //x This isn't used in modern Japanese, but is still there for historic refrence
+        //x </summary>
+        //x private static BasicKana Di = new BasicKana("di", "ぢ", "ヂ");
+
+        //x <summary>
+        //x Du sound
+        //x </summary>
+        //x private static BasicKana Du = new BasicKana("du", "づ", "ヅ");
+
+        //x <summary>
+        //x De sound
+        //x </summary>
+        //x private static BasicKana De = new BasicKana("de", "で", "デ");
+
+        //x <summary>
+        //x Do sound
+        //x </summary>
+        //x private static BasicKana Do = new BasicKana("do", "ど", "ド");
+
+        //x <summary>
+        //x Na sound
+        //x </summary>
+        //x private static BasicKana Na = new BasicKana("na", "な", "ナ");
+
+        //x <summary>
+        //x the Ni sound (We are the Knights who say "Ni")
+        //x </summary>
+        //x private static BasicKana Ni = new BasicKana("ni", "に", "ニ");
+
+        //x <summary>
+        //x The nu sound (sounds like new)
+        //x </summary>
+        //x private static BasicKana Nu = new BasicKana("nu", "ぬ", "ヌ");
+
+        //x <summary>
+        //x the Ne sound (knee)
+        //x </summary>
+        //x private static BasicKana Ne = new BasicKana("ne", "ね", "ネ");
+
+        //x <summary>
+        //x The no sound
+        //x </summary>
+        //x private static BasicKana No = new BasicKana("no", "の", "ノ");
+
+        //x <summary>
+        //x ha sound
+        //x </summary>
+        //x private static BasicKana Ha = new BasicKana("ha", "は", "ハ");
+
+        //x <summary>
+        //x hi sound
+        //x </summary>
+        //x private static BasicKana Hi = new BasicKana("hi", "ひ", "ヒ");
+
+        //x <summary>
+        //x Watch out for this one, the Hu sound becomes fu
+        //x </summary>
+        //x private static BasicKana Fu = new BasicKana("fu", "ふ", "フ");
+
+        //x <summary>
+        //x He sound
+        //x </summary>
+        //x private static BasicKana He = new BasicKana("he", "へ", "ヘ");
+
+        //x <summary>
+        //x Ho sound
+        //x </summary>
+        //x private static BasicKana Ho = new BasicKana("ho", "ほ", "ホ");
+
+        //x <summary>
+        //x Ba sound
+        //x </summary>
+        //x private static BasicKana Ba = new BasicKana("ba", "ば", "バ");
+
+        //x <summary>
+        //x Bi sound (be)
+        //x </summary>
+        //x private static BasicKana Bi = new BasicKana("bi", "び", "ビ");
+
+        //x <summary>
+        //x Bu sound
+        //x </summary>
+        //x private static BasicKana Bu = new BasicKana("bu", "ぶ", "ブ");
+
+        //x <summary>
+        //x Be sound
+        //x </summary>
+        //x private static BasicKana Be = new BasicKana("be", "べ", "ベ");
+
+        //x <summary>
+        //x Bo (bow) sound
+        //x </summary>
+        //x private static BasicKana Bo = new BasicKana("bo", "ぼ", "ボ");
+
+        //x <summary>
+        //x Pa sound
+        //x </summary>
+        //x private static BasicKana Pa = new BasicKana("pa", "ぱ", "パ");
+
+        //x <summary>
+        //x Pi sound
+        //x </summary>
+        //x private static BasicKana Pi = new BasicKana("pi", "ぴ", "ピ");
+
+        //x <summary>
+        //x Pu sound
+        //x </summary>
+        //x private static BasicKana Pu = new BasicKana("pu", "ぷ", "プ");
+
+        //x <summary>
+        //x pe sound
+        //x </summary>
+        //x private static BasicKana Pe = new BasicKana("pe", "ぺ", "ペ");
+
+        //x <summary>
+        //x Po sound
+        //x </summary>
+        //x private static BasicKana Po = new BasicKana("po", "ぽ", "ポ");
+
+        //x <summary>
+        //x Ma sound
+        //x </summary>
+        //x private static BasicKana Ma = new BasicKana("ma", "ま", "マ");
+
+        //x <summary>
+        //x me sound
+        //x </summary>
+        //x private static BasicKana Mi = new BasicKana("mi", "み", "ミ");
+
+        //x <summary>
+        //x mu sound
+        //x </summary>
+        //x private static BasicKana Mu = new BasicKana("mu", "む", "ム");
+
+        //x <summary>
+        //x  me sound
+        //x </summary>
+        //x private static BasicKana Me = new BasicKana("me", "め", "メ");
+
+        //x <summary>
+        //x Mo sound
+        //x </summary>
+        //x private static BasicKana Mo = new BasicKana("mo", "も", "モ");
+
+        //x <summary>
+        //x Ya sound
+        //x </summary>
+        //x private static BasicKana Ya = new BasicKana("ya", "や", "ヤ");
+
+        //x <summary>
+        //x Yu sound
+        //x </summary>
+        //x private static BasicKana Yu = new BasicKana("yu", "ゆ", "ユ");
+
+        //x <summary>
+        //x Yo sound
+        //x </summary>
+        //x private static BasicKana Yo = new BasicKana("yo", "よ", "ヨ");
+
+        //x <summary>
+        //x Ra sound
+        //x </summary>
+        //x private static BasicKana Ra = new BasicKana("ra", "ら", "ラ");
+
+        //x <summary>
+        //x ri sound
+        //x </summary>
+        //x private static BasicKana Ri = new BasicKana("ri", "り", "リ");
+
+        //x <summary>
+        //x Ru sound
+        //x </summary>
+        //x private static BasicKana Ru = new BasicKana("ru", "る", "ル");
+
+        //x <summary>
+        //x Re sound
+        //x </summary>
+        //x private static BasicKana Re = new BasicKana("re", "れ", "レ");
+
+        //x <summary>
+        //x Ro sound
+        //x </summary>
+        //x private static BasicKana Ro = new BasicKana("ro", "ろ", "ロ");
+
+        //x <summary>
+        //x Wa sound
+        //x </summary>
+        //x private static BasicKana Wa = new BasicKana("wa", "わ", "ワ");
+
+        //x <summary>
+        //x Wo (particle only not really a sound)
+        //x </summary>
+        //x private static BasicKana Wo = new BasicKana("wo", "を", "ヲ");
+
+        //x <summary>
+        //x "n" sound
+        //x </summary>
+        //x private static BasicKana N = new BasicKana("n", "ん", "ン");
 
         #region ModifiedKana
         /// <summary>
