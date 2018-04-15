@@ -20,7 +20,7 @@ namespace KanaPractice {
             Application.Run(new frmMain());
         }
 
-        private void CreateKanaData(string fileName) {
+        /*xprivate void CreateKanaData(string fileName) {
             //create an instance of the XmlSerializer class
             //specify the type of object to serialize
 
@@ -55,6 +55,6 @@ namespace KanaPractice {
 
         private void serializer_UnknownAttribute(object sender, XmlAttributeEventArgs e) {
 
-        }
+        }*/
     }
 }

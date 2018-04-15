@@ -50,6 +50,9 @@ namespace KanaPractice {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void mnuKanaVowelsLearn_Click(object sender, EventArgs e) {
+
+            //!important Stack Overflow exception here for some reason.
+            //!important Could be the use of the actual japanese text in KanaData.cs
             if (radKatakana.Checked) {
                 //?question Should I possibly Refactor this
                 //?question into another form instead of a message box?
@@ -103,9 +106,31 @@ namespace KanaPractice {
         }
 
         private void mnuKanaSSoundsLearn_Click(object sender, EventArgs e) {
-            if(radKatakana.Checked) {
+
+
+            if (radKatakana.Checked) {
                 MessageBox.Show($"{KanaData.sList[0].Romanji} {KanaData.sList[0].Katakana}\n" +
-                    $"{KanaData.sList[1].Romanji} {KanaData.sList[1].Katakana}");
+                    $"{KanaData.sList[1].Romanji} {KanaData.sList[1].Katakana}\n" +
+                    $"{KanaData.sList[2].Romanji} {KanaData.sList[2].Katakana}\n" +
+                    $"{KanaData.sList[3].Romanji} {KanaData.sList[3].Katakana}\n" +
+                    $"{KanaData.sList[4].Romanji} {KanaData.sList[4].Katakana}\n");
+            }
+            if(radHirigana.Checked) {
+                MessageBox.Show($"{KanaData.sList[0].Romanji} {KanaData.sList[0].Hirg}\n" +
+                    $"{KanaData.sList[1].Romanji} {KanaData.sList[1].Hirg}\n" +
+                    $"{KanaData.sList[2].Romanji} {KanaData.sList[2].Hirg}\n" +
+                    $"{KanaData.sList[3].Romanji} {KanaData.sList[3].Hirg} {KanaData.sList[3].Hirg}\n" +
+                    $"{KanaData.sList[4].Romanji} {KanaData.sList[4].Hirg}");
+            }
+        }
+
+        private void mnuKanaZSoundsLearn_Click(object sender, EventArgs e) {
+            if(radKatakana.Checked) {
+                MessageBox.Show($"{KanaData.zList[0].Romanji} {KanaData.zList[0].Katakana}\n" +
+                    $"{KanaData.zList[1].Romanji} {KanaData.zList[1].Katakana}\n" +
+                    $"{KanaData.zList[2].Romanji} {KanaData.zList[2].Katakana}\n" +
+                    $"{KanaData.zList[3].Romanji} {KanaData.zList[3].Katakana}\n" +
+                    $"{KanaData.zList[4].Romanji} {KanaData.zList}");
             }
         }
     }
