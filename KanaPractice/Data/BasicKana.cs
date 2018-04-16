@@ -20,28 +20,28 @@ namespace KanaPractice.Data {
         /// <summary>
         /// The romanized version of how to read japanese
         /// </summary>
-        private string romanji;
+        private string m_romanji;
 
         /// <summary>
         /// Gets the romanji for the selected syllable.
         /// </summary>
         public string Romanji {
             get {
-                return this.romanji;
+                return this.m_romanji;
             }
         }
         /// <summary>
         /// Native Japanse Words are written in this
         /// "Alphabet"
         /// </summary>
-        private string hirg;
+        private string m_hirg;
 
         /// <summary>
         /// Gets Hiragana for Selected Syllable
         /// </summary>
         public string Hirg {
             get {
-                return this.hirg;
+                return this.m_hirg;
             }
         }
 
@@ -49,7 +49,7 @@ namespace KanaPractice.Data {
         /// Words barrowed from other languages
         /// are written in this "alphabet"
         /// </summary>
-        private string katakana;
+        private string m_katakana;
 
 
         /// <summary>
@@ -70,9 +70,9 @@ namespace KanaPractice.Data {
         /// <param name="hirg">The hirgana writing system</param>
         /// <param name="kata">The Katakana writing system</param>
         public BasicKana(string romanji,string hirg,string kata) {
-            this.romanji = romanji;
-            this.hirg = hirg;
-            this.katakana = kata;
+            this.m_romanji = romanji;
+            this.m_hirg = hirg;
+            this.m_katakana = kata;
         }
 
         //? Do I need a dustructor
