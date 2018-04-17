@@ -258,6 +258,7 @@
             this.mnuKanaTSounds.Name = "mnuKanaTSounds";
             this.mnuKanaTSounds.Size = new System.Drawing.Size(252, 30);
             this.mnuKanaTSounds.Text = "T Sounds";
+            this.mnuKanaTSounds.Click += new System.EventHandler(this.mnuKanaTSounds_Click);
             // 
             // mnuKanaTSoundsLearn
             // 
@@ -284,7 +285,7 @@
             // mnuKanaDSoundsLearn
             // 
             this.mnuKanaDSoundsLearn.Name = "mnuKanaDSoundsLearn";
-            this.mnuKanaDSoundsLearn.Size = new System.Drawing.Size(252, 30);
+            this.mnuKanaDSoundsLearn.Size = new System.Drawing.Size(141, 30);
             this.mnuKanaDSoundsLearn.Text = "Learn";
             this.mnuKanaDSoundsLearn.Click += new System.EventHandler(this.mnuKanaDSoundsLearn_Click);
             // 
@@ -306,8 +307,9 @@
             // mnuKanaNSoundsLearn
             // 
             this.mnuKanaNSoundsLearn.Name = "mnuKanaNSoundsLearn";
-            this.mnuKanaNSoundsLearn.Size = new System.Drawing.Size(141, 30);
+            this.mnuKanaNSoundsLearn.Size = new System.Drawing.Size(252, 30);
             this.mnuKanaNSoundsLearn.Text = "Learn";
+            this.mnuKanaNSoundsLearn.Click += new System.EventHandler(this.mnuKanaNSoundsLearn_Click);
             // 
             // mnuKanaNSoundsStudy
             // 
@@ -327,8 +329,9 @@
             // mnuKanaHSoundsLearn
             // 
             this.mnuKanaHSoundsLearn.Name = "mnuKanaHSoundsLearn";
-            this.mnuKanaHSoundsLearn.Size = new System.Drawing.Size(141, 30);
+            this.mnuKanaHSoundsLearn.Size = new System.Drawing.Size(252, 30);
             this.mnuKanaHSoundsLearn.Text = "Learn";
+            this.mnuKanaHSoundsLearn.Click += new System.EventHandler(this.mnuKanaHSoundsLearn_Click);
             // 
             // mnuKanaHSoundsStudy
             // 
@@ -348,8 +351,9 @@
             // mnuKanaBSoundsLearn
             // 
             this.mnuKanaBSoundsLearn.Name = "mnuKanaBSoundsLearn";
-            this.mnuKanaBSoundsLearn.Size = new System.Drawing.Size(141, 30);
+            this.mnuKanaBSoundsLearn.Size = new System.Drawing.Size(252, 30);
             this.mnuKanaBSoundsLearn.Text = "Learn";
+            this.mnuKanaBSoundsLearn.Click += new System.EventHandler(this.mnuKanaBSoundsLearn_Click);
             // 
             // mnuKanaBSoundsStudy
             // 
@@ -369,8 +373,9 @@
             // mnuKanaPSoundsLearn
             // 
             this.mnuKanaPSoundsLearn.Name = "mnuKanaPSoundsLearn";
-            this.mnuKanaPSoundsLearn.Size = new System.Drawing.Size(141, 30);
+            this.mnuKanaPSoundsLearn.Size = new System.Drawing.Size(252, 30);
             this.mnuKanaPSoundsLearn.Text = "Learn";
+            this.mnuKanaPSoundsLearn.Click += new System.EventHandler(this.mnuKanaPSoundsLearn_Click);
             // 
             // mnuKanaPSoundsStudy
             // 
@@ -390,8 +395,9 @@
             // mnuKanaMSoundsLearn
             // 
             this.mnuKanaMSoundsLearn.Name = "mnuKanaMSoundsLearn";
-            this.mnuKanaMSoundsLearn.Size = new System.Drawing.Size(141, 30);
+            this.mnuKanaMSoundsLearn.Size = new System.Drawing.Size(252, 30);
             this.mnuKanaMSoundsLearn.Text = "Learn";
+            this.mnuKanaMSoundsLearn.Click += new System.EventHandler(this.mnuKanaMSoundsLearn_Click);
             // 
             // mnuKanaMSoundsStudy
             // 

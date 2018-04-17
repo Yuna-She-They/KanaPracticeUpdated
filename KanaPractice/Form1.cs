@@ -176,5 +176,100 @@ namespace KanaPractice {
                     $"{KanaData.dList[4].Romanji} \t {KanaData.dList[4].Hirg}", "D Sounds Hiragana");
             }
         }
+
+
+
+
+
+        private void mnuKanaTSounds_Click(object sender, EventArgs e) {
+
+        }
+
+        private void mnuKanaNSoundsLearn_Click(object sender, EventArgs e) {
+            if (radKatakana.Checked) {
+                MessageBox.Show($"{KanaData.nList[0].Romanji} \t {KanaData.nList[0].Katakana}\n" +
+                    $"{KanaData.nList[1].Romanji} \t {KanaData.nList[1].Katakana}\n" +
+                    $"{KanaData.nList[2].Romanji} \t {KanaData.nList[2].Katakana}\n" +
+                    $"{KanaData.nList[3].Romanji} \t {KanaData.nList[3].Katakana}\n" +
+                    $"{KanaData.nList[4].Romanji} \t {KanaData.nList[4].Katakana}", "N Sounds Katakana");
+            }
+
+            if (radHirigana.Checked) {
+                MessageBox.Show($"{KanaData.nList[0].Romanji} \t {KanaData.nList[0].Hirg}\n" +
+                    $"{KanaData.nList[1].Romanji} \t {KanaData.nList[1].Hirg}\n" +
+                    $"{KanaData.nList[2].Romanji} \t {KanaData.nList[2].Hirg}\n" +
+                    $"{KanaData.nList[3].Romanji} \t {KanaData.nList[3].Hirg}\n" +
+                    $"{KanaData.nList[4].Romanji} \t {KanaData.nList[4].Hirg}", "N Sounds Hiragana");
+            }
+
+
+        }
+
+        private void mnuKanaHSoundsLearn_Click(object sender, EventArgs e) {
+            if (radKatakana.Checked) {
+                MessageBox.Show($"{KanaData.hList[0].Romanji} \t {KanaData.hList[0].Katakana}\n" +
+                    $"{KanaData.hList[1].Romanji} \t {KanaData.hList[1].Katakana}\n" +
+                    $"{KanaData.hList[2].Romanji} \t {KanaData.hList[2].Katakana}\n" +
+                    $"{KanaData.hList[3].Romanji} \t {KanaData.hList[3].Katakana}\n" +
+                    $"{KanaData.hList[4].Romanji} \t {KanaData.hList[4].Katakana}", "H Sounds Katakana");
+            }
+
+            if (radHirigana.Checked) {
+                MessageBox.Show($"{KanaData.hList[0].Romanji} \t {KanaData.hList[0].Hirg}\t" +
+                    $"{KanaData.hList[1].Romanji} \t {KanaData.hList[1].Hirg}\n" +
+                    $"{KanaData.hList[2].Romanji} \t {KanaData.hList[2].Hirg}\n" +
+                    $"{KanaData.hList[3].Romanji} \t {KanaData.hList[3].Hirg}\n" +
+                    $"{KanaData.hList[4].Romanji} \t {KanaData.hList[4].Hirg}", "H Sounds Hiragana");
+            }
+
+        }
+
+        private void mnuKanaBSoundsLearn_Click(object sender, EventArgs e) {
+            if (radKatakana.Checked) {
+                MessageBox.Show($"{KanaData.bList[0].Romanji} \t {KanaData.bList[0].Katakana}\n" +
+                    $"{KanaData.bList[1].Romanji} \t {KanaData.bList[1].Katakana}\n" +
+                    $"{KanaData.bList[2].Romanji} \t {KanaData.bList[2].Katakana}\n" +
+                    $"{KanaData.bList[3].Romanji} \t {KanaData.bList[3].Katakana}\n" +
+                    $"{KanaData.bList[4].Romanji} \t {KanaData.bList[4].Katakana}", "B Sounds Katakana");
+            }
+
+            if(radHirigana.Checked) {
+                MessageBox.Show($"{KanaData.bList[0].Romanji} \t {KanaData.bList[0].Hirg}\n" +
+                    $"{KanaData.bList[1].Romanji} \t {KanaData.bList[1].Hirg}\n" +
+                    $"{KanaData.bList[2].Romanji} \t {KanaData.bList[2].Hirg}\n" +
+                    $"{KanaData.bList[3].Romanji} \t {KanaData.bList[3].Hirg}\n" +
+                    $"{KanaData.bList[4].Romanji} \t {KanaData.bList[4].Hirg}", "B Sounds Hiragana");
+            }
+        }
+
+        private void mnuKanaPSoundsLearn_Click(object sender, EventArgs e) {
+            if (radKatakana.Checked) {
+                MessageBox.Show($"{KanaData.pList[0].Romanji} \t {KanaData.pList[0].Katakana}\n" +
+                    $"{KanaData.pList[1].Romanji} \t {KanaData.pList[1].Katakana}\n" +
+                    $"{KanaData.pList[2].Romanji} \t {KanaData.pList[2].Katakana}\n" +
+                    $"{KanaData.pList[3].Romanji} \t {KanaData.pList[3].Katakana}\n" +
+                    $"{KanaData.pList[4].Romanji} \t {KanaData.pList[4].Katakana}", "P Sounds Katakana");
+            }
+
+            if(radHirigana.Checked) {
+                MessageBox.Show($"{KanaData.pList[0].Romanji} \t {KanaData.pList[0].Hirg}\n" +
+                    $"{KanaData.pList[1].Romanji} \t {KanaData.pList[1].Hirg}\n" +
+                    $"{KanaData.pList[2].Romanji} \t {KanaData.pList[2].Hirg}\n" +
+                    $"{KanaData.pList[3].Romanji} \t {KanaData.pList[3].Hirg}\n" +
+                    $"{KanaData.pList[4].Romanji} \t {KanaData.pList[4].Hirg}", "P Sounds Hiragana");
+            }
+        }
+
+        private void mnuKanaMSoundsLearn_Click(object sender, EventArgs e) {
+            if(radKatakana.Checked) {
+                MessageBox.Show($"{KanaData.mList[0].Romanji} \t {KanaData.mList[0].Katakana}\n" +
+                    $"{KanaData.mList[1].Romanji} \t {KanaData.mList[1].Katakana}\n" +
+                    $"{KanaData.mList[2].Romanji} \t {KanaData.mList[2].Katakana}\n" +
+                    $"{KanaData.mList[3].Romanji} \t {KanaData.mList[3].Katakana}\n" +
+                    $"{KanaData.mList[4].Romanji} \t {KanaData.mList[4].Katakana}", "M Sounds Katakana");
+            }
+
+
+        }
     }
 }
