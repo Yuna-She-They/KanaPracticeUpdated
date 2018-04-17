@@ -57,7 +57,7 @@ namespace KanaPractice.Data {
         /// </summary>
         public string Katakana {
             get {
-                return Katakana;
+                return m_katakana;
             }
         }
         //Todo Possibly Re-factor making a modified Kana struct, with ya,yu,yo props

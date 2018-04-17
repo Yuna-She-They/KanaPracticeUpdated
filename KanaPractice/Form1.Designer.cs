@@ -240,14 +240,14 @@
             // mnuKanaZSoundsLearn
             // 
             this.mnuKanaZSoundsLearn.Name = "mnuKanaZSoundsLearn";
-            this.mnuKanaZSoundsLearn.Size = new System.Drawing.Size(252, 30);
+            this.mnuKanaZSoundsLearn.Size = new System.Drawing.Size(141, 30);
             this.mnuKanaZSoundsLearn.Text = "Learn";
             this.mnuKanaZSoundsLearn.Click += new System.EventHandler(this.mnuKanaZSoundsLearn_Click);
             // 
             // mnuKanaZSoundsStudy
             // 
             this.mnuKanaZSoundsStudy.Name = "mnuKanaZSoundsStudy";
-            this.mnuKanaZSoundsStudy.Size = new System.Drawing.Size(252, 30);
+            this.mnuKanaZSoundsStudy.Size = new System.Drawing.Size(141, 30);
             this.mnuKanaZSoundsStudy.Text = "Study";
             // 
             // mnuKanaTSounds
@@ -262,13 +262,14 @@
             // mnuKanaTSoundsLearn
             // 
             this.mnuKanaTSoundsLearn.Name = "mnuKanaTSoundsLearn";
-            this.mnuKanaTSoundsLearn.Size = new System.Drawing.Size(141, 30);
+            this.mnuKanaTSoundsLearn.Size = new System.Drawing.Size(252, 30);
             this.mnuKanaTSoundsLearn.Text = "Learn";
+            this.mnuKanaTSoundsLearn.Click += new System.EventHandler(this.mnuKanaTSoundsLearn_Click);
             // 
             // mnuKanaTSoundsStudy
             // 
             this.mnuKanaTSoundsStudy.Name = "mnuKanaTSoundsStudy";
-            this.mnuKanaTSoundsStudy.Size = new System.Drawing.Size(141, 30);
+            this.mnuKanaTSoundsStudy.Size = new System.Drawing.Size(252, 30);
             this.mnuKanaTSoundsStudy.Text = "Study";
             // 
             // mnuKanaDSounds
@@ -283,8 +284,9 @@
             // mnuKanaDSoundsLearn
             // 
             this.mnuKanaDSoundsLearn.Name = "mnuKanaDSoundsLearn";
-            this.mnuKanaDSoundsLearn.Size = new System.Drawing.Size(141, 30);
+            this.mnuKanaDSoundsLearn.Size = new System.Drawing.Size(252, 30);
             this.mnuKanaDSoundsLearn.Text = "Learn";
+            this.mnuKanaDSoundsLearn.Click += new System.EventHandler(this.mnuKanaDSoundsLearn_Click);
             // 
             // mnuKanaDSoundsStudy
             // 
