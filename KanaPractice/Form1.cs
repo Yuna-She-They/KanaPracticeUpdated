@@ -61,6 +61,8 @@ namespace KanaPractice {
                     $"{KanaData.vowels[4].Romanji} \t {KanaData.vowels[4].Katakana}","Vowels Katakana");
             }
             if(radHirigana.Checked) {
+                //?question Possiblely Refactor into another
+
                 MessageBox.Show($"{KanaData.vowels[0].Romanji} \t {KanaData.vowels[0].Hirg}\n" +
                     $"{KanaData.vowels[1].Romanji} \t {KanaData.vowels[1].Hirg}\n" +
                     $"{KanaData.vowels[2].Romanji} \t {KanaData.vowels[2].Hirg}\n" +
@@ -128,7 +130,7 @@ namespace KanaPractice {
                     $"{KanaData.zList[1].Romanji} \t {KanaData.zList[1].Katakana}\n" +
                     $"{KanaData.zList[2].Romanji} \t {KanaData.zList[2].Katakana}\n" +
                     $"{KanaData.zList[3].Romanji} \t {KanaData.zList[3].Katakana}\n" +
-                    $"{KanaData.zList[4].Romanji} \t {KanaData.zList}","Z Sounds Katakana");
+                    $"{KanaData.zList[4].Romanji} \t {KanaData.zList[4].Katakana}","Z Sounds Katakana");
             }
             if (radHirigana.Checked) {
                 MessageBox.Show($"{KanaData.zList[0].Romanji} \t {KanaData.zList[0].Hirg}" +
@@ -142,7 +144,7 @@ namespace KanaPractice {
         private void mnuKanaTSoundsLearn_Click(object sender, EventArgs e) {
 
             if (radKatakana.Checked) {
-                MessageBox.Show($"{KanaData.tList[0].Romanji} \t {KanaData.tList[0].Katakana}" +
+                MessageBox.Show($"{KanaData.tList[0].Romanji} \t {KanaData.tList[0].Katakana}\n" +
                     $"{KanaData.tList[1].Romanji} \t {KanaData.tList[1].Katakana}\n" +
                     $"{KanaData.tList[2].Romanji} \t {KanaData.tList[2].Katakana}\n" +
                     $"{KanaData.tList[3].Romanji} \t {KanaData.tList[3].Katakana}\n" +
@@ -269,7 +271,50 @@ namespace KanaPractice {
                     $"{KanaData.mList[4].Romanji} \t {KanaData.mList[4].Katakana}", "M Sounds Katakana");
             }
 
-
+            if (radHirigana.Checked) {
+                MessageBox.Show($"{KanaData.mList[0].Romanji} \t {KanaData.mList[0].Hirg}\n" +
+                    $"{KanaData.mList[1].Romanji} \t {KanaData.mList[1].Hirg}\n" +
+                    $"{KanaData.mList[2].Romanji} \t {KanaData.mList[2].Hirg}\n" +
+                    $"{KanaData.mList[3].Romanji} \t {KanaData.mList[3].Hirg}\n" +
+                    $"{KanaData.mList[4].Romanji} \t {KanaData.mList[4].Hirg}","M Sounds Hiragana");
+            }
         }
+
+        private void mnuKanaYSoundsLearn_Click(object sender, EventArgs e) {
+            //!important Note that this list only has 3 elements in it
+            if (radKatakana.Checked) {
+                MessageBox.Show($"{KanaData.yList[0].Romanji} \t {KanaData.yList[0].Katakana}\n" +
+                    $"{KanaData.yList[1].Romanji} \t {KanaData.yList[1].Katakana}\n" +
+                    $"{KanaData.yList[2].Romanji} \t {KanaData.yList[2].Katakana}", "Y Sounds Katakana");
+            }
+
+            if (radHirigana.Checked) {
+                MessageBox.Show($"{KanaData.yList[0].Romanji} \t {KanaData.yList[0].Hirg}\n" +
+                    $"{KanaData.yList[1].Romanji} \t {KanaData.yList[1].Hirg}\n" +
+                    $"{KanaData.yList[2].Romanji} \t {KanaData.yList[2].Hirg}", "Y Sounds Hiragana");
+            }
+        }
+
+        private void mnuKanaRSoundsLearn_Click(object sender, EventArgs e) {
+            //!important The corrospinding List here has 5 elements (subscripts 0 -4)
+
+            if (radKatakana.Checked) {
+                MessageBox.Show($"{KanaData.rList[0].Romanji} \t {KanaData.rList[0].Katakana}\n" +
+                    $"{KanaData.rList[1].Romanji} \t {KanaData.rList[1].Katakana}\n" +
+                    $"{KanaData.rList[2].Romanji} \t {KanaData.rList[2].Katakana}\n" +
+                    $"{KanaData.rList[3].Romanji} \t {KanaData.rList[3].Katakana}\n" +
+                    $"{KanaData.rList[4].Romanji} \t {KanaData.rList[4].Katakana}", "R Sounds Katakana");
+            }
+
+            if(radHirigana.Checked) {
+                MessageBox.Show($"{KanaData.rList[0].Romanji} \t {KanaData.rList[0].Hirg}\n" +
+                    $"{KanaData.rList[1].Romanji} \t {KanaData.rList[1].Hirg}\n" +
+                    $"{KanaData.rList[2].Romanji} \t {KanaData.rList[2].Hirg}\n" +
+                    $"{KanaData.rList[3].Romanji} \t {KanaData.rList[3].Hirg}\n" +
+                    $"{KanaData.rList[4].Romanji} \t {KanaData.rList[4].Hirg}", "R Sounds Hiragana");
+            }
+        }
+
+
     }
 }
