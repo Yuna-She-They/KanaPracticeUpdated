@@ -199,43 +199,42 @@ namespace KanaPractice.Data {
         /// </summary>
         /// <remarks>Subscripts 0 - 35</remarks>
         public static List<BasicKana> modifiedKanaList = new List<BasicKana> {
-            new BasicKana("kya","きゃ","キャ"),
-            new BasicKana("kyu","きゅ","キュ"),
-            new BasicKana("kyo","きょ","キョ"),
-            new BasicKana("gya","ぎゃ","ギャ"),
-            new BasicKana("gyu","ぎゅ","ギュ"),
-            new BasicKana("gyo","ぎょ","ギョ"),
-            new BasicKana("sha","しゃ","シャ"),
-            new BasicKana("shu","しゅ","シュ"),
-            new BasicKana("sho","しょ","ショ"),
-            new BasicKana("ja","じゃ","ジャ"),
-            new BasicKana("ju","じゅ","ジュ"),
-            new BasicKana("jo","じょ","ジョ"),
-            new BasicKana("cha","ちゃ","チャ"),
-            new BasicKana("chu","ちゅ","チュ"),
-            new BasicKana("cho","ちょ","チョ"),
-            new BasicKana("dya","ぢゃ","ヂャ"),
-            new BasicKana("dyu","ぢゅ","ヂュ"),
-            new BasicKana("dyo","ぢょ","ヂョ"),
-            new BasicKana("hya","ひゃ","ヒャ"),
-            new BasicKana("hyu","ひゅ","ヒュ"),
-            new BasicKana("hyo","ひょ","ヒョ"),
-            new BasicKana("bya","びゃ","ビャ"),
-            new BasicKana("byu","びゅ","ビュ"),
-            new BasicKana("byo","びょ","ビョ"),
-            new BasicKana("pya","ぴゃ","ピャ"),
-            new BasicKana("pyu","ぴゅ","ピュ"),
-            new BasicKana("pyo","ぴょ","ピョ"),
-            new BasicKana("nya","にゃ","ニャ"),
-            new BasicKana("nyu","にゅ","ニュ"),
-            new BasicKana("nyo","にょ","ニョ"),
-            new BasicKana("mya","みゃ","ミャ"),
-            new BasicKana("myu","みゅ","ミュ"),
-            new BasicKana("myo","みょ","ミョ"),
-            new BasicKana("rya","りゃ","リャ"),
-            new BasicKana("ryu","りゅ","リュ"),
-            new BasicKana("ryo","りょ","リョ"),
-
+            new BasicKana("kya","きゃ","キャ"), //0
+            new BasicKana("kyu","きゅ","キュ"), //1
+            new BasicKana("kyo","きょ","キョ"), //2
+            new BasicKana("gya","ぎゃ","ギャ"), //3
+            new BasicKana("gyu","ぎゅ","ギュ"), //4
+            new BasicKana("gyo","ぎょ","ギョ"), //5
+            new BasicKana("sha","しゃ","シャ"), //6
+            new BasicKana("shu","しゅ","シュ"), //7
+            new BasicKana("sho","しょ","ショ"), //8
+            new BasicKana("ja","じゃ","ジャ"),  //9
+            new BasicKana("ju","じゅ","ジュ"),  //10
+            new BasicKana("jo","じょ","ジョ"),  //11
+            new BasicKana("cha","ちゃ","チャ"), //12
+            new BasicKana("chu","ちゅ","チュ"), //13
+            new BasicKana("cho","ちょ","チョ"), //14
+            new BasicKana("dya","ぢゃ","ヂャ"), //15
+            new BasicKana("dyu","ぢゅ","ヂュ"), //16
+            new BasicKana("dyo","ぢょ","ヂョ"), //17
+            new BasicKana("hya","ひゃ","ヒャ"), //18
+            new BasicKana("hyu","ひゅ","ヒュ"), //19
+            new BasicKana("hyo","ひょ","ヒョ"), //20
+            new BasicKana("bya","びゃ","ビャ"), //21
+            new BasicKana("byu","びゅ","ビュ"), //22
+            new BasicKana("byo","びょ","ビョ"), //23
+            new BasicKana("pya","ぴゃ","ピャ"), //24
+            new BasicKana("pyu","ぴゅ","ピュ"), //25
+            new BasicKana("pyo","ぴょ","ピョ"), //26
+            new BasicKana("nya","にゃ","ニャ"), //27
+            new BasicKana("nyu","にゅ","ニュ"), //28
+            new BasicKana("nyo","にょ","ニョ"), //29
+            new BasicKana("mya","みゃ","ミャ"), //30
+            new BasicKana("myu","みゅ","ミュ"), //31
+            new BasicKana("myo","みょ","ミョ"), //32
+            new BasicKana("rya","りゃ","リャ"), //33
+            new BasicKana("ryu","りゅ","リュ"), //34
+            new BasicKana("ryo","りょ","リョ"), //35
         };
 
 
