@@ -368,7 +368,7 @@ namespace KanaPractice {
         }
 
         private void mnuKanaVowelsStudy_Click(object sender, EventArgs e) {
-            
+
         }
     }
 }
