@@ -1,26 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Serialization;
-using KanaPractice.Data;
+﻿namespace KanaPractice {
+    #region Using Directives
+    using System;
+    using System.Windows.Forms;
+    #endregion Using Directives
 
-namespace KanaPractice {
-    public class Program {
+    /// <summary>
+    /// The main entry point for the application.
+    /// </summary>
+    public static class Program
+    {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        public static void Main() {
-
+        public static void Main()
+        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new CfrmMain());
         }
 
-        /*xprivate void CreateKanaData(string fileName) {
+        /*remove private void CreateKanaData(string fileName) {
             //create an instance of the XmlSerializer class
             //specify the type of object to serialize
 
