@@ -133,13 +133,13 @@ namespace KanaPractice {
             }
             if (radHirigana.Checked)
             {
-                /*remove MessageBox.Show($"{KanaData.gList[0].Romanji} \t {KanaData.gList[0].Hirg}\n" +
+				/*remove MessageBox.Show($"{KanaData.gList[0].Romanji} \t {KanaData.gList[0].Hirg}\n" +
                     $"{KanaData.gList[1].Romanji} \t {KanaData.gList[1].Hirg}\n" +
                     $"{KanaData.gList[2].Romanji} \t {KanaData.gList[2].Hirg}\n" +
                     $"{KanaData.gList[3].Romanji} \t {KanaData.gList[3].Hirg}\n" +
                     $"{KanaData.gList[4].Romanji} \t {KanaData.gList[4].Hirg}","G Sounds Hiragana");
 				*/
-				MessageBox.Show(Learn(KanaData.gList,false),"G Sounds hiragana")
+				MessageBox.Show(Learn(KanaData.gList, false), "G Sounds hiragana");
             }
         }
 
@@ -315,7 +315,7 @@ namespace KanaPractice {
                     $"{KanaData.nList[3].Romanji} \t {KanaData.nList[3].Hirg}\n" +
                     $"{KanaData.nList[4].Romanji} \t {KanaData.nList[4].Hirg}", "N Sounds Hiragana");
 				*/
-				MessageBox.Show(Lean(KanaData.nList, false), "N Sounds Hiragana");
+				MessageBox.Show(Learn(KanaData.nList, false), "N Sounds Hiragana");
             }
         }
 
@@ -418,7 +418,7 @@ namespace KanaPractice {
         }
 
         /// <summary>
-        ///
+        /// Japanese M Sounds.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -440,17 +440,18 @@ namespace KanaPractice {
 
             if (radHirigana.Checked)
             {
-               /*remove MessageBox.Show($"{KanaData.mList[0].Romanji} \t {KanaData.mList[0].Hirg}\n" +
-                    $"{KanaData.mList[1].Romanji} \t {KanaData.mList[1].Hirg}\n" +
-                    $"{KanaData.mList[2].Romanji} \t {KanaData.mList[2].Hirg}\n" +
-                    $"{KanaData.mList[3].Romanji} \t {KanaData.mList[3].Hirg}\n" +
-                    $"{KanaData.mList[4].Romanji} \t {KanaData.mList[4].Hirg}","M Sounds Hiragana");
-				*/
+				/*remove MessageBox.Show($"{KanaData.mList[0].Romanji} \t {KanaData.mList[0].Hirg}\n" +
+					 $"{KanaData.mList[1].Romanji} \t {KanaData.mList[1].Hirg}\n" +
+					 $"{KanaData.mList[2].Romanji} \t {KanaData.mList[2].Hirg}\n" +
+					 $"{KanaData.mList[3].Romanji} \t {KanaData.mList[3].Hirg}\n" +
+					 $"{KanaData.mList[4].Romanji} \t {KanaData.mList[4].Hirg}","M Sounds Hiragana");
+				 */
+				MessageBox.Show(Learn(KanaData.mList, false), "M Sounds Hiragana");
             }
         }
 
         /// <summary>
-        ///
+        /// Japanese Y sounds, also used in Modifed Kana. <see cref="KanaData.modifiedKanaList"/>
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -461,16 +462,20 @@ namespace KanaPractice {
 
             if (radKatakana.Checked)
             {
-                MessageBox.Show($"{KanaData.yList[0].Romanji} \t {KanaData.yList[0].Katakana}\n" +
+				/*remove MessageBox.Show($"{KanaData.yList[0].Romanji} \t {KanaData.yList[0].Katakana}\n" +
                     $"{KanaData.yList[1].Romanji} \t {KanaData.yList[1].Katakana}\n" +
                     $"{KanaData.yList[2].Romanji} \t {KanaData.yList[2].Katakana}", "Y Sounds Katakana");
+				*/
+				MessageBox.Show(Learn(KanaData.yList, true), "Y Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-                MessageBox.Show($"{KanaData.yList[0].Romanji} \t {KanaData.yList[0].Hirg}\n" +
+				/*remove MessageBox.Show($"{KanaData.yList[0].Romanji} \t {KanaData.yList[0].Hirg}\n" +
                     $"{KanaData.yList[1].Romanji} \t {KanaData.yList[1].Hirg}\n" +
                     $"{KanaData.yList[2].Romanji} \t {KanaData.yList[2].Hirg}", "Y Sounds Hiragana");
+				*/
+				MessageBox.Show(Learn(KanaData.yList, false), "Y Sounds Hiragana");
             }
         }
 
@@ -486,20 +491,24 @@ namespace KanaPractice {
 
             if (radKatakana.Checked)
             {
-                MessageBox.Show($"{KanaData.rList[0].Romanji} \t {KanaData.rList[0].Katakana}\n" +
+				/*remove MessageBox.Show($"{KanaData.rList[0].Romanji} \t {KanaData.rList[0].Katakana}\n" +
                     $"{KanaData.rList[1].Romanji} \t {KanaData.rList[1].Katakana}\n" +
                     $"{KanaData.rList[2].Romanji} \t {KanaData.rList[2].Katakana}\n" +
                     $"{KanaData.rList[3].Romanji} \t {KanaData.rList[3].Katakana}\n" +
                     $"{KanaData.rList[4].Romanji} \t {KanaData.rList[4].Katakana}", "R Sounds Katakana");
+				*/
+				MessageBox.Show(Learn(KanaData.rList, true), "R Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-                MessageBox.Show($"{KanaData.rList[0].Romanji} \t {KanaData.rList[0].Hirg}\n" +
+				/*remove MessageBox.Show($"{KanaData.rList[0].Romanji} \t {KanaData.rList[0].Hirg}\n" +
                     $"{KanaData.rList[1].Romanji} \t {KanaData.rList[1].Hirg}\n" +
                     $"{KanaData.rList[2].Romanji} \t {KanaData.rList[2].Hirg}\n" +
                     $"{KanaData.rList[3].Romanji} \t {KanaData.rList[3].Hirg}\n" +
                     $"{KanaData.rList[4].Romanji} \t {KanaData.rList[4].Hirg}", "R Sounds Hiragana");
+				*/
+				MessageBox.Show(Learn(KanaData.rList, false), "R Sounds Hiragana");
             }
         }
 
@@ -517,16 +526,20 @@ namespace KanaPractice {
 
             if (radKatakana.Checked)
             {
-                MessageBox.Show($"{KanaData.wList[0].Romanji} \t {KanaData.wList[0].Katakana}\n" +
+				/*remove MessageBox.Show($"{KanaData.wList[0].Romanji} \t {KanaData.wList[0].Katakana}\n" +
                     $"{KanaData.wList[1].Romanji} \t {KanaData.wList[1].Katakana}\n" +
                     $"{KanaData.wList[2].Romanji} \t {KanaData.wList[2].Katakana}", "W Sounds Katakana");
+				*/
+				MessageBox.Show(Learn(KanaData.wList, true), "W Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-                MessageBox.Show($"{KanaData.wList[0].Romanji} \t {KanaData.wList[0].Hirg}\n" +
+				/*remove MessageBox.Show($"{KanaData.wList[0].Romanji} \t {KanaData.wList[0].Hirg}\n" +
                     $"{KanaData.wList[1].Romanji} \t {KanaData.wList[1].Hirg}\n" +
                     $"{KanaData.wList[2].Romanji} \t {KanaData.wList[2].Hirg}", "W Sounds Hiragana");
+				*/
+				MessageBox.Show(Learn(KanaData.wList, false), "W Sounds Hiragana");
             }
         }
 
@@ -537,8 +550,16 @@ namespace KanaPractice {
         /// <param name="e">event args</param>
         private void mnuModifedLearn_Click(object sender, EventArgs e)
         {
-            // !important 36 (Subscripts 0 - 35) Elements in this list
-            // todo Create a New Form, for this "Learn" functionality
+			// !important 36 (Subscripts 0 - 35) Elements in this list
+			// todo Create a New Form, for this "Learn" functionality
+			if (radKatakana.Checked)
+			{
+				MessageBox.Show(Learn(KanaData.modifiedKanaList, true), "Modified Kana Sounds Katakana");
+			}
+			if (radHirigana.Checked)
+			{
+				MessageBox.Show(Learn(KanaData.modifiedKanaList, false), "Modified Kana Sounds Hiragana");
+			}
         }
 
 
