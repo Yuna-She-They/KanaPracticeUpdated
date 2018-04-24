@@ -56,14 +56,25 @@ namespace KanaPractice
         public void Study(List<BasicKana> lstToStudy) {
             //todo read up on Threading for WinForms, and learn how to use async and await
             lstToStudy.Shuffle();
-            if (radKatakana.Checked) {
+
+			/*remove if (radKatakana.Checked) {
                 lblKana.Text = lstToStudy[0].Katakana;
             }
             if (radHirigana.Checked) {
                 lblKana.Text = lstToStudy[0].Hirg;
             }
+			*/
+		}
 
-        }
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="lstToStudy"></param>
+		/// <param name="blnIsKatakana"></param>
+		public void Study(List<BasicKana>lstToStudy,bool blnIsKatakana)
+		{
+
+		}
 
 		/// <summary>
 		/// A function to show the romanji and corresponding Kana.

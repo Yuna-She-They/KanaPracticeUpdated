@@ -699,5 +699,17 @@ namespace KanaPractice {
         private void mnuKanaWSoundsStudy_Click(object sender, EventArgs e) {
             Study(KanaData.wList);
         }
-    }
+
+		private void btnCheck_Click(object sender, EventArgs e)
+		{
+			/*todo Call study function
+			 * depending on what radio button is checked.
+			 * declare a list of strings of what has been already
+			 * studied.
+			 * Figure out some way to seprate list of what has been
+			 * guessed and what hasn't and update lblKana that way
+			 * FYI Launchcode if you see this Please help!!!.
+			 */
+		}
+	}
 }
