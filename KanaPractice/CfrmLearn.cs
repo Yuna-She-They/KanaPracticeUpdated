@@ -10,7 +10,10 @@ using System.Windows.Forms;
 
 namespace KanaPractice {
     public partial class CfrmLearn : Form {
-        public CfrmLearn() {
+		/// <summary>
+		/// 
+		/// </summary>
+		public CfrmLearn() {
             InitializeComponent();
         }
     }

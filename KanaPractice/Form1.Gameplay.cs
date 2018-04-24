@@ -65,5 +65,32 @@ namespace KanaPractice
 
         }
 
+		/// <summary>
+		/// A function to show the romanji and corresponding Kana.
+		/// </summary>
+		/// <param name="lstToLearn">the list to learn based on what user clicks.</param>
+		/// <param name="katakana">if user wants to learn Katakana True, hiragana false.</param>
+		/// <returns></returns>
+		public string Learn(List<BasicKana> lstToLearn,bool katakana)
+		{
+			StringBuilder stringBuilder = new StringBuilder();
+
+			for(int i = 0; i < lstToLearn.Count; i++)
+			{
+				if(katakana)
+				{
+					stringBuilder.Append($"{lstToLearn[i].Romanji} \t {lstToLearn[i].Katakana}\n");
+				}
+				else
+				{
+					stringBuilder.Append($"{lstToLearn[i].Romanji} \t {lstToLearn[i].Hirg}\n");
+				}
+			}
+			string result = stringBuilder.ToString();
+
+			return result;
+
+		}
+
     }
 }

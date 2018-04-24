@@ -1,5 +1,8 @@
 ﻿namespace KanaPractice {
-    partial class CfrmLearn {
+	/// <summary>
+	/// 
+	/// </summary>
+	partial class CfrmLearn {
         /// <summary>
         /// Required designer variable.
         /// </summary>
