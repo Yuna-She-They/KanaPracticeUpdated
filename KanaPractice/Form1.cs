@@ -570,7 +570,16 @@ namespace KanaPractice {
         /// <param name="e">event handler</param>
         private void mnuKanaVowelsStudy_Click(object sender, EventArgs e)
         {
-            Study(KanaData.vowels);
+            //remove Study(KanaData.vowels);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.vowels, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.vowels, false);
+            }
+
         }
 
         /// <summary>
@@ -579,7 +588,15 @@ namespace KanaPractice {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void mnuKanaKSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.kList);
+            //remove Study(KanaData.kList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.kList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.kList, fase);
+            }
         }
 
         /// <summary>
@@ -588,7 +605,15 @@ namespace KanaPractice {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void mnuKanaGSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.gList);
+            //remove Study(KanaData.gList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.gList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.gList, false);
+            }
         }
 
         /// <summary>
@@ -597,7 +622,15 @@ namespace KanaPractice {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void mnuKanaSSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.sList);
+            //remove Study(KanaData.sList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.sList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.sList, false);
+            }
         }
 
         /// <summary>
@@ -606,7 +639,18 @@ namespace KanaPractice {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void mnuKanaZSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.zList);
+            //remove Study(KanaData.zList);
+
+            //I feel like this could be done with an if-else statment but
+            //I feel like this way is a bit more readable.
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.zList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.zList, false);
+            }
         }
 
         /// <summary>
@@ -615,7 +659,15 @@ namespace KanaPractice {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void mnuKanaTSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.tList);
+            //remove Study(KanaData.tList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.tList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.tList, false);
+            }
         }
 
         /// <summary>
@@ -624,7 +676,11 @@ namespace KanaPractice {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void mnuKanaDSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.dList);
+            //remove Study(KanaData.dList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.dList, true);
+            }
         }
 
         /// <summary>
