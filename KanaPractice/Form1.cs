@@ -30,8 +30,6 @@ namespace KanaPractice {
         /// <summary>
         /// Exits The Application
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuExit_Click(object sender, EventArgs e) {
             Application.Exit();
         }
@@ -39,8 +37,6 @@ namespace KanaPractice {
         /// <summary>
         /// Form Load Event
         /// </summary>
-        /// <param name="sender">What ever calls the event.</param>
-        /// <param name="e">Event arguments.</param>
         private void frmMain_Load(object sender, EventArgs e)
         {
             lblError.Text = String.Empty;
@@ -52,8 +48,6 @@ namespace KanaPractice {
         /// <summary>
         /// Learn Japanese Vowel Sounds.
         /// </summary>
-        /// <param name="sender">Caller of the event</param>
-        /// <param name="e">Event arguments.</param>
         private void mnuKanaVowelsLearn_Click(object sender, EventArgs e) {
             lblSelectedSounds.Text = "Vowels";
             if (radKatakana.Checked)
@@ -84,8 +78,6 @@ namespace KanaPractice {
         /// <summary>
         /// Learn Japanese K Sounds.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaKSoundsLearn_Click(object sender, EventArgs e)
         {
             // ?question Should I re-factor this into another form?
@@ -116,8 +108,6 @@ namespace KanaPractice {
         /// <summary>
         /// Learn Japanese G Sounds.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaGSoundsLearn_Click(object sender, EventArgs e) {
             // ?question Should I refactor this into a new form
             lblSelectedSounds.Text = "G Sounds";
@@ -146,8 +136,6 @@ namespace KanaPractice {
         /// <summary>
         /// Learn Japanese S Sounds.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaSSoundsLearn_Click(object sender, EventArgs e)
         {
             //?question should I refactor this into a new form?
@@ -179,8 +167,6 @@ namespace KanaPractice {
         /// <summary>
         /// Learn Japanese Z Sounds.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaZSoundsLearn_Click(object sender, EventArgs e)
         {
             // ?question Should I refactor this into a new form
@@ -211,8 +197,6 @@ namespace KanaPractice {
         /// <summary>
         /// Learn Japanese T Sounds.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaTSoundsLearn_Click(object sender, EventArgs e)
         {
             // ?question Should I refactor this into a new form
@@ -246,8 +230,6 @@ namespace KanaPractice {
         /// <summary>
         /// Learn Japanese D Sounds
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaDSoundsLearn_Click(object sender, EventArgs e)
         {
             //?question should I refactor this into a new form
@@ -263,7 +245,6 @@ namespace KanaPractice {
 				*/
 				MessageBox.Show(Learn(KanaData.dList, true), "D Sounds Katakana");
             }
-
             if (radHirigana.Checked)
             {
 				/*remove MessageBox.Show($"{KanaData.dList[0].Romanji} \t {KanaData.dList[0].Hirg}\n" +
@@ -279,8 +260,6 @@ namespace KanaPractice {
         /// <summary>
         /// Learn Japanese T Sounds
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaTSounds_Click(object sender, EventArgs e) {
             //do nothing I accidently clicked this when trying to make an event handler for something else.
         }
@@ -288,8 +267,6 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaNSoundsLearn_Click(object sender, EventArgs e)
         {
             //?question should I refactor this into a new form?
@@ -322,13 +299,10 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaHSoundsLearn_Click(object sender, EventArgs e)
         {
             // ?question should I refactor this into a new form?
             lblSelectedSounds.Text = "H Sounds";
-
             if (radKatakana.Checked)
             {
 				/*remove MessageBox.Show($"{KanaData.hList[0].Romanji} \t {KanaData.hList[0].Katakana}\n" +
@@ -339,7 +313,6 @@ namespace KanaPractice {
 				*/
 				MessageBox.Show(Learn(KanaData.hList, true), "H Sounds Katakana");
             }
-
             if (radHirigana.Checked)
             {
 				/*remove MessageBox.Show($"{KanaData.hList[0].Romanji} \t {KanaData.hList[0].Hirg}\t" +
@@ -355,8 +328,6 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaBSoundsLearn_Click(object sender, EventArgs e) {
             // ?question should I refactor this into a new form?
             lblSelectedSounds.Text = "B Sounds";
@@ -387,13 +358,10 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaPSoundsLearn_Click(object sender, EventArgs e)
         {
             // ?question should I refactor this into a new form?
             lblSelectedSounds.Text = "P Sounds";
-
             if (radKatakana.Checked)
             {
 				/*remove MessageBox.Show($"{KanaData.pList[0].Romanji} \t {KanaData.pList[0].Katakana}\n" +
@@ -404,7 +372,6 @@ namespace KanaPractice {
 				*/
 				MessageBox.Show(Learn(KanaData.pList, true), "P Sounds Katakana");
             }
-
             if (radHirigana.Checked)
             {
 				/*remove MessageBox.Show($"{KanaData.pList[0].Romanji} \t {KanaData.pList[0].Hirg}\n" +
@@ -420,8 +387,6 @@ namespace KanaPractice {
         /// <summary>
         /// Japanese M Sounds.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaMSoundsLearn_Click(object sender, EventArgs e)
         {
             //?question should I refactor this into a new form?
@@ -453,8 +418,6 @@ namespace KanaPractice {
         /// <summary>
         /// Japanese Y sounds, also used in Modifed Kana. <see cref="KanaData.modifiedKanaList"/>
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaYSoundsLearn_Click(object sender, EventArgs e)
         {
             // !important Note that this list only has 3 elements in it
@@ -482,8 +445,6 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaRSoundsLearn_Click(object sender, EventArgs e)
         {
             //!important The corrospinding List here has 5 elements (subscripts 0 -4)
@@ -515,8 +476,6 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender">object that calls function</param>
-        /// <param name="e">event args</param>
         private void mnuKanaWSoundsLearn_Click(object sender, EventArgs e)
         {
             // !important This corrosponding list only has 3 elements (subscripts 0 - 2)
@@ -546,12 +505,10 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender">object that calls the function</param>
-        /// <param name="e">event args</param>
         private void mnuModifedLearn_Click(object sender, EventArgs e)
         {
-			// !important 36 (Subscripts 0 - 35) Elements in this list
-			// todo Create a New Form, for this "Learn" functionality
+			//!important 36 (Subscripts 0 - 35) Elements in this list
+			//todo Create a New Form, for this "Learn" functionality
 			if (radKatakana.Checked)
 			{
 				MessageBox.Show(Learn(KanaData.modifiedKanaList, true), "Modified Kana Sounds Katakana");
@@ -566,8 +523,6 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender">object that calls the function</param>
-        /// <param name="e">event handler</param>
         private void mnuKanaVowelsStudy_Click(object sender, EventArgs e)
         {
             //remove Study(KanaData.vowels);
@@ -585,8 +540,6 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaKSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.kList);
             if (radKatakana.Checked)
@@ -595,15 +548,13 @@ namespace KanaPractice {
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.kList, fase);
+                Study(KanaData.kList, false);
             }
         }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaGSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.gList);
             if (radKatakana.Checked)
@@ -619,8 +570,6 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaSSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.sList);
             if (radKatakana.Checked)
@@ -636,8 +585,6 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaZSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.zList);
 
@@ -656,8 +603,6 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaTSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.tList);
             if (radKatakana.Checked)
@@ -673,99 +618,167 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaDSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.dList);
             if (radKatakana.Checked)
             {
                 Study(KanaData.dList, true);
             }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.dList, false);
+            }
         }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaNSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.nList);
+             //remove List<BasicKana> studyList = KanaData.nList;
+            //remove Study(KanaData.nList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.nList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.nList, false);
+            }
         }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaHSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.hList);
+            //remove Study(KanaData.hList);
+
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.hList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.hList, false);
+            }
         }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaBSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.bList);
+            //remove Study(KanaData.bList);
+
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.bList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.bList, false);
+            }
         }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaPSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.pList);
+            //remove Study(KanaData.pList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.pList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.pList, false);
+            }
+
         }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaMSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.mList);
+            //remove Study(KanaData.mList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.mList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.mList, false);
+            }
         }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaYSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.yList);
+            //remove Study(KanaData.yList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.yList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.yList, false);
+            }
         }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaRSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.rList);
+            //remove Study(KanaData.rList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.rList, true);
+            }
+            if (radHirigana.Checked)
+            {
+                Study(KanaData.rList, false);
+            }
         }
 
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void mnuKanaWSoundsStudy_Click(object sender, EventArgs e) {
-            Study(KanaData.wList);
+            if (radKatakana.Checked)
+            {
+                Study(KanaData.wList, true);
+            }
+            if(radHirigana.Checked)
+            {
+                Study(KanaData.wList, false);
+            }
         }
 
+
+
+
+
+
+        /// <summary>
+        ///
+        /// </summary>
 		private void btnCheck_Click(object sender, EventArgs e)
 		{
-			/*todo Call study function
-			 * depending on what radio button is checked.
+			if(txtRomanji.Text != String.Empty)
+            {
+                //todo figure out how to get the list that user is currently studying.
+                //CheckRomanji(txtRomanji.Text,????)
+            }
+
+
+            /*todo
 			 * declare a list of strings of what has been already
 			 * studied.
 			 * Figure out some way to seprate list of what has been
 			 * guessed and what hasn't and update lblKana that way
 			 * FYI Launchcode if you see this Please help!!!.
 			 */
+
 		}
 	}
 }

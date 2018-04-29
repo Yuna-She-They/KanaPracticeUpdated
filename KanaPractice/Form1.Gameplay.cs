@@ -10,9 +10,7 @@ namespace KanaPractice
     #region Using Directives
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
     using System.Windows.Forms;
     using KanaPractice.Data;
     #endregion Using Directives
@@ -34,7 +32,8 @@ namespace KanaPractice
 
 
         /// <summary>
-        ///
+        /// Checks the romanji in the textbox, true if romanji = key of basic kana objcect
+        /// corrosponding to Kana in lblKana
         /// </summary>
         /// <param name="strToCheck">The users entered text to check</param>
         /// <param name="lstOfKanaToCheck">List of kana objects to check</param>
@@ -56,49 +55,32 @@ namespace KanaPractice
             return blnResult;
         }
 
-        //todo Remove 1st Study Method, it won't work with what I want to do..
-
         /// <summary>
-        /// Currently a Dummy method to only show first element of shuffled List.
+        ///
         /// </summary>
-        /// <param name="lstToStudy">the list to study.</param>
-        public void Study(List<BasicKana> lstToStudy) {
-            //todo read up on Threading for WinForms, and learn how to use async and await
-            lstToStudy.Shuffle();
-
-			/*remove if (radKatakana.Checked) {
-                lblKana.Text = lstToStudy[0].Katakana;
-            }
-            if (radHirigana.Checked) {
-                lblKana.Text = lstToStudy[0].Hirg;
-            }
-			*/
-		}
-
-		/// <summary>
-		/// Put a random kana in lblKana, user needs to enter
-        /// correct roman letters in textbox.
-		/// </summary>
-		/// <param name="lstToStudy">The List of kana to Study.
-        /// Lists are in groups by a standard katakana or hirgana chart.
-        /// </param>
-		/// <param name="blnIsKatakana">true of radio button katakana is
-        /// checked, False Otherwise.
-        /// </param>
-		public void Study(List<BasicKana>lstToStudy,bool blnIsKatakana)
-		{
+        /// <param name="lstToStudy"></param>
+        /// <param name="blnKatakana"></param>
+        /// <returns></returns>
+        public string Study(List<BasicKana>lstToStudy,bool blnKatakana)
+        {
             lstToStudy.Shuffle();
             Random rand = new Random();
+            //string result = "";
+            //List<BasicKana> resultList;
             int randNum = rand.Next(lstToStudy.Count);
 
-            if (blnIsKatakana)
+            if(blnKatakana)
             {
-                lblKana.Text = lstToStudy[randNum].Katakana;
-            }
-            else
+                int myNum = randNum;
+                lblKana.Text = lstToStudy[myNum].Katakana;
+                return lstToStudy[myNum].Katakana;
+            }else
             {
-                lblKana.Text = lstToStudy[randNum].Hirg;
+                int myNum = randNum;
+                lblKana.Text = lstToStudy[myNum].Hirg;
+                return lstToStudy[myNum].Hirg;
             }
+
         }
 
         /*todo
