@@ -50,28 +50,14 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaVowelsLearn_Click(object sender, EventArgs e) {
             lblSelectedSounds.Text = "Vowels";
+            this.selectedList = KanaData.vowels;
             if (radKatakana.Checked)
             {
-				//?question Should I possibly Refactor this
-				//?question into another form instead of a message box?
-				/*remove MessageBox.Show($"{KanaData.vowels[0].Romanji} \t {KanaData.vowels[0].Katakana} \n" +
-                    $"{KanaData.vowels[1].Romanji} \t {KanaData.vowels[1].Katakana}\n" +
-                    $"{KanaData.vowels[2].Romanji} \t {KanaData.vowels[2].Katakana}\n" +
-                    $"{KanaData.vowels[3].Romanji} \t {KanaData.vowels[3].Katakana}\n" +
-                    $"{KanaData.vowels[4].Romanji} \t {KanaData.vowels[4].Katakana}","Vowels Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.vowels, true), "Vowels in Katakana");
+				MessageBox.Show(Learn(selectedList, true), "Vowels in Katakana");
             }
             if (radHirigana.Checked)
             {
-				//?question Possiblely Refactor into another form
-				/*remove MessageBox.Show($"{KanaData.vowels[0].Romanji} \t {KanaData.vowels[0].Hirg}\n" +
-                    $"{KanaData.vowels[1].Romanji} \t {KanaData.vowels[1].Hirg}\n" +
-                    $"{KanaData.vowels[2].Romanji} \t {KanaData.vowels[2].Hirg}\n" +
-                    $"{KanaData.vowels[3].Romanji} \t {KanaData.vowels[3].Hirg}\n" +
-                    $"{KanaData.vowels[4].Romanji} \t {KanaData.vowels[4].Hirg}","Vowels Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.vowels, false), "Vowels in Hiragana");
+				MessageBox.Show(Learn(selectedList, false), "Vowels in Hiragana");
             }
         }
 
@@ -82,26 +68,15 @@ namespace KanaPractice {
         {
             // ?question Should I re-factor this into another form?
             lblSelectedSounds.Text = "K Sounds";
+            selectedList = KanaData.kList;
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.kList[0].Romanji} \t {KanaData.kList[0].Katakana}\n" +
-                    $"{KanaData.kList[1].Romanji} \t {KanaData.kList[1].Katakana}\n" +
-                    $"{KanaData.kList[2].Romanji} \t {KanaData.kList[2].Katakana}\n" +
-                    $"{KanaData.kList[3].Romanji} \t {KanaData.kList[4].Katakana}\n" +
-                    $"{KanaData.kList[4].Romanji} \t {KanaData.kList[4].Katakana}","K Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.kList, true), "K Sounds Katakana");
+				MessageBox.Show(Learn(selectedList, true), "K Sounds Katakana");
 
             }
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.kList[0].Romanji} \t {KanaData.kList[0].Hirg}\n" +
-                    $"{KanaData.kList[1].Romanji} \t {KanaData.kList[1].Hirg}\n" +
-                    $"{KanaData.kList[2].Romanji} \t {KanaData.kList[2].Hirg}\n" +
-                    $"{KanaData.kList[3].Romanji} \t {KanaData.kList[3].Hirg}\n" +
-                    $"{KanaData.kList[4].Romanji} \t {KanaData.kList[4].Hirg}","K Sounds, Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.kList, false), "K sounds hiragana");
+				MessageBox.Show(Learn(selectedList, false), "K sounds hiragana");
             }
         }
 
@@ -111,25 +86,14 @@ namespace KanaPractice {
         private void mnuKanaGSoundsLearn_Click(object sender, EventArgs e) {
             // ?question Should I refactor this into a new form
             lblSelectedSounds.Text = "G Sounds";
-
+            selectedList = KanaData.gList;
             if (radKatakana.Checked)
             {
-				/*removeMessageBox.Show($"{KanaData.gList[0].Romanji} \t {KanaData.gList[0].Katakana}\n" +
-                    $"{KanaData.gList[1].Romanji} \t {KanaData.gList[1].Katakana}\n" +
-                    $"{KanaData.gList[2].Romanji} \t {KanaData.gList[2].Katakana}\n" +
-                    $"{KanaData.gList[3].Romanji} \t {KanaData.gList[3].Katakana}\n" +
-                    $"{KanaData.gList[4].Romanji} \t {KanaData.gList[4].Katakana}","G Sounds Katakana");*/
-				MessageBox.Show(Learn(KanaData.gList, true), "G Sounds Katakana");
+				MessageBox.Show(Learn(selectedList, true), "G Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.gList[0].Romanji} \t {KanaData.gList[0].Hirg}\n" +
-                    $"{KanaData.gList[1].Romanji} \t {KanaData.gList[1].Hirg}\n" +
-                    $"{KanaData.gList[2].Romanji} \t {KanaData.gList[2].Hirg}\n" +
-                    $"{KanaData.gList[3].Romanji} \t {KanaData.gList[3].Hirg}\n" +
-                    $"{KanaData.gList[4].Romanji} \t {KanaData.gList[4].Hirg}","G Sounds Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.gList, false), "G Sounds hiragana");
+				MessageBox.Show(Learn(selectedList, false), "G Sounds hiragana");
             }
         }
 
@@ -140,27 +104,15 @@ namespace KanaPractice {
         {
             //?question should I refactor this into a new form?
             this.lblSelectedSounds.Text = "S Sounds";
-
+            selectedList = KanaData.sList;
             if (radKatakana.Checked)
             {
 
-				/*remove MessageBox.Show($"{KanaData.sList[0].Romanji} \t {KanaData.sList[0].Katakana}\n" +
-                    $"{KanaData.sList[1].Romanji} \t {KanaData.sList[1].Katakana}\n" +
-                    $"{KanaData.sList[2].Romanji} \t {KanaData.sList[2].Katakana}\n" +
-                    $"{KanaData.sList[3].Romanji} \t {KanaData.sList[3].Katakana}\n" +
-                    $"{KanaData.sList[4].Romanji} \t {KanaData.sList[4].Katakana}","S Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.sList, true), "S sounds Katakana");
+				MessageBox.Show(Learn(selectedList, true), "S sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.sList[0].Romanji} \t {KanaData.sList[0].Hirg}\n" +
-                    $"{KanaData.sList[1].Romanji} \t {KanaData.sList[1].Hirg}\n" +
-                    $"{KanaData.sList[2].Romanji} \t {KanaData.sList[2].Hirg}\n" +
-                    $"{KanaData.sList[3].Romanji} \t {KanaData.sList[3].Hirg} {KanaData.sList[3].Hirg}\n" +
-                    $"{KanaData.sList[4].Romanji} \t {KanaData.sList[4].Hirg}","S Sounds Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.sList, false), "S Sounds Hiragana");
+				MessageBox.Show(Learn(selectedList, false), "S Sounds Hiragana");
             }
         }
 
@@ -169,28 +121,17 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaZSoundsLearn_Click(object sender, EventArgs e)
         {
-            // ?question Should I refactor this into a new form
+            //?question Should I refactor this into a new form
             lblSelectedSounds.Text = "Z Sounds";
+            selectedList = KanaData.zList;
 
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.zList[0].Romanji} \t {KanaData.zList[0].Katakana}\n" +
-                    $"{KanaData.zList[1].Romanji} \t {KanaData.zList[1].Katakana}\n" +
-                    $"{KanaData.zList[2].Romanji} \t {KanaData.zList[2].Katakana}\n" +
-                    $"{KanaData.zList[3].Romanji} \t {KanaData.zList[3].Katakana}\n" +
-                    $"{KanaData.zList[4].Romanji} \t {KanaData.zList[4].Katakana}","Z Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.zList, true), "Z Sounds Katakana");
+				MessageBox.Show(Learn(selectedList, true), "Z Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				/*remove  MessageBox.Show($"{KanaData.zList[0].Romanji} \t {KanaData.zList[0].Hirg}" +
-					 $"{KanaData.zList[1].Romanji} \t {KanaData.zList[1].Hirg}\n" +
-					 $"{KanaData.zList[2].Romanji} \t {KanaData.zList[2].Hirg}\n" +
-					 $"{KanaData.zList[3].Romanji} \t {KanaData.zList[3].Hirg}\n" +
-					 $"{KanaData.zList[4].Romanji} \t {KanaData.zList[4].Hirg}", "Z Sounds Hiragana");
-				 */
-				MessageBox.Show(Learn(KanaData.zList, false), "Z Sounds Hiragana");
+				MessageBox.Show(Learn(selectedList, false), "Z Sounds Hiragana");
             }
         }
 
@@ -201,29 +142,15 @@ namespace KanaPractice {
         {
             // ?question Should I refactor this into a new form
             lblSelectedSounds.Text = "T Sounds";
-
+            selectedList = KanaData.tList;
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.tList[0].Romanji} \t {KanaData.tList[0].Katakana}\n" +
-                    $"{KanaData.tList[1].Romanji} \t {KanaData.tList[1].Katakana}\n" +
-                    $"{KanaData.tList[2].Romanji} \t {KanaData.tList[2].Katakana}\n" +
-                    $"{KanaData.tList[3].Romanji} \t {KanaData.tList[3].Katakana}\n" +
-                    $"{KanaData.tList[4].Romanji} \t {KanaData.tList[4].Katakana}", "T Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.tList, true), "T Sounds Katakana");
+				MessageBox.Show(Learn(selectedList, true), "T Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-
-				/*remove MessageBox.Show($"{KanaData.tList[0].Romanji} \t {KanaData.tList[0].Hirg}\n" +
-                    $"{KanaData.tList[1].Romanji} \t {KanaData.tList[1].Hirg}\n" +
-                    $"{KanaData.tList[2].Romanji} \t {KanaData.tList[2].Hirg}\n" +
-                    $"{KanaData.tList[3].Romanji} \t {KanaData.tList[3].Hirg}\n" +
-                    $"{KanaData.tList[4].Romanji} \t {KanaData.tList[4].Hirg}", "T Sounds, Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.tList, false), "T Sounds Hiragana");
-
+				MessageBox.Show(Learn(selectedList, false), "T Sounds Hiragana");
             }
         }
 
@@ -234,26 +161,14 @@ namespace KanaPractice {
         {
             //?question should I refactor this into a new form
             lblSelectedSounds.Text = "D Sounds";
-
+            selectedList = KanaData.dList;
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.dList[0].Romanji} \t {KanaData.dList[0].Katakana}\n" +
-                    $"{KanaData.dList[1].Romanji} \t {KanaData.dList[1].Katakana}\n" +
-                    $"{KanaData.dList[2].Romanji} \t {KanaData.dList[2].Katakana}\n" +
-                    $"{KanaData.dList[3].Romanji} \t {KanaData.dList[3].Katakana}\n" +
-                    $"{KanaData.dList[4].Romanji} \t {KanaData.dList[4].Katakana}", "D Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.dList, true), "D Sounds Katakana");
+				MessageBox.Show(Learn(selectedList, true), "D Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.dList[0].Romanji} \t {KanaData.dList[0].Hirg}\n" +
-                    $"{KanaData.dList[1].Romanji} \t {KanaData.dList[1].Hirg}\n" +
-                    $"{KanaData.dList[2].Romanji} \t {KanaData.dList[2].Hirg}\n" +
-                    $"{KanaData.dList[3].Romanji} \t {KanaData.dList[3].Hirg}\n" +
-                    $"{KanaData.dList[4].Romanji} \t {KanaData.dList[4].Hirg}", "D Sounds Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.dList, false), "D Sounds Hiragana");
+				MessageBox.Show(Learn(selectedList, false), "D Sounds Hiragana");
             }
         }
 
@@ -271,28 +186,15 @@ namespace KanaPractice {
         {
             //?question should I refactor this into a new form?
             lblSelectedSounds.Text = "N Sounds";
-
-
+            selectedList = KanaData.nList;
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.nList[0].Romanji} \t {KanaData.nList[0].Katakana}\n" +
-                    $"{KanaData.nList[1].Romanji} \t {KanaData.nList[1].Katakana}\n" +
-                    $"{KanaData.nList[2].Romanji} \t {KanaData.nList[2].Katakana}\n" +
-                    $"{KanaData.nList[3].Romanji} \t {KanaData.nList[3].Katakana}\n" +
-                    $"{KanaData.nList[4].Romanji} \t {KanaData.nList[4].Katakana}", "N Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.nList, true), "N Sounds Katakana");
+				MessageBox.Show(Learn(selectedList, true), "N Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.nList[0].Romanji} \t {KanaData.nList[0].Hirg}\n" +
-                    $"{KanaData.nList[1].Romanji} \t {KanaData.nList[1].Hirg}\n" +
-                    $"{KanaData.nList[2].Romanji} \t {KanaData.nList[2].Hirg}\n" +
-                    $"{KanaData.nList[3].Romanji} \t {KanaData.nList[3].Hirg}\n" +
-                    $"{KanaData.nList[4].Romanji} \t {KanaData.nList[4].Hirg}", "N Sounds Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.nList, false), "N Sounds Hiragana");
+				MessageBox.Show(Learn(selectedList, false), "N Sounds Hiragana");
             }
         }
 
@@ -301,27 +203,16 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaHSoundsLearn_Click(object sender, EventArgs e)
         {
+            selectedList = KanaData.hList;
             // ?question should I refactor this into a new form?
             lblSelectedSounds.Text = "H Sounds";
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.hList[0].Romanji} \t {KanaData.hList[0].Katakana}\n" +
-                    $"{KanaData.hList[1].Romanji} \t {KanaData.hList[1].Katakana}\n" +
-                    $"{KanaData.hList[2].Romanji} \t {KanaData.hList[2].Katakana}\n" +
-                    $"{KanaData.hList[3].Romanji} \t {KanaData.hList[3].Katakana}\n" +
-                    $"{KanaData.hList[4].Romanji} \t {KanaData.hList[4].Katakana}", "H Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.hList, true), "H Sounds Katakana");
+				MessageBox.Show(Learn(selectedList, true), "H Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.hList[0].Romanji} \t {KanaData.hList[0].Hirg}\t" +
-                    $"{KanaData.hList[1].Romanji} \t {KanaData.hList[1].Hirg}\n" +
-                    $"{KanaData.hList[2].Romanji} \t {KanaData.hList[2].Hirg}\n" +
-                    $"{KanaData.hList[3].Romanji} \t {KanaData.hList[3].Hirg}\n" +
-                    $"{KanaData.hList[4].Romanji} \t {KanaData.hList[4].Hirg}", "H Sounds Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.hList, false), "H Sounds Hiragana");
+				MessageBox.Show(Learn(selectedList, false), "H Sounds Hiragana");
             }
         }
 
@@ -329,29 +220,19 @@ namespace KanaPractice {
         ///
         /// </summary>
         private void mnuKanaBSoundsLearn_Click(object sender, EventArgs e) {
-            // ?question should I refactor this into a new form?
+            List<BasicKana> learnList = KanaData.bList;
+
+            //?question should I refactor this into a new form?
             lblSelectedSounds.Text = "B Sounds";
 
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.bList[0].Romanji} \t {KanaData.bList[0].Katakana}\n" +
-                    $"{KanaData.bList[1].Romanji} \t {KanaData.bList[1].Katakana}\n" +
-                    $"{KanaData.bList[2].Romanji} \t {KanaData.bList[2].Katakana}\n" +
-                    $"{KanaData.bList[3].Romanji} \t {KanaData.bList[3].Katakana}\n" +
-                    $"{KanaData.bList[4].Romanji} \t {KanaData.bList[4].Katakana}", "B Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.bList, true), "B Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "B Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.bList[0].Romanji} \t {KanaData.bList[0].Hirg}\n" +
-                    $"{KanaData.bList[1].Romanji} \t {KanaData.bList[1].Hirg}\n" +
-                    $"{KanaData.bList[2].Romanji} \t {KanaData.bList[2].Hirg}\n" +
-                    $"{KanaData.bList[3].Romanji} \t {KanaData.bList[3].Hirg}\n" +
-                    $"{KanaData.bList[4].Romanji} \t {KanaData.bList[4].Hirg}", "B Sounds Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.bList, false), "B Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "B Sounds Hiragana");
             }
         }
 
@@ -360,27 +241,16 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaPSoundsLearn_Click(object sender, EventArgs e)
         {
+            List<BasicKana> learnList = KanaData.pList;
             // ?question should I refactor this into a new form?
             lblSelectedSounds.Text = "P Sounds";
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.pList[0].Romanji} \t {KanaData.pList[0].Katakana}\n" +
-                    $"{KanaData.pList[1].Romanji} \t {KanaData.pList[1].Katakana}\n" +
-                    $"{KanaData.pList[2].Romanji} \t {KanaData.pList[2].Katakana}\n" +
-                    $"{KanaData.pList[3].Romanji} \t {KanaData.pList[3].Katakana}\n" +
-                    $"{KanaData.pList[4].Romanji} \t {KanaData.pList[4].Katakana}", "P Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.pList, true), "P Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "P Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.pList[0].Romanji} \t {KanaData.pList[0].Hirg}\n" +
-                    $"{KanaData.pList[1].Romanji} \t {KanaData.pList[1].Hirg}\n" +
-                    $"{KanaData.pList[2].Romanji} \t {KanaData.pList[2].Hirg}\n" +
-                    $"{KanaData.pList[3].Romanji} \t {KanaData.pList[3].Hirg}\n" +
-                    $"{KanaData.pList[4].Romanji} \t {KanaData.pList[4].Hirg}", "P Sounds Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.pList, false), "P Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "P Sounds Hiragana");
             }
         }
 
@@ -389,29 +259,18 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaMSoundsLearn_Click(object sender, EventArgs e)
         {
+            List<BasicKana> learnList = KanaData.mList;
             //?question should I refactor this into a new form?
             lblSelectedSounds.Text = "M Sounds";
 
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.mList[0].Romanji} \t {KanaData.mList[0].Katakana}\n" +
-                    $"{KanaData.mList[1].Romanji} \t {KanaData.mList[1].Katakana}\n" +
-                    $"{KanaData.mList[2].Romanji} \t {KanaData.mList[2].Katakana}\n" +
-                    $"{KanaData.mList[3].Romanji} \t {KanaData.mList[3].Katakana}\n" +
-                    $"{KanaData.mList[4].Romanji} \t {KanaData.mList[4].Katakana}", "M Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.mList, true), "M Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "M Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.mList[0].Romanji} \t {KanaData.mList[0].Hirg}\n" +
-					 $"{KanaData.mList[1].Romanji} \t {KanaData.mList[1].Hirg}\n" +
-					 $"{KanaData.mList[2].Romanji} \t {KanaData.mList[2].Hirg}\n" +
-					 $"{KanaData.mList[3].Romanji} \t {KanaData.mList[3].Hirg}\n" +
-					 $"{KanaData.mList[4].Romanji} \t {KanaData.mList[4].Hirg}","M Sounds Hiragana");
-				 */
-				MessageBox.Show(Learn(KanaData.mList, false), "M Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "M Sounds Hiragana");
             }
         }
 
@@ -420,25 +279,18 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaYSoundsLearn_Click(object sender, EventArgs e)
         {
+            List<BasicKana> learnList = KanaData.rList;
             // !important Note that this list only has 3 elements in it
             lblSelectedSounds.Text = "Y Sounds";
 
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.yList[0].Romanji} \t {KanaData.yList[0].Katakana}\n" +
-                    $"{KanaData.yList[1].Romanji} \t {KanaData.yList[1].Katakana}\n" +
-                    $"{KanaData.yList[2].Romanji} \t {KanaData.yList[2].Katakana}", "Y Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.yList, true), "Y Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "Y Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.yList[0].Romanji} \t {KanaData.yList[0].Hirg}\n" +
-                    $"{KanaData.yList[1].Romanji} \t {KanaData.yList[1].Hirg}\n" +
-                    $"{KanaData.yList[2].Romanji} \t {KanaData.yList[2].Hirg}", "Y Sounds Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.yList, false), "Y Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "Y Sounds Hiragana");
             }
         }
 
@@ -447,29 +299,18 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaRSoundsLearn_Click(object sender, EventArgs e)
         {
+            List<BasicKana> learnList = KanaData.rList;
             //!important The corrospinding List here has 5 elements (subscripts 0 -4)
             lblSelectedSounds.Text = "R Sounds";
 
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.rList[0].Romanji} \t {KanaData.rList[0].Katakana}\n" +
-                    $"{KanaData.rList[1].Romanji} \t {KanaData.rList[1].Katakana}\n" +
-                    $"{KanaData.rList[2].Romanji} \t {KanaData.rList[2].Katakana}\n" +
-                    $"{KanaData.rList[3].Romanji} \t {KanaData.rList[3].Katakana}\n" +
-                    $"{KanaData.rList[4].Romanji} \t {KanaData.rList[4].Katakana}", "R Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.rList, true), "R Sounds Katakana");
+                MessageBox.Show(Learn(learnList, true), "R Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.rList[0].Romanji} \t {KanaData.rList[0].Hirg}\n" +
-                    $"{KanaData.rList[1].Romanji} \t {KanaData.rList[1].Hirg}\n" +
-                    $"{KanaData.rList[2].Romanji} \t {KanaData.rList[2].Hirg}\n" +
-                    $"{KanaData.rList[3].Romanji} \t {KanaData.rList[3].Hirg}\n" +
-                    $"{KanaData.rList[4].Romanji} \t {KanaData.rList[4].Hirg}", "R Sounds Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.rList, false), "R Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "R Sounds Hiragana");
             }
         }
 
@@ -478,27 +319,20 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaWSoundsLearn_Click(object sender, EventArgs e)
         {
-            // !important This corrosponding list only has 3 elements (subscripts 0 - 2)
+            //!important This corrosponding list only has 3 elements (subscripts 0 - 2)
 
-            // ?question Should I use another form instead of a message box for the "learn" feature
+            List<BasicKana> learnList = KanaData.wList;
+            //?question Should I use another form instead of a message box for the "learn" feature
             lblSelectedSounds.Text = "W Sounds (Wa, Wo, N)";
 
             if (radKatakana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.wList[0].Romanji} \t {KanaData.wList[0].Katakana}\n" +
-                    $"{KanaData.wList[1].Romanji} \t {KanaData.wList[1].Katakana}\n" +
-                    $"{KanaData.wList[2].Romanji} \t {KanaData.wList[2].Katakana}", "W Sounds Katakana");
-				*/
-				MessageBox.Show(Learn(KanaData.wList, true), "W Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "W Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-				/*remove MessageBox.Show($"{KanaData.wList[0].Romanji} \t {KanaData.wList[0].Hirg}\n" +
-                    $"{KanaData.wList[1].Romanji} \t {KanaData.wList[1].Hirg}\n" +
-                    $"{KanaData.wList[2].Romanji} \t {KanaData.wList[2].Hirg}", "W Sounds Hiragana");
-				*/
-				MessageBox.Show(Learn(KanaData.wList, false), "W Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "W Sounds Hiragana");
             }
         }
 
@@ -507,6 +341,7 @@ namespace KanaPractice {
         /// </summary>
         private void mnuModifedLearn_Click(object sender, EventArgs e)
         {
+            List<BasicKana> learnList = KanaData.modifiedKanaList;
 			//!important 36 (Subscripts 0 - 35) Elements in this list
 			//todo Create a New Form, for this "Learn" functionality
 			if (radKatakana.Checked)
@@ -525,7 +360,9 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaVowelsStudy_Click(object sender, EventArgs e)
         {
+            //remove List<string> studied = new List<string>();
             //remove Study(KanaData.vowels);
+            List<BasicKana> studyList = KanaData.vowels;
             if (radKatakana.Checked)
             {
                 Study(KanaData.vowels, true);
@@ -542,13 +379,15 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaKSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.kList);
+            List<BasicKana> studyList = KanaData.kList;
+
             if (radKatakana.Checked)
             {
-                Study(KanaData.kList, true);
+                Study(studyList, true);
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.kList, false);
+                Study(studyList, false);
             }
         }
 
@@ -556,14 +395,16 @@ namespace KanaPractice {
         ///
         /// </summary>
         private void mnuKanaGSoundsStudy_Click(object sender, EventArgs e) {
+
+            List<BasicKana> studyList = KanaData.gList;
             //remove Study(KanaData.gList);
             if (radKatakana.Checked)
             {
-                Study(KanaData.gList, true);
+                Study(studyList, true);
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.gList, false);
+                Study(studyList, false);
             }
         }
 
@@ -571,14 +412,17 @@ namespace KanaPractice {
         ///
         /// </summary>
         private void mnuKanaSSoundsStudy_Click(object sender, EventArgs e) {
+
+            List<BasicKana> studyList = KanaData.sList;
+
             //remove Study(KanaData.sList);
             if (radKatakana.Checked)
             {
-                Study(KanaData.sList, true);
+                Study(studyList, true);
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.sList, false);
+                Study(studyList, false);
             }
         }
 
@@ -587,16 +431,16 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaZSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.zList);
-
+            List<BasicKana> studyList = KanaData.zList;
             //I feel like this could be done with an if-else statment but
             //I feel like this way is a bit more readable.
             if (radKatakana.Checked)
             {
-                Study(KanaData.zList, true);
+                Study(studyList, true);
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.zList, false);
+                Study(studyList, false);
             }
         }
 
@@ -605,13 +449,14 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaTSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.tList);
+            List<BasicKana> studyList = KanaData.tList;
             if (radKatakana.Checked)
             {
-                Study(KanaData.tList, true);
+                Study(studyList, true);
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.tList, false);
+                Study(studyList, false);
             }
         }
 
@@ -620,13 +465,15 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaDSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.dList);
+
+            List<BasicKana> studyList = KanaData.dList;
             if (radKatakana.Checked)
             {
-                Study(KanaData.dList, true);
+                Study(studyList, true);
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.dList, false);
+                Study(studyList, false);
             }
         }
 

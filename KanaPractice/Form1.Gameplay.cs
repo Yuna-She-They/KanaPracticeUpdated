@@ -30,6 +30,11 @@ namespace KanaPractice
             set;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<BasicKana> selectedList;
+
 
         /// <summary>
         /// Checks the romanji in the textbox, true if romanji = key of basic kana objcect
@@ -117,7 +122,6 @@ namespace KanaPractice
 			string result = stringBuilder.ToString();
 
 			return result;
-
 		}
 
     }
