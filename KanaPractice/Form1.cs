@@ -50,14 +50,14 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaVowelsLearn_Click(object sender, EventArgs e) {
             lblSelectedSounds.Text = "Vowels";
-            this.selectedList = KanaData.vowels;
+            learnList = KanaData.vowels;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, true), "Vowels in Katakana");
+				MessageBox.Show(Learn(learnList, true), "Vowels in Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, false), "Vowels in Hiragana");
+				MessageBox.Show(Learn(learnList, false), "Vowels in Hiragana");
             }
         }
 
@@ -68,15 +68,14 @@ namespace KanaPractice {
         {
             // ?question Should I re-factor this into another form?
             lblSelectedSounds.Text = "K Sounds";
-            selectedList = KanaData.kList;
+            learnList = KanaData.kList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, true), "K Sounds Katakana");
-
+				MessageBox.Show(Learn(learnList, true), "K Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, false), "K sounds hiragana");
+				MessageBox.Show(Learn(learnList, false), "K sounds hiragana");
             }
         }
 
@@ -86,14 +85,14 @@ namespace KanaPractice {
         private void mnuKanaGSoundsLearn_Click(object sender, EventArgs e) {
             // ?question Should I refactor this into a new form
             lblSelectedSounds.Text = "G Sounds";
-            selectedList = KanaData.gList;
+            learnList = KanaData.gList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, true), "G Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "G Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, false), "G Sounds hiragana");
+				MessageBox.Show(Learn(learnList, false), "G Sounds hiragana");
             }
         }
 
@@ -104,15 +103,14 @@ namespace KanaPractice {
         {
             //?question should I refactor this into a new form?
             this.lblSelectedSounds.Text = "S Sounds";
-            selectedList = KanaData.sList;
+            learnList = KanaData.sList;
             if (radKatakana.Checked)
             {
-
-				MessageBox.Show(Learn(selectedList, true), "S sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "S sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, false), "S Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "S Sounds Hiragana");
             }
         }
 
@@ -123,15 +121,15 @@ namespace KanaPractice {
         {
             //?question Should I refactor this into a new form
             lblSelectedSounds.Text = "Z Sounds";
-            selectedList = KanaData.zList;
+            learnList = KanaData.zList;
 
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, true), "Z Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "Z Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, false), "Z Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "Z Sounds Hiragana");
             }
         }
 
@@ -142,15 +140,15 @@ namespace KanaPractice {
         {
             // ?question Should I refactor this into a new form
             lblSelectedSounds.Text = "T Sounds";
-            selectedList = KanaData.tList;
+            learnList = KanaData.tList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, true), "T Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "T Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, false), "T Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "T Sounds Hiragana");
             }
         }
 
@@ -161,14 +159,14 @@ namespace KanaPractice {
         {
             //?question should I refactor this into a new form
             lblSelectedSounds.Text = "D Sounds";
-            selectedList = KanaData.dList;
+            learnList = KanaData.dList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, true), "D Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "D Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, false), "D Sounds Hiragana");
+                MessageBox.Show(Learn(learnList, false), "D Sounds Hiragana");
             }
         }
 
@@ -186,15 +184,15 @@ namespace KanaPractice {
         {
             //?question should I refactor this into a new form?
             lblSelectedSounds.Text = "N Sounds";
-            selectedList = KanaData.nList;
+            learnList = KanaData.nList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, true), "N Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "N Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, false), "N Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "N Sounds Hiragana");
             }
         }
 
@@ -203,16 +201,16 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaHSoundsLearn_Click(object sender, EventArgs e)
         {
-            selectedList = KanaData.hList;
+            learnList = KanaData.hList;
             // ?question should I refactor this into a new form?
             lblSelectedSounds.Text = "H Sounds";
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, true), "H Sounds Katakana");
+				MessageBox.Show(Learn(learnList, true), "H Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(selectedList, false), "H Sounds Hiragana");
+				MessageBox.Show(Learn(learnList, false), "H Sounds Hiragana");
             }
         }
 
@@ -220,7 +218,7 @@ namespace KanaPractice {
         ///
         /// </summary>
         private void mnuKanaBSoundsLearn_Click(object sender, EventArgs e) {
-            List<BasicKana> learnList = KanaData.bList;
+            //List<BasicKana> learnList = KanaData.bList;
 
             //?question should I refactor this into a new form?
             lblSelectedSounds.Text = "B Sounds";
@@ -383,11 +381,11 @@ namespace KanaPractice {
 
             if (radKatakana.Checked)
             {
-                Study(studyList, true);
+                studiedList.Add(Study(studyList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(studyList, false);
+                studiedList.Add(Study(studyList, false));
             }
         }
 
@@ -400,11 +398,11 @@ namespace KanaPractice {
             //remove Study(KanaData.gList);
             if (radKatakana.Checked)
             {
-                Study(studyList, true);
+                studiedList.Add(Study(studyList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(studyList, false);
+                studiedList.Add(Study(studyList, false));
             }
         }
 
@@ -418,11 +416,11 @@ namespace KanaPractice {
             //remove Study(KanaData.sList);
             if (radKatakana.Checked)
             {
-                Study(studyList, true);
+                studiedList.Add(Study(studyList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(studyList, false);
+                studiedList.Add(Study(studyList, false));
             }
         }
 
@@ -436,11 +434,11 @@ namespace KanaPractice {
             //I feel like this way is a bit more readable.
             if (radKatakana.Checked)
             {
-                Study(studyList, true);
+                studiedList.Add(Study(studyList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(studyList, false);
+                studiedList.Add(Study(studyList, false));
             }
         }
 
@@ -452,11 +450,11 @@ namespace KanaPractice {
             List<BasicKana> studyList = KanaData.tList;
             if (radKatakana.Checked)
             {
-                Study(studyList, true);
+                studiedList.Add(Study(studyList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(studyList, false);
+                studiedList.Add(Study(studyList, false));
             }
         }
 
@@ -469,11 +467,11 @@ namespace KanaPractice {
             List<BasicKana> studyList = KanaData.dList;
             if (radKatakana.Checked)
             {
-                Study(studyList, true);
+                studiedList.Add(Study(studyList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(studyList, false);
+                studiedList.Add(Study(studyList, false));
             }
         }
 
@@ -485,11 +483,11 @@ namespace KanaPractice {
             //remove Study(KanaData.nList);
             if (radKatakana.Checked)
             {
-                Study(KanaData.nList, true);
+                studiedList.Add(Study(KanaData.nList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.nList, false);
+                studiedList.Add(Study(KanaData.nList, false));
             }
         }
 
@@ -501,11 +499,11 @@ namespace KanaPractice {
 
             if (radKatakana.Checked)
             {
-                Study(KanaData.hList, true);
+                studiedList.Add(Study(KanaData.hList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.hList, false);
+                studiedList.Add(Study(KanaData.hList, false));
             }
         }
 
@@ -517,11 +515,11 @@ namespace KanaPractice {
 
             if (radKatakana.Checked)
             {
-                Study(KanaData.bList, true);
+                studiedList.Add(Study(KanaData.bList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.bList, false);
+                studiedList.Add(Study(KanaData.bList, false));
             }
         }
 
@@ -532,11 +530,11 @@ namespace KanaPractice {
             //remove Study(KanaData.pList);
             if (radKatakana.Checked)
             {
-                Study(KanaData.pList, true);
+                studiedList.Add(Study(KanaData.pList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.pList, false);
+                studiedList.Add(Study(KanaData.pList, false));
             }
 
         }
@@ -548,11 +546,11 @@ namespace KanaPractice {
             //remove Study(KanaData.mList);
             if (radKatakana.Checked)
             {
-                Study(KanaData.mList, true);
+                studiedList.Add(Study(KanaData.mList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.mList, false);
+                studiedList.Add(Study(KanaData.mList, false));
             }
         }
 
@@ -563,11 +561,11 @@ namespace KanaPractice {
             //remove Study(KanaData.yList);
             if (radKatakana.Checked)
             {
-                Study(KanaData.yList, true);
+                studiedList.Add(Study(KanaData.yList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.yList, false);
+                studiedList.Add(Study(KanaData.yList, false));
             }
         }
 
@@ -578,11 +576,11 @@ namespace KanaPractice {
             //remove Study(KanaData.rList);
             if (radKatakana.Checked)
             {
-                Study(KanaData.rList, true);
+                studiedList.Add(Study(KanaData.rList, true));
             }
             if (radHirigana.Checked)
             {
-                Study(KanaData.rList, false);
+                studiedList.Add(Study(KanaData.rList, false));
             }
         }
 
@@ -593,11 +591,11 @@ namespace KanaPractice {
         private void mnuKanaWSoundsStudy_Click(object sender, EventArgs e) {
             if (radKatakana.Checked)
             {
-                Study(KanaData.wList, true);
+                studiedList.Add(Study(KanaData.wList, true));
             }
             if(radHirigana.Checked)
             {
-                Study(KanaData.wList, false);
+                studiedList.Add(Study(KanaData.wList, false));
             }
         }
 

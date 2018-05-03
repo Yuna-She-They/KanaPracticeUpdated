@@ -30,11 +30,18 @@ namespace KanaPractice
             set;
         }
 
+
         /// <summary>
-        /// 
+        /// Stores current list user is studying
         /// </summary>
         public List<BasicKana> selectedList;
 
+        /// <summary>
+        ///
+        /// </summary>
+        public List<BasicKana> learnList;
+
+        public List<BasicKana> studiedList;
 
         /// <summary>
         /// Checks the romanji in the textbox, true if romanji = key of basic kana objcect
@@ -60,13 +67,7 @@ namespace KanaPractice
             return blnResult;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="lstToStudy"></param>
-        /// <param name="blnKatakana"></param>
-        /// <returns></returns>
-        public string Study(List<BasicKana>lstToStudy,bool blnKatakana)
+        /*remove public string Study(List<BasicKana>lstToStudy,bool blnKatakana)
         {
             lstToStudy.Shuffle();
             Random rand = new Random();
@@ -87,7 +88,31 @@ namespace KanaPractice
             }
 
         }
+        */
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="lstToStudy"></param>
+        /// <param name="katakana"></param>
+        /// <returns></returns>
+        public BasicKana Study(List<BasicKana> lstToStudy,bool katakana)
+        {
+            lstToStudy.Shuffle();
+            Random rand = new Random();
+            int myNum = rand.Next(lstToStudy.Count);
+
+            if (katakana)
+            {
+
+                lblKana.Text = lstToStudy[myNum].Katakana;
+            }
+            else
+            {
+                lblKana.Text = lstToStudy[myNum].Hirg;
+            }
+            return lstToStudy[myNum];
+        }
         /*todo
          * Problems:
          * Set Random Kana in lblKana,
