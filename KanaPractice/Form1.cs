@@ -50,7 +50,7 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaVowelsLearn_Click(object sender, EventArgs e) {
             lblSelectedSounds.Text = "Vowels";
-            learnList = KanaData.vowels;
+            List<BasicKana> learnList = KanaData.vowels;
             if (radKatakana.Checked)
             {
 				MessageBox.Show(Learn(learnList, true), "Vowels in Katakana");
@@ -68,7 +68,7 @@ namespace KanaPractice {
         {
             // ?question Should I re-factor this into another form?
             lblSelectedSounds.Text = "K Sounds";
-            learnList = KanaData.kList;
+            List<BasicKana> learnList = KanaData.kList;
             if (radKatakana.Checked)
             {
 				MessageBox.Show(Learn(learnList, true), "K Sounds Katakana");
@@ -85,7 +85,7 @@ namespace KanaPractice {
         private void mnuKanaGSoundsLearn_Click(object sender, EventArgs e) {
             // ?question Should I refactor this into a new form
             lblSelectedSounds.Text = "G Sounds";
-            learnList = KanaData.gList;
+            List<BasicKana> learnList = KanaData.gList;
             if (radKatakana.Checked)
             {
 				MessageBox.Show(Learn(learnList, true), "G Sounds Katakana");
@@ -103,7 +103,7 @@ namespace KanaPractice {
         {
             //?question should I refactor this into a new form?
             this.lblSelectedSounds.Text = "S Sounds";
-            learnList = KanaData.sList;
+            List<BasicKana> learnList = KanaData.sList;
             if (radKatakana.Checked)
             {
 				MessageBox.Show(Learn(learnList, true), "S sounds Katakana");
@@ -121,7 +121,7 @@ namespace KanaPractice {
         {
             //?question Should I refactor this into a new form
             lblSelectedSounds.Text = "Z Sounds";
-            learnList = KanaData.zList;
+            List<BasicKana> learnList = KanaData.zList;
 
             if (radKatakana.Checked)
             {
@@ -140,7 +140,7 @@ namespace KanaPractice {
         {
             // ?question Should I refactor this into a new form
             lblSelectedSounds.Text = "T Sounds";
-            learnList = KanaData.tList;
+            List<BasicKana> learnList = KanaData.tList;
             if (radKatakana.Checked)
             {
 				MessageBox.Show(Learn(learnList, true), "T Sounds Katakana");
@@ -159,7 +159,7 @@ namespace KanaPractice {
         {
             //?question should I refactor this into a new form
             lblSelectedSounds.Text = "D Sounds";
-            learnList = KanaData.dList;
+            List<BasicKana> learnList = KanaData.dList;
             if (radKatakana.Checked)
             {
 				MessageBox.Show(Learn(learnList, true), "D Sounds Katakana");
@@ -184,7 +184,7 @@ namespace KanaPractice {
         {
             //?question should I refactor this into a new form?
             lblSelectedSounds.Text = "N Sounds";
-            learnList = KanaData.nList;
+            List<BasicKana>learnList = KanaData.nList;
             if (radKatakana.Checked)
             {
 				MessageBox.Show(Learn(learnList, true), "N Sounds Katakana");
@@ -201,7 +201,7 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaHSoundsLearn_Click(object sender, EventArgs e)
         {
-            learnList = KanaData.hList;
+            List<BasicKana>learnList = KanaData.hList;
             // ?question should I refactor this into a new form?
             lblSelectedSounds.Text = "H Sounds";
             if (radKatakana.Checked)
@@ -218,10 +218,11 @@ namespace KanaPractice {
         ///
         /// </summary>
         private void mnuKanaBSoundsLearn_Click(object sender, EventArgs e) {
-            //List<BasicKana> learnList = KanaData.bList;
+            List<BasicKana> learnList = KanaData.bList;
 
             //?question should I refactor this into a new form?
             lblSelectedSounds.Text = "B Sounds";
+            //learnList = KanaData.bList;
 
             if (radKatakana.Checked)
             {
@@ -278,7 +279,7 @@ namespace KanaPractice {
         private void mnuKanaYSoundsLearn_Click(object sender, EventArgs e)
         {
             List<BasicKana> learnList = KanaData.rList;
-            // !important Note that this list only has 3 elements in it
+            //!important Note that this list only has 3 elements in it
             lblSelectedSounds.Text = "Y Sounds";
 
             if (radKatakana.Checked)
@@ -361,6 +362,7 @@ namespace KanaPractice {
             //remove List<string> studied = new List<string>();
             //remove Study(KanaData.vowels);
             List<BasicKana> studyList = KanaData.vowels;
+            selectedList = studyList;
             if (radKatakana.Checked)
             {
                 Study(KanaData.vowels, true);
@@ -378,6 +380,7 @@ namespace KanaPractice {
         private void mnuKanaKSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.kList);
             List<BasicKana> studyList = KanaData.kList;
+            selectedList = studyList;
 
             if (radKatakana.Checked)
             {
@@ -396,6 +399,8 @@ namespace KanaPractice {
 
             List<BasicKana> studyList = KanaData.gList;
             //remove Study(KanaData.gList);
+            selectedList = studyList;
+
             if (radKatakana.Checked)
             {
                 studiedList.Add(Study(studyList, true));
@@ -412,6 +417,7 @@ namespace KanaPractice {
         private void mnuKanaSSoundsStudy_Click(object sender, EventArgs e) {
 
             List<BasicKana> studyList = KanaData.sList;
+            selectedList = studyList;
 
             //remove Study(KanaData.sList);
             if (radKatakana.Checked)
@@ -430,6 +436,8 @@ namespace KanaPractice {
         private void mnuKanaZSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.zList);
             List<BasicKana> studyList = KanaData.zList;
+            selectedList = studyList;
+
             //I feel like this could be done with an if-else statment but
             //I feel like this way is a bit more readable.
             if (radKatakana.Checked)
@@ -448,6 +456,8 @@ namespace KanaPractice {
         private void mnuKanaTSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.tList);
             List<BasicKana> studyList = KanaData.tList;
+            selectedList = studyList;
+
             if (radKatakana.Checked)
             {
                 studiedList.Add(Study(studyList, true));
@@ -463,8 +473,9 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaDSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.dList);
-
             List<BasicKana> studyList = KanaData.dList;
+            selectedList = studyList;
+
             if (radKatakana.Checked)
             {
                 studiedList.Add(Study(studyList, true));
@@ -479,15 +490,17 @@ namespace KanaPractice {
         ///
         /// </summary>
         private void mnuKanaNSoundsStudy_Click(object sender, EventArgs e) {
-             //remove List<BasicKana> studyList = KanaData.nList;
+             List<BasicKana> studyList = KanaData.nList;
+            selectedList = studyList;
+
             //remove Study(KanaData.nList);
             if (radKatakana.Checked)
             {
-                studiedList.Add(Study(KanaData.nList, true));
+                studiedList.Add(Study(studyList, true));
             }
             if (radHirigana.Checked)
             {
-                studiedList.Add(Study(KanaData.nList, false));
+                studiedList.Add(Study(studyList, false));
             }
         }
 
@@ -496,6 +509,9 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaHSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.hList);
+            List<BasicKana> studyList = KanaData.hList;
+            selectedList = studyList;
+
 
             if (radKatakana.Checked)
             {
@@ -512,14 +528,16 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaBSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.bList);
+            List<BasicKana> studyList = KanaData.bList;
+            selectedList = studyList;
 
             if (radKatakana.Checked)
             {
-                studiedList.Add(Study(KanaData.bList, true));
+                studiedList.Add(Study(studyList, true));
             }
             if (radHirigana.Checked)
             {
-                studiedList.Add(Study(KanaData.bList, false));
+                studiedList.Add(Study(studyList, false));
             }
         }
 
@@ -528,13 +546,15 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaPSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.pList);
+            List<BasicKana> studyList = KanaData.pList;
+            selectedList = studyList;
             if (radKatakana.Checked)
             {
-                studiedList.Add(Study(KanaData.pList, true));
+                studiedList.Add(Study(studyList, true));
             }
             if (radHirigana.Checked)
             {
-                studiedList.Add(Study(KanaData.pList, false));
+                studiedList.Add(Study(studyList, false));
             }
 
         }
@@ -544,13 +564,16 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaMSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.mList);
+            List<BasicKana> studyList = KanaData.mList;
+            selectedList = studyList;
+
             if (radKatakana.Checked)
             {
-                studiedList.Add(Study(KanaData.mList, true));
+                studiedList.Add(Study(studyList, true));
             }
             if (radHirigana.Checked)
             {
-                studiedList.Add(Study(KanaData.mList, false));
+                studiedList.Add(Study(studyList, false));
             }
         }
 
@@ -559,13 +582,17 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaYSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.yList);
+            List<BasicKana> studyList = KanaData.yList;
+            selectedList = studyList;
             if (radKatakana.Checked)
             {
-                studiedList.Add(Study(KanaData.yList, true));
+                resultKana = Study(studyList, true);
+                studiedList.Add(resultKana);
             }
             if (radHirigana.Checked)
             {
-                studiedList.Add(Study(KanaData.yList, false));
+                //resultKana =
+                studiedList.Add(Study(studyList, false));
             }
         }
 
@@ -574,13 +601,18 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaRSoundsStudy_Click(object sender, EventArgs e) {
             //remove Study(KanaData.rList);
+            List<BasicKana> studyList = KanaData.rList;
+            selectedList = studyList;
+
             if (radKatakana.Checked)
             {
-                studiedList.Add(Study(KanaData.rList, true));
+                resultKana = Study(studyList, true);
+                studiedList.Add(resultKana);
             }
             if (radHirigana.Checked)
             {
-                studiedList.Add(Study(KanaData.rList, false));
+                resultKana = Study(studyList, false);
+                studiedList.Add(resultKana);
             }
         }
 
@@ -589,13 +621,18 @@ namespace KanaPractice {
         ///
         /// </summary>
         private void mnuKanaWSoundsStudy_Click(object sender, EventArgs e) {
+            List<BasicKana> studyList = KanaData.wList;
+            selectedList = studyList;
+
             if (radKatakana.Checked)
             {
-                studiedList.Add(Study(KanaData.wList, true));
+                resultKana = Study(studyList, true);
+                studiedList.Add(resultKana);
             }
             if(radHirigana.Checked)
             {
-                studiedList.Add(Study(KanaData.wList, false));
+                resultKana = Study(studyList, false);
+                studiedList.Add(resultKana);
             }
         }
 
@@ -613,6 +650,10 @@ namespace KanaPractice {
             {
                 //todo figure out how to get the list that user is currently studying.
                 //CheckRomanji(txtRomanji.Text,????)
+                if(CheckRomanji(txtRomanji.Text,selectedList))
+                {
+
+                }
             }
 
 

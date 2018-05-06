@@ -18,7 +18,7 @@ namespace KanaPractice
     /// <summary>
     /// The Game play logic
     /// </summary>
-    public partial class CfrmMain :  Form {
+    public partial class CfrmMain : Form {
         //?question should this be a public or private method?
         //Keep public for now, ask for advice at another code review.
 
@@ -30,6 +30,11 @@ namespace KanaPractice
             set;
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        public BasicKana resultKana;
+
 
         /// <summary>
         /// Stores current list user is studying
@@ -37,10 +42,9 @@ namespace KanaPractice
         public List<BasicKana> selectedList;
 
         /// <summary>
-        ///
+        /// Stores a list of all basic kana user has guessed correctly
+        /// so user will not get a repeat in kana
         /// </summary>
-        public List<BasicKana> learnList;
-
         public List<BasicKana> studiedList;
 
         /// <summary>
@@ -52,43 +56,18 @@ namespace KanaPractice
         /// <returns></returns>
         public bool CheckRomanji(string strToCheck, List<BasicKana> lstOfKanaToCheck) {
 
-            bool blnResult = false;
+
             for (int i = 0; i < lstOfKanaToCheck.Count; i++)
             {
                 if (strToCheck == lstOfKanaToCheck[i].Romanji)
                 {
-                    blnResult = true;
-                }
-                else
-                {
-                    blnResult = false;
+                    studiedList.Add(lstOfKanaToCheck[i]);
+                    return true;
                 }
             }
-            return blnResult;
+            return false;
         }
 
-        /*remove public string Study(List<BasicKana>lstToStudy,bool blnKatakana)
-        {
-            lstToStudy.Shuffle();
-            Random rand = new Random();
-            //string result = "";
-            //List<BasicKana> resultList;
-            int randNum = rand.Next(lstToStudy.Count);
-
-            if(blnKatakana)
-            {
-                int myNum = randNum;
-                lblKana.Text = lstToStudy[myNum].Katakana;
-                return lstToStudy[myNum].Katakana;
-            }else
-            {
-                int myNum = randNum;
-                lblKana.Text = lstToStudy[myNum].Hirg;
-                return lstToStudy[myNum].Hirg;
-            }
-
-        }
-        */
 
         /// <summary>
         ///
