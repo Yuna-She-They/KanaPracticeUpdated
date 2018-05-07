@@ -652,7 +652,19 @@ namespace KanaPractice {
                 //CheckRomanji(txtRomanji.Text,????)
                 if(CheckRomanji(txtRomanji.Text,selectedList))
                 {
-
+                    if(radKatakana.Checked)
+                    {
+                        NextKana(true);
+                    }
+                    else
+                    {
+                        NextKana(false);
+                    }
+                }
+                else
+                {
+                    for(int i = 0; i < selectedList.Count; i++)
+                        lblError.Text = selectedList[i].Romanji;
                 }
             }
 

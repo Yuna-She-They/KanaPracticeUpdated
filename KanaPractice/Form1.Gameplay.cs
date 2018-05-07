@@ -25,10 +25,7 @@ namespace KanaPractice
         /// <summary>
         ///
         /// </summary>
-        public List<BasicKana> guessedCorrectly {
-            get;
-            set;
-        }
+        public List<BasicKana> guessedCorrectly = new List<BasicKana>();
 
         /// <summary>
         ///
@@ -39,13 +36,13 @@ namespace KanaPractice
         /// <summary>
         /// Stores current list user is studying
         /// </summary>
-        public List<BasicKana> selectedList;
+        public List<BasicKana> selectedList = new List<BasicKana>();
 
         /// <summary>
         /// Stores a list of all basic kana user has guessed correctly
         /// so user will not get a repeat in kana
         /// </summary>
-        public List<BasicKana> studiedList;
+        public List<BasicKana> studiedList = new List<BasicKana>();
 
         /// <summary>
         /// Checks the romanji in the textbox, true if romanji = key of basic kana objcect
@@ -62,6 +59,7 @@ namespace KanaPractice
                 if (strToCheck == lstOfKanaToCheck[i].Romanji)
                 {
                     studiedList.Add(lstOfKanaToCheck[i]);
+                    guessedCorrectly.Add(lstOfKanaToCheck[i]);
                     return true;
                 }
             }
@@ -92,15 +90,32 @@ namespace KanaPractice
             }
             return lstToStudy[myNum];
         }
-        /*todo
-         * Problems:
-         * Set Random Kana in lblKana,
-         * have user enter text in txtRomanji,
-         * Validate romanji in textbox,
-         * put correctly guessed kana in a list called guessedCorrectly
-         * if kana is in list move to next kana,
-         * (optional) keep track of guesses, correct and incorrect)
-         */
+
+        /// <summary>
+        ///
+        /// </summary>
+        public void NextKana(bool katakana)
+        {
+            if (katakana)
+            {
+                BasicKana resultKana = Study(selectedList, true);
+            }
+            else
+            {
+                BasicKana resultKana = Study(selectedList, false);
+
+            }
+            if(!guessedCorrectly.Contains(resultKana))
+            {
+                if(katakana)
+                {
+                    resultKana = Study(selectedList, true);
+                }else
+                {
+                    resultKana = Study(selectedList, false);
+                }
+            }
+        }
 
 		/// <summary>
 		/// A function to show the romanji and corresponding Kana.
