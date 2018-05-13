@@ -42,6 +42,7 @@ namespace KanaPractice {
             lblError.Text = String.Empty;
             lblKana.Text = String.Empty;
             lblSelectedSounds.Text = String.Empty;
+            
         }
 
 
