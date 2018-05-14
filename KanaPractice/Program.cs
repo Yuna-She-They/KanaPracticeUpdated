@@ -17,7 +17,8 @@
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CfrmMain());
+            //remove Application.Run(new CfrmMain());
+            Application.Run(new DatabaseForm());
         }
 
         /*remove private void CreateKanaData(string fileName) {
