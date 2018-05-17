@@ -42,7 +42,7 @@ namespace KanaPractice {
             lblError.Text = String.Empty;
             lblKana.Text = String.Empty;
             lblSelectedSounds.Text = String.Empty;
-            
+
         }
 
 
@@ -601,16 +601,16 @@ namespace KanaPractice {
         ///
         /// </summary>
         private void mnuKanaRSoundsStudy_Click(object sender, EventArgs e) {
-            //remove Study(KanaData.rList);
+            // remove Study(KanaData.rList);
             List<BasicKana> studyList = KanaData.rList;
-            selectedList = studyList;
+            this.selectedList = studyList;
 
-            if (radKatakana.Checked)
+            if (this.radKatakana.Checked)
             {
                 resultKana = Study(studyList, true);
                 studiedList.Add(resultKana);
             }
-            if (radHirigana.Checked)
+            if (this.radHirigana.Checked)
             {
                 resultKana = Study(studyList, false);
                 studiedList.Add(resultKana);
@@ -623,14 +623,14 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaWSoundsStudy_Click(object sender, EventArgs e) {
             List<BasicKana> studyList = KanaData.wList;
-            selectedList = studyList;
+            this.selectedList = studyList;
 
-            if (radKatakana.Checked)
+            if (this.radKatakana.Checked)
             {
                 resultKana = Study(studyList, true);
                 studiedList.Add(resultKana);
             }
-            if(radHirigana.Checked)
+            if (this.radHirigana.Checked)
             {
                 resultKana = Study(studyList, false);
                 studiedList.Add(resultKana);
@@ -643,17 +643,17 @@ namespace KanaPractice {
 
 
         /// <summary>
-        ///
+        /// <para>A button to check weather or not text is correct romanji.</para>
         /// </summary>
 		private void btnCheck_Click(object sender, EventArgs e)
 		{
-			if(txtRomanji.Text != String.Empty)
+			if (this.txtRomanji.Text != String.Empty)
             {
-                //todo figure out how to get the list that user is currently studying.
-                //CheckRomanji(txtRomanji.Text,????)
-                if(CheckRomanji(txtRomanji.Text,selectedList))
+                // todo figure out how to get the list that user is currently studying.
+                // CheckRomanji(txtRomanji.Text,????)
+                if (CheckRomanji(txtRomanji.Text, selectedList))
                 {
-                    if(radKatakana.Checked)
+                    if (this.radKatakana.Checked)
                     {
                         NextKana(true);
                     }
@@ -664,13 +664,13 @@ namespace KanaPractice {
                 }
                 else
                 {
-                    for(int i = 0; i < selectedList.Count; i++)
-                        lblError.Text = selectedList[i].Romanji;
+                    for (int i = 0; i < selectedList.Count; i++)
+                        this.lblError.Text = selectedList[i].Romanji;
                 }
             }
 
 
-            /*todo
+            /* todo
 			 * declare a list of strings of what has been already
 			 * studied.
 			 * Figure out some way to seprate list of what has been

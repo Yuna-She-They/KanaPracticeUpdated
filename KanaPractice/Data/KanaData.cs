@@ -38,11 +38,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> kList = new List<BasicKana>
         {
-            new BasicKana("ka","か","カ"),
-            new BasicKana("ki","き","キ"),
-            new BasicKana("ku","く","ク"),
-            new BasicKana("ke","け","ケ"),
-            new BasicKana("ko","こ","コ")
+            new BasicKana("ka", "か", "カ"),
+            new BasicKana("ki", "き", "キ"),
+            new BasicKana("ku", "く", "ク"),
+            new BasicKana("ke", "け", "ケ"),
+            new BasicKana("ko", "こ", "コ")
         };
 
 
@@ -52,11 +52,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscript 0 - 4</remarks>
         public static List<BasicKana> gList = new List<BasicKana>
         {
-            new BasicKana("ga","が","ガ"),
-            new BasicKana("gi","ぎ","ギ"),
-            new BasicKana("gu","ぐ","グ"),
-            new BasicKana("ge","げ","ゲ"),
-            new BasicKana("go","ご","ゴ")
+            new BasicKana("ga", "が", "ガ"),
+            new BasicKana("gi", "ぎ", "ギ"),
+            new BasicKana("gu", "ぐ", "グ"),
+            new BasicKana("ge", "げ", "ゲ"),
+            new BasicKana("go", "ご", "ゴ")
         };
 
         /// <summary>
@@ -65,11 +65,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> sList = new List<BasicKana>
         {
-            new BasicKana("sa","さ","サ"),
-            new BasicKana("shi","し","シ"),
-            new BasicKana("su","す","ス"),
-            new BasicKana("se","せ","セ"),
-            new BasicKana("so","そ","ソ")
+            new BasicKana("sa", "さ", "サ"),
+            new BasicKana("shi", "し", "シ"),
+            new BasicKana("su", "す", "ス"),
+            new BasicKana("se", "せ", "セ"),
+            new BasicKana("so", "そ", "ソ")
         };
 
 
@@ -79,11 +79,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> zList = new List<BasicKana>
         {
-            new BasicKana("za","ざ","ザ"),
-            new BasicKana("ji","じ","ジ"),
-            new BasicKana("zu","ず","ズ"),
-            new BasicKana("ze","ぜ","ゼ"),
-            new BasicKana("zo","ぞ","ゾ")
+            new BasicKana("za", "ざ", "ザ"),
+            new BasicKana("ji", "じ", "ジ"),
+            new BasicKana("zu", "ず", "ズ"),
+            new BasicKana("ze", "ぜ", "ゼ"),
+            new BasicKana("zo", "ぞ", "ゾ")
         };
 
 
@@ -93,11 +93,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> tList = new List<BasicKana>
         {
-            new BasicKana("ta","た","タ"),
-            new BasicKana("chi","ち","千"),
-            new BasicKana("tsu","つ","ツ"),
-            new BasicKana("te","て","テ"),
-            new BasicKana("to","と","ト")
+            new BasicKana("ta", "た", "タ"),
+            new BasicKana("chi", "ち", "千"),
+            new BasicKana("tsu", "つ", "ツ"),
+            new BasicKana("te", "て", "テ"),
+            new BasicKana("to", "と", "ト")
         };
 
 
@@ -107,11 +107,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> dList = new List<BasicKana>
         {
-            new BasicKana("da","だ","ダ"),
-            new BasicKana("di","ぢ","ヂ"),
-            new BasicKana("du","づ","ヅ"),
-            new BasicKana("de","で","デ"),
-            new BasicKana("do","ど","ド")
+            new BasicKana("da", "だ", "ダ"),
+            new BasicKana("di", "ぢ", "ヂ"),
+            new BasicKana("du", "づ", "ヅ"),
+            new BasicKana("de", "で", "デ"),
+            new BasicKana("do", "ど", "ド")
         };
 
         /// <summary>
@@ -120,11 +120,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> nList = new List<BasicKana>
         {
-             new BasicKana("na","な","ナ"),
-             new BasicKana("ni","に","ニ"),
-             new BasicKana("nu","ぬ","ヌ"),
-             new BasicKana("ne","ね","ネ"),
-             new BasicKana("no","の","ノ")
+             new BasicKana("na", "な", "ナ"),
+             new BasicKana("ni", "に", "ニ"),
+             new BasicKana("nu", "ぬ", "ヌ"),
+             new BasicKana("ne", "ね", "ネ"),
+             new BasicKana("no", "の", "ノ")
         };
 
 
@@ -134,11 +134,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> hList = new List<BasicKana>
         {
-            new BasicKana("ha","は","ハ"),
-            new BasicKana("hi","ひ","ヒ"),
-            new BasicKana("fu","ふ","フ"),
-            new BasicKana("he","へ","ヘ"),
-            new BasicKana("ho","ほ","ホ")
+            new BasicKana("ha", "は", "ハ"),
+            new BasicKana("hi", "ひ", "ヒ"),
+            new BasicKana("fu", "ふ", "フ"),
+            new BasicKana("he", "へ", "ヘ"),
+            new BasicKana("ho", "ほ", "ホ")
         };
 
         /// <summary>
@@ -147,11 +147,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> bList = new List<BasicKana>
         {
-            new BasicKana("ba","ば","バ"),
-            new BasicKana("bi","び","ビ"),
-            new BasicKana("bu","ぶ","ブ"),
-            new BasicKana("be","べ","ベ"),
-            new BasicKana("bo","ぼ","ボ")
+            new BasicKana("ba", "ば", "バ"),
+            new BasicKana("bi", "び", "ビ"),
+            new BasicKana("bu", "ぶ", "ブ"),
+            new BasicKana("be", "べ", "ベ"),
+            new BasicKana("bo", "ぼ", "ボ")
         };
 
 
@@ -161,11 +161,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> pList = new List<BasicKana>
         {
-            new BasicKana("pa","ぱ","パ"),
-            new BasicKana("pi","ぴ","ピ"),
-            new BasicKana("pu","ぷ","プ"),
-            new BasicKana("pe","ぺ","ペ"),
-            new BasicKana("po","ぽ","ポ")
+            new BasicKana("pa", "ぱ", "パ"),
+            new BasicKana("pi", "ぴ", "ピ"),
+            new BasicKana("pu", "ぷ", "プ"),
+            new BasicKana("pe", "ぺ", "ペ"),
+            new BasicKana("po", "ぽ", "ポ")
         };
 
         /// <summary>
@@ -174,11 +174,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> mList = new List<BasicKana>
         {
-            new BasicKana("ma","ま","マ"),
-            new BasicKana("mi","み","ミ"),
-            new BasicKana("mu","む","ム"),
-            new BasicKana("me","め","メ"),
-            new BasicKana("mo","も","モ")
+            new BasicKana("ma", "ま", "マ"),
+            new BasicKana("mi", "み", "ミ"),
+            new BasicKana("mu", "む", "ム"),
+            new BasicKana("me", "め", "メ"),
+            new BasicKana("mo", "も", "モ")
         };
 
         /// <summary>
@@ -187,9 +187,9 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 2</remarks>
         public static List<BasicKana> yList = new List<BasicKana>
         {
-            new BasicKana("ya","や","ヤ"),
-            new BasicKana("yu","ゆ","ユ"),
-            new BasicKana("yo","よ","ヨ")
+            new BasicKana("ya", "や", "ヤ"),
+            new BasicKana("yu", "ゆ", "ユ"),
+            new BasicKana("yo", "よ", "ヨ")
         };
 
         /// <summary>
@@ -198,11 +198,11 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 4</remarks>
         public static List<BasicKana> rList = new List<BasicKana>
         {
-            new BasicKana("ra","ら","ラ"),
-            new BasicKana("ri","り","リ"),
-            new BasicKana("ru","る","ル"),
-            new BasicKana("re","れ","レ"),
-            new BasicKana("ro","ろ","ロ")
+            new BasicKana("ra", "ら", "ラ"),
+            new BasicKana("ri", "り", "リ"),
+            new BasicKana("ru", "る", "ル"),
+            new BasicKana("re", "れ", "レ"),
+            new BasicKana("ro", "ろ", "ロ")
         };
 
         /// <summary>
@@ -211,9 +211,9 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 2</remarks>
         public static List<BasicKana> wList = new List<BasicKana>
         {
-            new BasicKana("wa","わ","ワ"),
-            new BasicKana("wo","を","ヲ"),
-            new BasicKana("n","ん","ン")
+            new BasicKana("wa", "わ", "ワ"),
+            new BasicKana("wo", "を", "ヲ"),
+            new BasicKana("n", "ん", "ン")
         };
 
         /// <summary>
@@ -222,42 +222,42 @@ namespace KanaPractice.Data {
         /// <remarks>Subscripts 0 - 35</remarks>
         public static List<BasicKana> modifiedKanaList = new List<BasicKana>
         {
-            new BasicKana("kya","きゃ","キャ"),
-            new BasicKana("kyu","きゅ","キュ"),
-            new BasicKana("kyo","きょ","キョ"),
-            new BasicKana("gya","ぎゃ","ギャ"),
-            new BasicKana("gyu","ぎゅ","ギュ"),
-            new BasicKana("gyo","ぎょ","ギョ"),
-            new BasicKana("sha","しゃ","シャ"),
-            new BasicKana("shu","しゅ","シュ"),
-            new BasicKana("sho","しょ","ショ"),
-            new BasicKana("ja","じゃ","ジャ"),
-            new BasicKana("ju","じゅ","ジュ"),
-            new BasicKana("jo","じょ","ジョ"),
-            new BasicKana("cha","ちゃ","チャ"),
-            new BasicKana("chu","ちゅ","チュ"),
-            new BasicKana("cho","ちょ","チョ"),
-            new BasicKana("dya","ぢゃ","ヂャ"),
-            new BasicKana("dyu","ぢゅ","ヂュ"),
-            new BasicKana("dyo","ぢょ","ヂョ"),
-            new BasicKana("hya","ひゃ","ヒャ"),
-            new BasicKana("hyu","ひゅ","ヒュ"),
-            new BasicKana("hyo","ひょ","ヒョ"),
-            new BasicKana("bya","びゃ","ビャ"),
-            new BasicKana("byu","びゅ","ビュ"),
-            new BasicKana("byo","びょ","ビョ"),
-            new BasicKana("pya","ぴゃ","ピャ"),
-            new BasicKana("pyu","ぴゅ","ピュ"),
-            new BasicKana("pyo","ぴょ","ピョ"),
-            new BasicKana("nya","にゃ","ニャ"),
-            new BasicKana("nyu","にゅ","ニュ"),
-            new BasicKana("nyo","にょ","ニョ"),
-            new BasicKana("mya","みゃ","ミャ"),
-            new BasicKana("myu","みゅ","ミュ"),
-            new BasicKana("myo","みょ","ミョ"),
-            new BasicKana("rya","りゃ","リャ"),
-            new BasicKana("ryu","りゅ","リュ"),
-            new BasicKana("ryo","りょ","リョ"),
+            new BasicKana("kya", "きゃ", "キャ"),
+            new BasicKana("kyu", "きゅ", "キュ"),
+            new BasicKana("kyo", "きょ", "キョ"),
+            new BasicKana("gya", "ぎゃ", "ギャ"),
+            new BasicKana("gyu", "ぎゅ", "ギュ"),
+            new BasicKana("gyo", "ぎょ", "ギョ"),
+            new BasicKana("sha", "しゃ", "シャ"),
+            new BasicKana("shu", "しゅ", "シュ"),
+            new BasicKana("sho", "しょ", "ショ"),
+            new BasicKana("ja", "じゃ", "ジャ"),
+            new BasicKana("ju", "じゅ", "ジュ"),
+            new BasicKana("jo", "じょ", "ジョ"),
+            new BasicKana("cha", "ちゃ", "チャ"),
+            new BasicKana("chu", "ちゅ", "チュ"),
+            new BasicKana("cho", "ちょ", "チョ"),
+            new BasicKana("dya", "ぢゃ", "ヂャ"),
+            new BasicKana("dyu", "ぢゅ", "ヂュ"),
+            new BasicKana("dyo", "ぢょ", "ヂョ"),
+            new BasicKana("hya", "ひゃ", "ヒャ"),
+            new BasicKana("hyu", "ひゅ", "ヒュ"),
+            new BasicKana("hyo", "ひょ", "ヒョ"),
+            new BasicKana("bya", "びゃ", "ビャ"),
+            new BasicKana("byu", "びゅ", "ビュ"),
+            new BasicKana("byo", "びょ", "ビョ"),
+            new BasicKana("pya", "ぴゃ", "ピャ"),
+            new BasicKana("pyu", "ぴゅ", "ピュ"),
+            new BasicKana("pyo", "ぴょ", "ピョ"),
+            new BasicKana("nya", "にゃ", "ニャ"),
+            new BasicKana("nyu", "にゅ", "ニュ"),
+            new BasicKana("nyo", "にょ", "ニョ"),
+            new BasicKana("mya", "みゃ", "ミャ"),
+            new BasicKana("myu", "みゅ", "ミュ"),
+            new BasicKana("myo", "みょ", "ミョ"),
+            new BasicKana("rya", "りゃ", "リャ"),
+            new BasicKana("ryu", "りゅ", "リュ"),
+            new BasicKana("ryo", "りょ", "リョ"),
         };
 
         /// <summary>

@@ -32,5 +32,15 @@ namespace KanaPractice.Properties {
                 return ((string)(this["JapaneseKanaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-1UVADPU;Initial Catalog=Kana;Integrated Security=True")]
+        public string KanaConnectionString {
+            get {
+                return ((string)(this["KanaConnectionString"]));
+            }
+        }
     }
 }

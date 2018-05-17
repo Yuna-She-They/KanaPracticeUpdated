@@ -1,6 +1,9 @@
 ﻿namespace KanaPractice
 {
-    partial class DatabaseForm
+    /// <summary>
+    /// 
+    /// </summary>
+    partial class DataForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +32,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatabaseForm));
-            this.japaneseKanaDataSet = new KanaPractice.JapaneseKanaDataSet();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataForm));
+            this.kanaDataSet = new KanaPractice.KanaDataSet();
             this.kanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kanaTableAdapter = new KanaPractice.JapaneseKanaDataSetTableAdapters.KanaTableAdapter();
-            this.tableAdapterManager = new KanaPractice.JapaneseKanaDataSetTableAdapters.TableAdapterManager();
+            this.kanaTableAdapter = new KanaPractice.KanaDataSetTableAdapters.KanaTableAdapter();
+            this.tableAdapterManager = new KanaPractice.KanaDataSetTableAdapters.TableAdapterManager();
             this.kanaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -53,17 +56,17 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpMode = new System.Windows.Forms.GroupBox();
-            this.radStudy = new System.Windows.Forms.RadioButton();
             this.radLearn = new System.Windows.Forms.RadioButton();
+            this.radStudy = new System.Windows.Forms.RadioButton();
+            this.grpKana = new System.Windows.Forms.GroupBox();
+            this.radKatakana = new System.Windows.Forms.RadioButton();
+            this.radHiragana = new System.Windows.Forms.RadioButton();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.lblKana = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
             this.txtGuess = new System.Windows.Forms.TextBox();
             this.btnCheck = new System.Windows.Forms.Button();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.grpKana = new System.Windows.Forms.GroupBox();
-            this.radHiragana = new System.Windows.Forms.RadioButton();
-            this.radKatakana = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.japaneseKanaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kanaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kanaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kanaBindingNavigator)).BeginInit();
             this.kanaBindingNavigator.SuspendLayout();
@@ -72,15 +75,15 @@
             this.grpKana.SuspendLayout();
             this.SuspendLayout();
             // 
-            // japaneseKanaDataSet
+            // kanaDataSet
             // 
-            this.japaneseKanaDataSet.DataSetName = "JapaneseKanaDataSet";
-            this.japaneseKanaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.kanaDataSet.DataSetName = "KanaDataSet";
+            this.kanaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // kanaBindingSource
             // 
             this.kanaBindingSource.DataMember = "Kana";
-            this.kanaBindingSource.DataSource = this.japaneseKanaDataSet;
+            this.kanaBindingSource.DataSource = this.kanaDataSet;
             // 
             // kanaTableAdapter
             // 
@@ -90,7 +93,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.KanaTableAdapter = this.kanaTableAdapter;
-            this.tableAdapterManager.UpdateOrder = KanaPractice.JapaneseKanaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = KanaPractice.KanaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // kanaBindingNavigator
             // 
@@ -220,7 +223,6 @@
             // kanaDataGridView
             // 
             this.kanaDataGridView.AutoGenerateColumns = false;
-            this.kanaDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.kanaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kanaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -228,10 +230,10 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.kanaDataGridView.DataSource = this.kanaBindingSource;
-            this.kanaDataGridView.Location = new System.Drawing.Point(12, 55);
+            this.kanaDataGridView.Location = new System.Drawing.Point(12, 36);
             this.kanaDataGridView.Name = "kanaDataGridView";
             this.kanaDataGridView.RowTemplate.Height = 28;
-            this.kanaDataGridView.Size = new System.Drawing.Size(564, 67);
+            this.kanaDataGridView.Size = new System.Drawing.Size(451, 220);
             this.kanaDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -239,55 +241,41 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
             this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 62;
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Romanji";
             this.dataGridViewTextBoxColumn2.HeaderText = "Romanji";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 103;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Katakana";
             this.dataGridViewTextBoxColumn3.HeaderText = "Katakana";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 113;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Hiragana";
             this.dataGridViewTextBoxColumn4.HeaderText = "Hiragana";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 110;
             // 
             // grpMode
             // 
             this.grpMode.Controls.Add(this.radStudy);
             this.grpMode.Controls.Add(this.radLearn);
-            this.grpMode.Location = new System.Drawing.Point(582, 44);
+            this.grpMode.Location = new System.Drawing.Point(469, 36);
             this.grpMode.Name = "grpMode";
-            this.grpMode.Size = new System.Drawing.Size(200, 134);
+            this.grpMode.Size = new System.Drawing.Size(99, 104);
             this.grpMode.TabIndex = 2;
             this.grpMode.TabStop = false;
-            this.grpMode.Text = "groupBox1";
-            // 
-            // radStudy
-            // 
-            this.radStudy.AutoSize = true;
-            this.radStudy.Location = new System.Drawing.Point(19, 97);
-            this.radStudy.Name = "radStudy";
-            this.radStudy.Size = new System.Drawing.Size(75, 24);
-            this.radStudy.TabIndex = 1;
-            this.radStudy.TabStop = true;
-            this.radStudy.Text = "Study";
-            this.radStudy.UseVisualStyleBackColor = true;
+            this.grpMode.Text = "Play Mode";
             // 
             // radLearn
             // 
             this.radLearn.AutoSize = true;
-            this.radLearn.Location = new System.Drawing.Point(19, 42);
+            this.radLearn.Location = new System.Drawing.Point(6, 37);
             this.radLearn.Name = "radLearn";
             this.radLearn.Size = new System.Drawing.Size(75, 24);
             this.radLearn.TabIndex = 0;
@@ -295,105 +283,113 @@
             this.radLearn.Text = "Learn";
             this.radLearn.UseVisualStyleBackColor = true;
             // 
+            // radStudy
+            // 
+            this.radStudy.AutoSize = true;
+            this.radStudy.Location = new System.Drawing.Point(7, 68);
+            this.radStudy.Name = "radStudy";
+            this.radStudy.Size = new System.Drawing.Size(75, 24);
+            this.radStudy.TabIndex = 1;
+            this.radStudy.TabStop = true;
+            this.radStudy.Text = "Study";
+            this.radStudy.UseVisualStyleBackColor = true;
+            // 
+            // grpKana
+            // 
+            this.grpKana.Controls.Add(this.radHiragana);
+            this.grpKana.Controls.Add(this.radKatakana);
+            this.grpKana.Location = new System.Drawing.Point(575, 36);
+            this.grpKana.Name = "grpKana";
+            this.grpKana.Size = new System.Drawing.Size(200, 100);
+            this.grpKana.TabIndex = 3;
+            this.grpKana.TabStop = false;
+            this.grpKana.Text = "Kana";
+            // 
+            // radKatakana
+            // 
+            this.radKatakana.AutoSize = true;
+            this.radKatakana.Location = new System.Drawing.Point(7, 37);
+            this.radKatakana.Name = "radKatakana";
+            this.radKatakana.Size = new System.Drawing.Size(102, 24);
+            this.radKatakana.TabIndex = 0;
+            this.radKatakana.TabStop = true;
+            this.radKatakana.Text = "Katakana";
+            this.radKatakana.UseVisualStyleBackColor = true;
+            // 
+            // radHiragana
+            // 
+            this.radHiragana.AutoSize = true;
+            this.radHiragana.Location = new System.Drawing.Point(7, 68);
+            this.radHiragana.Name = "radHiragana";
+            this.radHiragana.Size = new System.Drawing.Size(99, 24);
+            this.radHiragana.TabIndex = 1;
+            this.radHiragana.TabStop = true;
+            this.radHiragana.Text = "Hiragana";
+            this.radHiragana.UseVisualStyleBackColor = true;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(485, 159);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(83, 30);
+            this.btnConfirm.TabIndex = 4;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
             // lblKana
             // 
             this.lblKana.AutoSize = true;
-            this.lblKana.Font = new System.Drawing.Font("mikachan_o-PB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKana.Location = new System.Drawing.Point(13, 199);
+            this.lblKana.Location = new System.Drawing.Point(31, 333);
             this.lblKana.Name = "lblKana";
-            this.lblKana.Size = new System.Drawing.Size(137, 40);
-            this.lblKana.TabIndex = 3;
+            this.lblKana.Size = new System.Drawing.Size(61, 20);
+            this.lblKana.TabIndex = 5;
             this.lblKana.Text = "lblKana";
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(156, 199);
+            this.lblError.Location = new System.Drawing.Point(121, 332);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(126, 46);
-            this.lblError.TabIndex = 4;
+            this.lblError.Size = new System.Drawing.Size(51, 20);
+            this.lblError.TabIndex = 6;
             this.lblError.Text = "label1";
             // 
             // txtGuess
             // 
-            this.txtGuess.Location = new System.Drawing.Point(20, 348);
+            this.txtGuess.Location = new System.Drawing.Point(35, 407);
             this.txtGuess.Name = "txtGuess";
-            this.txtGuess.Size = new System.Drawing.Size(262, 26);
-            this.txtGuess.TabIndex = 5;
+            this.txtGuess.Size = new System.Drawing.Size(137, 26);
+            this.txtGuess.TabIndex = 7;
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(302, 348);
+            this.btnCheck.Location = new System.Drawing.Point(231, 407);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(75, 31);
-            this.btnCheck.TabIndex = 6;
+            this.btnCheck.Size = new System.Drawing.Size(75, 27);
+            this.btnCheck.TabIndex = 8;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Location = new System.Drawing.Point(582, 342);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(117, 38);
-            this.btnConfirm.TabIndex = 7;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // grpKana
-            // 
-            this.grpKana.Controls.Add(this.radKatakana);
-            this.grpKana.Controls.Add(this.radHiragana);
-            this.grpKana.Location = new System.Drawing.Point(588, 184);
-            this.grpKana.Name = "grpKana";
-            this.grpKana.Size = new System.Drawing.Size(200, 152);
-            this.grpKana.TabIndex = 8;
-            this.grpKana.TabStop = false;
-            this.grpKana.Text = "Kana System";
-            // 
-            // radHiragana
-            // 
-            this.radHiragana.AutoSize = true;
-            this.radHiragana.Location = new System.Drawing.Point(13, 30);
-            this.radHiragana.Name = "radHiragana";
-            this.radHiragana.Size = new System.Drawing.Size(99, 24);
-            this.radHiragana.TabIndex = 0;
-            this.radHiragana.TabStop = true;
-            this.radHiragana.Text = "Hiragana";
-            this.radHiragana.UseVisualStyleBackColor = true;
-            // 
-            // radKatakana
-            // 
-            this.radKatakana.AutoSize = true;
-            this.radKatakana.Location = new System.Drawing.Point(13, 80);
-            this.radKatakana.Name = "radKatakana";
-            this.radKatakana.Size = new System.Drawing.Size(102, 24);
-            this.radKatakana.TabIndex = 1;
-            this.radKatakana.TabStop = true;
-            this.radKatakana.Text = "Katakana";
-            this.radKatakana.UseVisualStyleBackColor = true;
-            // 
-            // DatabaseForm
+            // DataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 454);
-            this.Controls.Add(this.grpKana);
-            this.Controls.Add(this.btnConfirm);
+            this.ClientSize = new System.Drawing.Size(800, 470);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.txtGuess);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblKana);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.grpKana);
             this.Controls.Add(this.grpMode);
             this.Controls.Add(this.kanaDataGridView);
             this.Controls.Add(this.kanaBindingNavigator);
-            this.Name = "DatabaseForm";
-            this.Text = "DatabaseForm";
-            this.Load += new System.EventHandler(this.DatabaseForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.japaneseKanaDataSet)).EndInit();
+            this.Name = "DataForm";
+            this.Text = "DataForm";
+            this.Load += new System.EventHandler(this.DataForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.kanaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kanaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kanaBindingNavigator)).EndInit();
             this.kanaBindingNavigator.ResumeLayout(false);
@@ -410,10 +406,10 @@
 
         #endregion
 
-        private JapaneseKanaDataSet japaneseKanaDataSet;
+        private KanaDataSet kanaDataSet;
         private System.Windows.Forms.BindingSource kanaBindingSource;
-        private JapaneseKanaDataSetTableAdapters.KanaTableAdapter kanaTableAdapter;
-        private JapaneseKanaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private KanaDataSetTableAdapters.KanaTableAdapter kanaTableAdapter;
+        private KanaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator kanaBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -435,13 +431,13 @@
         private System.Windows.Forms.GroupBox grpMode;
         private System.Windows.Forms.RadioButton radStudy;
         private System.Windows.Forms.RadioButton radLearn;
+        private System.Windows.Forms.GroupBox grpKana;
+        private System.Windows.Forms.RadioButton radHiragana;
+        private System.Windows.Forms.RadioButton radKatakana;
+        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label lblKana;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.TextBox txtGuess;
         private System.Windows.Forms.Button btnCheck;
-        private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.GroupBox grpKana;
-        private System.Windows.Forms.RadioButton radKatakana;
-        private System.Windows.Forms.RadioButton radHiragana;
     }
 }

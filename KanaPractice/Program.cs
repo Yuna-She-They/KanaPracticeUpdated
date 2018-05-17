@@ -1,4 +1,5 @@
-﻿namespace KanaPractice {
+﻿namespace KanaPractice
+{
     #region Using Directives
     using System;
     using System.Windows.Forms;
@@ -17,11 +18,13 @@
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             //remove Application.Run(new CfrmMain());
-            Application.Run(new DatabaseForm());
+            //remove Application.Run(new DatabaseForm());
+            Application.Run(new DataForm());
         }
 
-        /*remove private void CreateKanaData(string fileName) {
+        /* remove private void CreateKanaData(string fileName) {
             //create an instance of the XmlSerializer class
             //specify the type of object to serialize
 

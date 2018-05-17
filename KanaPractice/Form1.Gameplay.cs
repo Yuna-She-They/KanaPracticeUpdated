@@ -19,16 +19,16 @@ namespace KanaPractice
     /// The Game play logic
     /// </summary>
     public partial class CfrmMain : Form {
-        //?question should this be a public or private method?
-        //Keep public for now, ask for advice at another code review.
+        // ?question should this be a public or private method?
+        // Keep public for now, ask for advice at another code review.
 
         /// <summary>
-        ///
+        /// <para>A list of Kana that has been guessed Correctly</para>
         /// </summary>
         public List<BasicKana> guessedCorrectly = new List<BasicKana>();
 
         /// <summary>
-        ///
+        /// <para> The kana that is the result of List.Shuffle().</para>
         /// </summary>
         public BasicKana resultKana;
 
@@ -68,12 +68,12 @@ namespace KanaPractice
 
 
         /// <summary>
-        ///
+        /// <para>A Function to Study Kana/</para>
         /// </summary>
         /// <param name="lstToStudy"></param>
         /// <param name="katakana"></param>
         /// <returns></returns>
-        public BasicKana Study(List<BasicKana> lstToStudy,bool katakana)
+        public BasicKana Study(List<BasicKana> lstToStudy, bool katakana)
         {
             lstToStudy.Shuffle();
             Random rand = new Random();
@@ -81,38 +81,40 @@ namespace KanaPractice
 
             if (katakana)
             {
-
-                lblKana.Text = lstToStudy[myNum].Katakana;
+                this.lblKana.Text = lstToStudy[myNum].Katakana;
             }
             else
             {
-                lblKana.Text = lstToStudy[myNum].Hirg;
+                this.lblKana.Text = lstToStudy[myNum].Hirg;
             }
+
             return lstToStudy[myNum];
         }
 
         /// <summary>
-        ///
+        /// <para>Goes to another Random Kana that hasn't been guessed yet.</para>
         /// </summary>
+        /// <param name="katakana">True if using Katakana false if not</param>
         public void NextKana(bool katakana)
         {
             if (katakana)
             {
-                BasicKana resultKana = Study(selectedList, true);
+                BasicKana resultKana = this.Study(this.selectedList, true);
             }
             else
             {
-                BasicKana resultKana = Study(selectedList, false);
-
+                BasicKana resultKana = this.Study(this.selectedList, false);
             }
-            if(!guessedCorrectly.Contains(resultKana))
+
+            if (!this.guessedCorrectly.Contains(this.resultKana))
             {
-                if(katakana)
+                if (katakana)
                 {
-                    resultKana = Study(selectedList, true);
-                }else
+                    this.resultKana = this.Study(selectedList, true);
+                }
+                else
                 {
-                    resultKana = Study(selectedList, false);
+                   this.resultKana = this.Study(selectedList, false);
                 }
             }
         }
@@ -121,15 +123,15 @@ namespace KanaPractice
 		/// A function to show the romanji and corresponding Kana.
 		/// </summary>
 		/// <param name="lstToLearn">the list to learn based on what user clicks.</param>
-		/// <param name="katakana">if user wants to learn Katakana True, hiragana false.</param>
-		/// <returns></returns>
-		public string Learn(List<BasicKana> lstToLearn,bool katakana)
+		/// <param name="katakana">if user wants to learn Katakana True hiragana false.</param>
+		/// <returns>A string to learn a all the kana.</returns>
+		public string Learn(List<BasicKana> lstToLearn, bool katakana)
 		{
 			StringBuilder stringBuilder = new StringBuilder();
 
-			for(int i = 0; i < lstToLearn.Count; i++)
+			for (int i = 0; i < lstToLearn.Count; i++)
 			{
-				if(katakana)
+				if (katakana)
 				{
 					stringBuilder.Append($"{lstToLearn[i].Romanji} \t {lstToLearn[i].Katakana}\n");
 				}
@@ -138,10 +140,10 @@ namespace KanaPractice
 					stringBuilder.Append($"{lstToLearn[i].Romanji} \t {lstToLearn[i].Hirg}\n");
 				}
 			}
+
 			string result = stringBuilder.ToString();
 
 			return result;
 		}
-
     }
 }

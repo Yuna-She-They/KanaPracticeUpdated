@@ -54,11 +54,11 @@
     <Compile Include="CfrmLearn.Designer.cs">
       <DependentUpon>CfrmLearn.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseForm.cs">
+    <Compile Include="DataForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatabaseForm.Designer.cs">
-      <DependentUpon>DatabaseForm.cs</DependentUpon>
+    <Compile Include="DataForm.Designer.cs">
+      <DependentUpon>DataForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\BasicKana.cs" />
     <Compile Include="Data\KanaData.cs" />
@@ -72,15 +72,15 @@
     <Compile Include="Form1.Gameplay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JapaneseKanaDataSet.Designer.cs">
+    <Compile Include="KanaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>JapaneseKanaDataSet.xsd</DependentUpon>
+      <DependentUpon>KanaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DatabaseForm.resx">
-      <DependentUpon>DatabaseForm.cs</DependentUpon>
+    <EmbeddedResource Include="DataForm.resx">
+      <DependentUpon>DataForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -95,16 +95,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="JapaneseKanaDataSet.xsc">
-      <DependentUpon>JapaneseKanaDataSet.xsd</DependentUpon>
+    <None Include="KanaDataSet.xsc">
+      <DependentUpon>KanaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="JapaneseKanaDataSet.xsd">
+    <None Include="KanaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>JapaneseKanaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>KanaDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="JapaneseKanaDataSet.xss">
-      <DependentUpon>JapaneseKanaDataSet.xsd</DependentUpon>
+    <None Include="KanaDataSet.xss">
+      <DependentUpon>KanaDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,11 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="JapaneseKana.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
