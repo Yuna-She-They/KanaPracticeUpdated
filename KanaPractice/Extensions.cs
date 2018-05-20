@@ -20,7 +20,6 @@ namespace KanaPractice
     /// </summary>
     public static class Extensions
     {
-
         /// <summary>
         /// a random object used for Shuffle
         /// </summary>

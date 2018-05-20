@@ -56,11 +56,11 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpMode = new System.Windows.Forms.GroupBox();
-            this.radLearn = new System.Windows.Forms.RadioButton();
             this.radStudy = new System.Windows.Forms.RadioButton();
+            this.radLearn = new System.Windows.Forms.RadioButton();
             this.grpKana = new System.Windows.Forms.GroupBox();
-            this.radKatakana = new System.Windows.Forms.RadioButton();
             this.radHiragana = new System.Windows.Forms.RadioButton();
+            this.radKatakana = new System.Windows.Forms.RadioButton();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.lblKana = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
@@ -272,17 +272,6 @@
             this.grpMode.TabStop = false;
             this.grpMode.Text = "Play Mode";
             // 
-            // radLearn
-            // 
-            this.radLearn.AutoSize = true;
-            this.radLearn.Location = new System.Drawing.Point(6, 37);
-            this.radLearn.Name = "radLearn";
-            this.radLearn.Size = new System.Drawing.Size(75, 24);
-            this.radLearn.TabIndex = 0;
-            this.radLearn.TabStop = true;
-            this.radLearn.Text = "Learn";
-            this.radLearn.UseVisualStyleBackColor = true;
-            // 
             // radStudy
             // 
             this.radStudy.AutoSize = true;
@@ -293,6 +282,17 @@
             this.radStudy.TabStop = true;
             this.radStudy.Text = "Study";
             this.radStudy.UseVisualStyleBackColor = true;
+            // 
+            // radLearn
+            // 
+            this.radLearn.AutoSize = true;
+            this.radLearn.Location = new System.Drawing.Point(6, 37);
+            this.radLearn.Name = "radLearn";
+            this.radLearn.Size = new System.Drawing.Size(75, 24);
+            this.radLearn.TabIndex = 0;
+            this.radLearn.TabStop = true;
+            this.radLearn.Text = "Learn";
+            this.radLearn.UseVisualStyleBackColor = true;
             // 
             // grpKana
             // 
@@ -305,17 +305,6 @@
             this.grpKana.TabStop = false;
             this.grpKana.Text = "Kana";
             // 
-            // radKatakana
-            // 
-            this.radKatakana.AutoSize = true;
-            this.radKatakana.Location = new System.Drawing.Point(7, 37);
-            this.radKatakana.Name = "radKatakana";
-            this.radKatakana.Size = new System.Drawing.Size(102, 24);
-            this.radKatakana.TabIndex = 0;
-            this.radKatakana.TabStop = true;
-            this.radKatakana.Text = "Katakana";
-            this.radKatakana.UseVisualStyleBackColor = true;
-            // 
             // radHiragana
             // 
             this.radHiragana.AutoSize = true;
@@ -326,6 +315,17 @@
             this.radHiragana.TabStop = true;
             this.radHiragana.Text = "Hiragana";
             this.radHiragana.UseVisualStyleBackColor = true;
+            // 
+            // radKatakana
+            // 
+            this.radKatakana.AutoSize = true;
+            this.radKatakana.Location = new System.Drawing.Point(7, 37);
+            this.radKatakana.Name = "radKatakana";
+            this.radKatakana.Size = new System.Drawing.Size(102, 24);
+            this.radKatakana.TabIndex = 0;
+            this.radKatakana.TabStop = true;
+            this.radKatakana.Text = "Katakana";
+            this.radKatakana.UseVisualStyleBackColor = true;
             // 
             // btnConfirm
             // 
@@ -371,6 +371,7 @@
             this.btnCheck.TabIndex = 8;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // DataForm
             // 

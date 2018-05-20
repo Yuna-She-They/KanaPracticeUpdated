@@ -1,6 +1,6 @@
 ﻿
-namespace KanaPractice {
-
+namespace KanaPractice
+{
     #region Using Directives
     using System;
     using System.Collections.Generic;
@@ -17,8 +17,8 @@ namespace KanaPractice {
     /// <summary>
     /// Holds Events for Event Driven Form
     /// </summary>
-    public partial class CfrmMain : Form {
-
+    public partial class CfrmMain : Form
+    {
         /// <summary>
         /// Constructor for class,
         /// this calls initComponents
@@ -39,9 +39,9 @@ namespace KanaPractice {
         /// </summary>
         private void frmMain_Load(object sender, EventArgs e)
         {
-            lblError.Text = String.Empty;
-            lblKana.Text = String.Empty;
-            lblSelectedSounds.Text = String.Empty;
+            lblError.Text = string.Empty;
+            lblKana.Text = string.Empty;
+            lblSelectedSounds.Text = string.Empty;
 
         }
 
@@ -54,11 +54,11 @@ namespace KanaPractice {
             List<BasicKana> learnList = KanaData.vowels;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(learnList, true), "Vowels in Katakana");
+				MessageBox.Show(this.Learn(learnList, true), "Vowels in Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(learnList, false), "Vowels in Hiragana");
+				MessageBox.Show(this.Learn(learnList, false), "Vowels in Hiragana");
             }
         }
 
@@ -72,11 +72,11 @@ namespace KanaPractice {
             List<BasicKana> learnList = KanaData.kList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(learnList, true), "K Sounds Katakana");
+				MessageBox.Show(this.Learn(learnList, true), "K Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(learnList, false), "K sounds hiragana");
+				MessageBox.Show(this.Learn(learnList, false), "K sounds hiragana");
             }
         }
 
@@ -89,11 +89,11 @@ namespace KanaPractice {
             List<BasicKana> learnList = KanaData.gList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(learnList, true), "G Sounds Katakana");
+				MessageBox.Show(this.Learn(learnList, true), "G Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(learnList, false), "G Sounds hiragana");
+				MessageBox.Show(this.Learn(learnList, false), "G Sounds hiragana");
             }
         }
 
@@ -107,11 +107,11 @@ namespace KanaPractice {
             List<BasicKana> learnList = KanaData.sList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(learnList, true), "S sounds Katakana");
+				MessageBox.Show(this.Learn(learnList, true), "S sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(learnList, false), "S Sounds Hiragana");
+				MessageBox.Show(this.Learn(learnList, false), "S Sounds Hiragana");
             }
         }
 
@@ -126,11 +126,11 @@ namespace KanaPractice {
 
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(learnList, true), "Z Sounds Katakana");
+				MessageBox.Show(this.Learn(learnList, true), "Z Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(learnList, false), "Z Sounds Hiragana");
+				MessageBox.Show(this.Learn(learnList, false), "Z Sounds Hiragana");
             }
         }
 
@@ -144,12 +144,12 @@ namespace KanaPractice {
             List<BasicKana> learnList = KanaData.tList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(learnList, true), "T Sounds Katakana");
+				MessageBox.Show(this.Learn(learnList, true), "T Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(learnList, false), "T Sounds Hiragana");
+				MessageBox.Show(this.Learn(learnList, false), "T Sounds Hiragana");
             }
         }
 
@@ -163,11 +163,11 @@ namespace KanaPractice {
             List<BasicKana> learnList = KanaData.dList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(learnList, true), "D Sounds Katakana");
+				MessageBox.Show(this.Learn(learnList, true), "D Sounds Katakana");
             }
             if (radHirigana.Checked)
             {
-                MessageBox.Show(Learn(learnList, false), "D Sounds Hiragana");
+                MessageBox.Show(this.Learn(learnList, false), "D Sounds Hiragana");
             }
         }
 
@@ -185,15 +185,15 @@ namespace KanaPractice {
         {
             //?question should I refactor this into a new form?
             lblSelectedSounds.Text = "N Sounds";
-            List<BasicKana>learnList = KanaData.nList;
+            List<BasicKana> learnList = KanaData.nList;
             if (radKatakana.Checked)
             {
-				MessageBox.Show(Learn(learnList, true), "N Sounds Katakana");
+				MessageBox.Show(this.Learn(learnList, true), "N Sounds Katakana");
             }
 
             if (radHirigana.Checked)
             {
-				MessageBox.Show(Learn(learnList, false), "N Sounds Hiragana");
+				MessageBox.Show(this.Learn(learnList, false), "N Sounds Hiragana");
             }
         }
 
@@ -202,7 +202,7 @@ namespace KanaPractice {
         /// </summary>
         private void mnuKanaHSoundsLearn_Click(object sender, EventArgs e)
         {
-            List<BasicKana>learnList = KanaData.hList;
+            List<BasicKana> learnList = KanaData.hList;
             // ?question should I refactor this into a new form?
             lblSelectedSounds.Text = "H Sounds";
             if (radKatakana.Checked)
@@ -396,8 +396,8 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        private void mnuKanaGSoundsStudy_Click(object sender, EventArgs e) {
-
+        private void mnuKanaGSoundsStudy_Click(object sender, EventArgs e)
+        {
             List<BasicKana> studyList = KanaData.gList;
             //remove Study(KanaData.gList);
             selectedList = studyList;
@@ -415,8 +415,8 @@ namespace KanaPractice {
         /// <summary>
         ///
         /// </summary>
-        private void mnuKanaSSoundsStudy_Click(object sender, EventArgs e) {
-
+        private void mnuKanaSSoundsStudy_Click(object sender, EventArgs e)
+        {
             List<BasicKana> studyList = KanaData.sList;
             selectedList = studyList;
 
@@ -647,11 +647,11 @@ namespace KanaPractice {
         /// </summary>
 		private void btnCheck_Click(object sender, EventArgs e)
 		{
-			if (this.txtRomanji.Text != String.Empty)
+			if (this.txtRomanji.Text != string.Empty)
             {
                 // todo figure out how to get the list that user is currently studying.
                 // CheckRomanji(txtRomanji.Text,????)
-                if (CheckRomanji(txtRomanji.Text, selectedList))
+                if (this.CheckRomanji(txtRomanji.Text, selectedList))
                 {
                     if (this.radKatakana.Checked)
                     {

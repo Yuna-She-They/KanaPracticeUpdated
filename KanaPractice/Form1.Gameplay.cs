@@ -51,15 +51,14 @@ namespace KanaPractice
         /// <param name="strToCheck">The users entered text to check</param>
         /// <param name="lstOfKanaToCheck">List of kana objects to check</param>
         /// <returns></returns>
-        public bool CheckRomanji(string strToCheck, List<BasicKana> lstOfKanaToCheck) {
-
-
+        public bool CheckRomanji(string strToCheck, List<BasicKana> lstOfKanaToCheck)
+        {
             for (int i = 0; i < lstOfKanaToCheck.Count; i++)
             {
                 if (strToCheck == lstOfKanaToCheck[i].Romanji)
                 {
                     studiedList.Add(lstOfKanaToCheck[i]);
-                    guessedCorrectly.Add(lstOfKanaToCheck[i]);
+                    this.guessedCorrectly.Add(lstOfKanaToCheck[i]);
                     return true;
                 }
             }

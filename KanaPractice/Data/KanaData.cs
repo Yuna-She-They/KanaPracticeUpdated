@@ -1,6 +1,5 @@
-﻿
-
-namespace KanaPractice.Data {
+﻿namespace KanaPractice.Data
+{
 
     #region Using Directives
     using System;
@@ -10,15 +9,11 @@ namespace KanaPractice.Data {
     using System.Threading.Tasks;
     #endregion Using Directives
 
-
-
-
     /// <summary>
     /// A Class to hold All the Data for japanese Sylliables
     /// </summary>
     public static class KanaData
     {
-
         /// <summary>
         /// <para>A list that holds the A,I,U,E, and O Sounds.</para>
         /// </summary>
@@ -44,7 +39,6 @@ namespace KanaPractice.Data {
             new BasicKana("ke", "け", "ケ"),
             new BasicKana("ko", "こ", "コ")
         };
-
 
         /// <summary>
         /// <para>A list that holds the Ga, Gi, Gu, Ge, and Go Sounds.</para>
@@ -72,7 +66,6 @@ namespace KanaPractice.Data {
             new BasicKana("so", "そ", "ソ")
         };
 
-
         /// <summary>
         /// <para>A list that holds the Za,Ji,Zu,Ze, and Zo sounds</para>
         /// </summary>
@@ -86,7 +79,6 @@ namespace KanaPractice.Data {
             new BasicKana("zo", "ぞ", "ゾ")
         };
 
-
         /// <summary>
         /// <para>A list that holds the Ta,Chi,Tsu,Te and To sounds</para>
         /// </summary>
@@ -99,7 +91,6 @@ namespace KanaPractice.Data {
             new BasicKana("te", "て", "テ"),
             new BasicKana("to", "と", "ト")
         };
-
 
         /// <summary>
         /// <para>A list that holds the Da, Di, Du, De, and Do sounds</para>
@@ -127,7 +118,6 @@ namespace KanaPractice.Data {
              new BasicKana("no", "の", "ノ")
         };
 
-
         /// <summary>
         /// <para>A list that holds the Ha, Hi, Fu, He, and Ho Sounds.</para>
         /// </summary>
@@ -153,7 +143,6 @@ namespace KanaPractice.Data {
             new BasicKana("be", "べ", "ベ"),
             new BasicKana("bo", "ぼ", "ボ")
         };
-
 
         /// <summary>
         /// <para>A list that holds the Pa, Pi, Pu, Pe, and Po Sounds.</para>
@@ -284,8 +273,5 @@ namespace KanaPractice.Data {
             wList,
             modifiedKanaList
         };
-
-        //public static List<BasicKana> Vowels { get => Vowels1; set => Vowels1 = value; }
-        //public static List<BasicKana> Vowels1 { get => vowels; set => vowels = value; }
     }
 }

@@ -77,6 +77,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KanaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="KanaDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DataForm.resx">
