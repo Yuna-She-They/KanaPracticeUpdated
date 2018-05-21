@@ -3,29 +3,127 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using System.Data.SqlClient;
+
 
 namespace KanaPractice
 {
-    /// <summary>
-    ///
-    /// </summary>
     public static class KanaDB
     {
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="kanaID"></param>
-        /// <returns></returns>
-        public static Data.BasicKana GetKana(int kanaID)
+        public static bool GetKana(int kanaID,bool katakana)
         {
-            Data.BasicKana kana = new Data.BasicKana();
-            SqlConnection connection = null;
-            string selectStatement = "SELECT Romanji, Hiragana, Katakana FROM Kana WHERE ID=@KanaID";
-            SqlCommand selectCommand = new SqlCommand(selectStatement,connection);
-            selectCommand.Parameters.AddWithValue("@KanaID", kanaID);
-            return null;
+            string sql = string.Empty;
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-1UVADPU;Initial Catalog=Kana;Integrated Security=True");
+            SqlCommand cmd;
+            bool blnReturn;
+
+            try
+            {
+                if (katakana)
+                {
+                    sql = "SELECT Romanji, Katakana FROM Kana WHERE ID=@kanaID";
+                }
+                else
+                {
+                    sql = "SELECT Romanji, Hiragana FROM Kana WHERE ID=@kanaID";
+                }
+                conn.Open();
+                cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("kanaID", (int)kanaID);
+                cmd.ExecuteNonQuery();
+                blnReturn = true;
+            }
+            catch(Exception ex)
+            {
+                //MessageBox.Show(ex.Message)
+                blnReturn = false;
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Dispose();
+                }
+            }
+            return blnReturn;
+        }
+
+        public static bool Study(int kanaID,bool katakana)
+        {
+            string sql = string.Empty;
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP=1UVADPU;Initial Catalog=Kana;Integrated Security=True");
+            SqlCommand cmd;
+            bool blnReturn;
+
+            try
+            {
+                if (katakana)
+                {
+                    sql = "SELECT Katakana FROM Kana WHERE ID = @kanaID";
+                }
+                else
+                {
+                    sql = "SELECT Hiragana FROM Kana WHERE ID = @kanaID";
+                }
+
+                conn.Open();
+                cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("kanaID", (int)kanaID);
+                cmd.ExecuteNonQuery();
+                blnReturn = true;
+            }
+            catch (Exception ex)
+            {
+                //MsgBox(ex.Message)
+                blnReturn = false;
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Dispose();
+                }
+            }
+            return blnReturn;
+        }
+
+        public static bool Learn(int kanaID,bool katakana)
+        {
+            string sql = string.Empty;
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-1UVADPU;Initial Catalog=Kana;Integrated Security=True");
+            SqlCommand cmd;
+            bool blnReturn;
+
+            try
+            {
+                if (katakana)
+                {
+                    sql = "SELECT Romanji, Katakana FROM Kana WHERE ID=@kanaID";
+                }
+                else
+                {
+                    sql = "SELECT Romanji, Hiragana FROM Kana WHERE ID=@kanaID";
+                }
+
+                conn.Open();
+                cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("kanaID",(int)kanaID);
+                cmd.ExecuteNonQuery();
+                blnReturn = true;
+            }
+            catch (Exception ex)
+            {
+                //ex.Message
+                blnReturn = false;
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Dispose();
+                }
+            }
+            return blnReturn;
         }
     }
 }

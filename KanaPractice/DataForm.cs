@@ -37,44 +37,51 @@ namespace KanaPractice
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            SqlCommand sqlCommand = new SqlCommand();
-            
+            Random rand = new Random();
+            int myNum = rand.Next(1, 106);
+            while (myNum == 103)
+            {
+                myNum = rand.Next(1, 106);
+            }
             if (this.radLearn.Checked)
             {
                 if (this.radKatakana.Checked)
                 {
-                    string learnKatakanaSQL = "SELECT Romanji, Katakana FROM Kana";
-                    sqlCommand.CommandText = learnKatakanaSQL;
 
+                    if (KanaDB.Learn(myNum,true))
+                    {
+                        kanaDataGridView.Refresh();
+                    }
                 }
                 if (this.radHiragana.Checked)
                 {
-                    string learnHiraganaSQL = "SELECT Romanji, Hiragana FROM Kana";
-                    sqlCommand.CommandText = learnHiraganaSQL;
+                    if (KanaDB.Learn(myNum,false))
+                    {
+                        kanaDataGridView.Refresh();
+                    }
                 }
+
             }
 
             if (this.radStudy.Checked)
             {
-                if (!(this.txtGuess.Text == string.Empty))
+                if (this.radKatakana.Checked)
                 {
-                    if (this.radKatakana.Checked)
-                    {
-                        string studyKatakanaSQL = "SELECT Katakana FROM Kana WHERE Romanji = @Romanji";
-                        sqlCommand.CommandText = studyKatakanaSQL;
-
-                    }
-
-                    if (this.radHiragana.Checked)
-                    {
-                        string studyHiraganaSQL = "SELECT Hiragana FROM Kana WHERE Romanji = @Romanji";
-                        sqlCommand.CommandText = studyHiraganaSQL;
-                    }
+                    KanaDB.Study(myNum, true);
+                    kanaDataGridView.Refresh();
                 }
+                if (this.radHiragana.Checked)
+                {
+                    KanaDB.Study(myNum, false);
+                    kanaDataGridView.Refresh();
+                }
+
             }
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
-        { }
+        {
+
+        }
     }
 }
