@@ -47,17 +47,18 @@ namespace KanaPractice
             {
                 if (this.radKatakana.Checked)
                 {
-
+                    kanaDataGridView.BeginEdit(true);
                     if (KanaDB.Learn(myNum,true))
                     {
-                        kanaDataGridView.Refresh();
+                        this.kanaTableAdapter.Fill(this.kanaDataSet.Kana);
+
                     }
                 }
                 if (this.radHiragana.Checked)
                 {
                     if (KanaDB.Learn(myNum,false))
                     {
-                        kanaDataGridView.Refresh();
+                        this.kanaTableAdapter.Fill(this.kanaDataSet.Kana);
                     }
                 }
 
@@ -68,15 +69,15 @@ namespace KanaPractice
                 if (this.radKatakana.Checked)
                 {
                     KanaDB.Study(myNum, true);
-                    kanaDataGridView.Refresh();
                 }
                 if (this.radHiragana.Checked)
                 {
                     KanaDB.Study(myNum, false);
-                    kanaDataGridView.Refresh();
                 }
 
             }
+            kanaDataGridView.EndEdit();
+            kanaDataGridView.Refresh();
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
