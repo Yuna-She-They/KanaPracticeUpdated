@@ -62,10 +62,9 @@
             this.radHiragana = new System.Windows.Forms.RadioButton();
             this.radKatakana = new System.Windows.Forms.RadioButton();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.lblKana = new System.Windows.Forms.Label();
-            this.lblError = new System.Windows.Forms.Label();
             this.txtGuess = new System.Windows.Forms.TextBox();
             this.btnCheck = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kanaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kanaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kanaBindingNavigator)).BeginInit();
@@ -329,32 +328,13 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(485, 159);
+            this.btnConfirm.Location = new System.Drawing.Point(485, 168);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(83, 30);
             this.btnConfirm.TabIndex = 4;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // lblKana
-            // 
-            this.lblKana.AutoSize = true;
-            this.lblKana.Location = new System.Drawing.Point(31, 333);
-            this.lblKana.Name = "lblKana";
-            this.lblKana.Size = new System.Drawing.Size(61, 20);
-            this.lblKana.TabIndex = 5;
-            this.lblKana.Text = "lblKana";
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(121, 332);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(51, 20);
-            this.lblError.TabIndex = 6;
-            this.lblError.Text = "label1";
             // 
             // txtGuess
             // 
@@ -365,23 +345,32 @@
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(231, 407);
+            this.btnCheck.Location = new System.Drawing.Point(178, 406);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(75, 27);
+            this.btnCheck.Size = new System.Drawing.Size(75, 32);
             this.btnCheck.TabIndex = 8;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(259, 406);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(85, 32);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // DataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 470);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.txtGuess);
-            this.Controls.Add(this.lblError);
-            this.Controls.Add(this.lblKana);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.grpKana);
             this.Controls.Add(this.grpMode);
@@ -436,9 +425,8 @@
         private System.Windows.Forms.RadioButton radHiragana;
         private System.Windows.Forms.RadioButton radKatakana;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Label lblKana;
-        private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.TextBox txtGuess;
         private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.Button btnExit;
     }
 }

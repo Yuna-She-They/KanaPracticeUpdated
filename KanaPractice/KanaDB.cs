@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
 
 namespace KanaPractice
 {
@@ -87,7 +88,7 @@ namespace KanaPractice
             return blnReturn;
         }
 
-        public static bool Learn(int kanaID,bool katakana)
+        public static bool Learn(bool katakana)
         {
             string sql = string.Empty;
             SqlConnection conn = new SqlConnection("Data Source=DESKTOP-1UVADPU;Initial Catalog=Kana;Integrated Security=True");
@@ -98,17 +99,20 @@ namespace KanaPractice
             {
                 if (katakana)
                 {
-                    sql = "SELECT Romanji, Katakana FROM Kana WHERE ID=@kanaID";
+                    sql = "SELECT Romanji, Katakana FROM Kana";
                 }
                 else
                 {
-                    sql = "SELECT Romanji, Hiragana FROM Kana WHERE ID=@kanaID";
+                    sql = "SELECT Romanji, Hiragana FROM Kana";
                 }
 
                 conn.Open();
                 cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("kanaID",(int)kanaID);
-                cmd.ExecuteNonQuery();
+                SqlDataReader sqlReader = cmd.ExecuteReader();
+                while (sqlReader.Read())
+                {
+                    
+                }
                 blnReturn = true;
             }
             catch (Exception ex)

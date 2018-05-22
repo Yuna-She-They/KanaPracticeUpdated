@@ -47,19 +47,20 @@ namespace KanaPractice
             {
                 if (this.radKatakana.Checked)
                 {
-                    kanaDataGridView.BeginEdit(true);
-                    if (KanaDB.Learn(myNum,true))
-                    {
-                        this.kanaTableAdapter.Fill(this.kanaDataSet.Kana);
-
-                    }
+                    GetData("SELECT Romanji, Katakana FROM Kana",null);
+                    kanaDataGridView.Columns[0].Visible = false;
+                    kanaDataGridView.Columns[1].Visible = true;
+                    kanaDataGridView.Columns[2].Visible = true;
+                    // 0 = id, 1 = romanji, 2 = katakana 3 = hiragana
+                    kanaDataGridView.Columns[3].Visible = false;
                 }
                 if (this.radHiragana.Checked)
                 {
-                    if (KanaDB.Learn(myNum,false))
-                    {
-                        this.kanaTableAdapter.Fill(this.kanaDataSet.Kana);
-                    }
+                    GetData("SELECT Romanji, Hiragana FROM Kana",null);
+                    kanaDataGridView.Columns[0].Visible = false;
+                    kanaDataGridView.Columns[1].Visible = true;
+                    kanaDataGridView.Columns[2].Visible = false;
+                    kanaDataGridView.Columns[3].Visible = true;
                 }
 
             }
@@ -68,21 +69,70 @@ namespace KanaPractice
             {
                 if (this.radKatakana.Checked)
                 {
-                    KanaDB.Study(myNum, true);
+                    GetData("SELECT Katakana FROM Kana WHERE ID=" + myNum,myNum);
+                    kanaDataGridView.Columns[0].Visible = false;
+                    kanaDataGridView.Columns[1].Visible = false;
+                    kanaDataGridView.Columns[2].Visible = true;
+                    kanaDataGridView.Columns[3].Visible = false;
                 }
                 if (this.radHiragana.Checked)
                 {
-                    KanaDB.Study(myNum, false);
+                    GetData("SELECT Hiragana FROM Kana WHERE ID=" + myNum, myNum);
+                    kanaDataGridView.Columns[0].Visible = false;
+                    kanaDataGridView.Columns[1].Visible = false;
+                    kanaDataGridView.Columns[2].Visible = false;
+                    kanaDataGridView.Columns[3].Visible = true;
                 }
 
             }
-            kanaDataGridView.EndEdit();
+            //kanaDataGridView.EndEdit();
             kanaDataGridView.Refresh();
         }
-
         private void btnCheck_Click(object sender, EventArgs e)
         {
+            if (txtGuess.Text != string.Empty)
+            {
+                GetData("SELECT Romanji,Katakana,Hiragana FROM Kana WHERE Romanji='" + txtGuess.Text + "'", null);
+                //Todo figure out how to get romanji  into label error if romanji is wrong.
+                kanaDataGridView.Columns[1].Visible = true;
+                kanaDataGridView.Columns[2].Visible = true;
+                kanaDataGridView.Columns[3].Visible = true;
+            }
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void GetData(string selectCommand,int? kanaID)
+        {
+            try
+            {
+                string connectionString = "Data Source=DESKTOP-1UVADPU;Initial Catalog=Kana;Integrated Security=True";
+                SqlDataAdapter kanaDataAdapter = new SqlDataAdapter(selectCommand, connectionString);
+                DataTable kanaDataTable = new DataTable();
+                if (kanaID != null)
+                {
+                    SqlCommand cmd = new SqlCommand(selectCommand);
+                    cmd.Parameters.AddWithValue("kanaID", (int)kanaID);
+                }
+                else
+                {
+                    SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(kanaDataAdapter);
+                }
+
+                kanaDataTable.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                kanaDataAdapter.Fill(kanaDataTable);
+                kanaBindingSource.DataSource = kanaDataTable;
+                kanaDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                kanaDataGridView.Refresh();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
